@@ -80,17 +80,11 @@ def test_hebbian_update(hebb_historical):
         pytest.skip("Hebb implementation not found")
     hebbian_update = hebb_historical.hebbian_update_historical
 
-    # weight_matrix shape: (n_input, n_output) = (1, 2)
     W = np.array([[0.5, -0.5]])
-    # pre_synaptic shape: (n_input,) = (1,)
     pre = np.array([1.0])
-    # post_synaptic shape: (n_output,) = (2,)
-    post = np.array([1.0, 0.0])   # only first output fires
+    post = np.array([1.0, 0.0])
 
     W_new = hebbian_update(W, pre, post, lr=0.1)
-
-    # Expected: delta = 0.1 * outer(pre, post) = 0.1 * [[1.0, 0.0]] = [[0.1, 0.0]]
-    # So W_new = [[0.6, -0.5]]
     assert np.allclose(W_new, np.array([[0.6, -0.5]]))
 
 
@@ -100,13 +94,13 @@ def test_perceptron_xor(perceptron_historical):
         pytest.skip("Perceptron implementation not found")
     Perceptron = perceptron_historical.PerceptronScratch
 
+    np.random.seed(42)
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 1, 1, 0])
     p = Perceptron(input_size=2, lr=0.1)
     p.train(X, y, epochs=20)
 
     preds = np.array([p.forward(xi) for xi in X])
-    # XOR should NOT converge to all correct (linear separability)
     assert not np.array_equal(preds, y)
 
 
@@ -116,6 +110,7 @@ def test_perceptron_and(perceptron_historical):
         pytest.skip("Perceptron implementation not found")
     Perceptron = perceptron_historical.PerceptronScratch
 
+    np.random.seed(42)
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])  # AND
     p = Perceptron(input_size=2, lr=0.1)
@@ -126,17 +121,17 @@ def test_perceptron_and(perceptron_historical):
 
 
 def test_adaline_and(adaline_historical):
-    """Test ADALINE on AND gate with sufficient epochs and small learning rate."""
+    """Test ADALINE on AND gate with deterministic seed."""
     if adaline_historical is None:
         pytest.skip("ADALINE implementation not found")
     ADALINE = adaline_historical.ADALINE
 
+    np.random.seed(42)
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])  # AND
 
-    # Use a smaller learning rate and more epochs for reliable convergence
-    ad = ADALINE(input_size=2, lr=0.01)   # reduced from 0.1
-    ad.train(X, y, epochs=2000)           # increased from 1000
+    ad = ADALINE(input_size=2, lr=0.005)
+    ad.train(X, y, epochs=5000)
 
     preds = ad.predict_quantized(X)
     assert np.array_equal(preds, y)
@@ -148,6 +143,7 @@ def test_hopfield_recovery(hopfield_historical):
         pytest.skip("Hopfield implementation not found")
     Hopfield = hopfield_historical.HopfieldNetwork
 
+    np.random.seed(42)
     x1 = np.array([1, -1, 1, -1, 1, -1, 1, -1, 1])
     patterns = np.array([x1])
     hop = Hopfield(N=9)
@@ -161,23 +157,24 @@ def test_hopfield_recovery(hopfield_historical):
 
 
 def test_xor_backprop(werbos_historical):
-    """Test that backpropagation can solve XOR."""
+    """Test that backpropagation can solve XOR with deterministic seed."""
     if werbos_historical is None:
         pytest.skip("Backprop implementation not found")
 
     MLP = werbos_historical.MLP_Backprop
 
+    np.random.seed(42)
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([[0], [1], [1], [0]])
 
     net = MLP(input_size=2, hidden_size=2, output_size=1, lr=0.5)
-    net.train(X, y, epochs=2000)
+    net.train(X, y, epochs=5000)
 
     preds = net.forward(X)
     rounded = np.round(preds).flatten()
     expected = y.flatten()
 
-    # Allow tolerance due to random initialization
+    # Allow one sample to be off (tolerance ≥ 0.75 accuracy)
     assert np.mean((rounded == expected)) >= 0.75
 
 
