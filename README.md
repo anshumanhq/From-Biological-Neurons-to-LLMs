@@ -7,7 +7,7 @@
 
 ## Status Badges
 
-[![Validation](https://github.com/yourusername/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml/badge.svg)](https://github.com/yourusername/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml)
+[![Validation](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml/badge.svg)](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Papers Archived](https://img.shields.io/badge/Papers%20Archived-11-brightgreen)](research/index.yaml)
