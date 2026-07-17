@@ -126,7 +126,7 @@ def test_perceptron_and(perceptron_historical):
 
 
 def test_adaline_and(adaline_historical):
-    """Test ADALINE on AND gate with sufficient epochs and proper learning rate."""
+    """Test ADALINE on AND gate with sufficient epochs and small learning rate."""
     if adaline_historical is None:
         pytest.skip("ADALINE implementation not found")
     ADALINE = adaline_historical.ADALINE
@@ -134,8 +134,9 @@ def test_adaline_and(adaline_historical):
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])  # AND
 
-    ad = ADALINE(input_size=2, lr=0.1)
-    ad.train(X, y, epochs=1000)  # More epochs
+    # Use a smaller learning rate and more epochs for reliable convergence
+    ad = ADALINE(input_size=2, lr=0.01)   # reduced from 0.1
+    ad.train(X, y, epochs=2000)           # increased from 1000
 
     preds = ad.predict_quantized(X)
     assert np.array_equal(preds, y)
@@ -170,7 +171,7 @@ def test_xor_backprop(werbos_historical):
     y = np.array([[0], [1], [1], [0]])
 
     net = MLP(input_size=2, hidden_size=2, output_size=1, lr=0.5)
-    net.train(X, y, epochs=2000)  # no verbose argument
+    net.train(X, y, epochs=2000)
 
     preds = net.forward(X)
     rounded = np.round(preds).flatten()
