@@ -27,7 +27,7 @@ def load_module_from_path(filepath):
 
 
 # ============================================================
-# Fixture: Dynamically load implementations
+# Fixtures: Dynamically load implementations
 # ============================================================
 
 @pytest.fixture(scope="module")
@@ -79,12 +79,16 @@ def test_hebbian_update(hebb_historical):
     if hebb_historical is None:
         pytest.skip("Heeb implementation not found")
     hebbian_update = hebb_historical.hebbian_update_historical
+
     W = np.array([[0.5, -0.5]])
-    pre = np.array([1.0, 0.0])
+    pre = np.array([1.0, 0.0])   # Only first input active
     post = np.array([1.0])
+
     W_new = hebbian_update(W, pre, post, lr=0.1)
-    assert W_new[0, 0] == 0.6
-    assert W_new[0, 1] == -0.5
+
+    # Only the active synapse (index 0) should change
+    assert W_new[0, 0] == 0.6   # 0.5 + 0.1 * 1.0 * 1.0
+    assert W_new[0, 1] == -0.5  # Unchanged because pre[1] = 0
 
 
 def test_perceptron_xor(perceptron_historical):
@@ -92,10 +96,12 @@ def test_perceptron_xor(perceptron_historical):
     if perceptron_historical is None:
         pytest.skip("Perceptron implementation not found")
     Perceptron = perceptron_historical.PerceptronScratch
+
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 1, 1, 0])
     p = Perceptron(input_size=2, lr=0.1)
     p.train(X, y, epochs=20)
+
     preds = np.array([p.forward(xi) for xi in X])
     # XOR should NOT converge to all correct (linear separability)
     assert not np.array_equal(preds, y)
@@ -106,23 +112,28 @@ def test_perceptron_and(perceptron_historical):
     if perceptron_historical is None:
         pytest.skip("Perceptron implementation not found")
     Perceptron = perceptron_historical.PerceptronScratch
+
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])  # AND
     p = Perceptron(input_size=2, lr=0.1)
     p.train(X, y, epochs=20)
+
     preds = np.array([p.forward(xi) for xi in X])
     assert np.array_equal(preds, y)
 
 
 def test_adaline_and(adaline_historical):
-    """Test ADALINE on AND gate."""
+    """Test ADALINE on AND gate with sufficient epochs."""
     if adaline_historical is None:
         pytest.skip("ADALINE implementation not found")
     ADALINE = adaline_historical.ADALINE
+
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])  # AND
+
     ad = ADALINE(input_size=2, lr=0.1)
-    ad.train(X, y, epochs=50)
+    ad.train(X, y, epochs=500)  # Increased epochs for convergence
+
     preds = ad.predict_quantized(X)
     assert np.array_equal(preds, y)
 
@@ -132,6 +143,7 @@ def test_hopfield_recovery(hopfield_historical):
     if hopfield_historical is None:
         pytest.skip("Hopfield implementation not found")
     Hopfield = hopfield_historical.HopfieldNetwork
+
     x1 = np.array([1, -1, 1, -1, 1, -1, 1, -1, 1])
     patterns = np.array([x1])
     hop = Hopfield(N=9)
@@ -148,14 +160,25 @@ def test_xor_backprop(werbos_historical):
     """Test that backpropagation can solve XOR."""
     if werbos_historical is None:
         pytest.skip("Backprop implementation not found")
+
+    # Fix: The MLP expects hidden_size as an integer, not a list
+    # We need to create the network with: input_size=2, hidden_size=2, output_size=1
+    # The class signature is: MLP_Backprop(input_size=2, hidden_size=2, output_size=1, lr=0.5)
+
+    # Import the MLP class directly
     MLP = werbos_historical.MLP_Backprop
+
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([[0], [1], [1], [0]])
-    net = MLP([2, 2, 1], lr=0.5)
+
+    # Correct initialization: pass integers directly
+    net = MLP(input_size=2, hidden_size=2, output_size=1, lr=0.5)
     net.train(X, y, epochs=2000, verbose=False)
+
     preds = net.forward(X)
     rounded = np.round(preds).flatten()
     expected = y.flatten()
+
     # Allow tolerance due to random initialization
     assert np.mean((rounded == expected)) >= 0.75
 
