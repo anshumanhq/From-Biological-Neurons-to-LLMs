@@ -119,7 +119,10 @@ def test_perceptron_and(perceptron_historical):
 
 
 def test_adaline_and(adaline_historical):
-    """ADALINE on AND: ensure loss decreases and final decision boundary is correct."""
+    """
+    ADALINE on AND: use the train() method (which handles bipolar conversion).
+    This is the correct way to test the implementation.
+    """
     if adaline_historical is None:
         pytest.skip("ADALINE implementation not found")
     ADALINE = adaline_historical.ADALINE
@@ -128,15 +131,23 @@ def test_adaline_and(adaline_historical):
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     y = np.array([0, 0, 0, 1])
 
-    ad = ADALINE(input_size=2, lr=0.01)   # lower learning rate for stability
+    ad = ADALINE(input_size=2, lr=0.01)
+
+    # Use the train() method (bipolar conversion happens inside)
+    # Store losses to verify convergence
     losses = []
     for epoch in range(5000):
+        # Manual loss tracking: run one epoch of train() and record loss
+        # But train() doesn't return loss; we compute it separately
+        ad.train(X, y, epochs=1)
+        # Compute loss on the current model
         total_error = 0.0
         for xi, target in zip(X, y):
             v = ad.forward_linear(xi)
-            error = target - v  # target is converted to bipolar internally
-            ad.weights += ad.lr * error * xi
-            ad.bias += ad.lr * error
+            # For loss, use 0/1 targets (or bipolar, but we want to see MSE decrease)
+            # Actually use bipolar loss for consistency
+            target_bipolar = 1 if target == 1 else -1
+            error = target_bipolar - v
             total_error += error ** 2
         losses.append(total_error)
         if total_error < 1e-6:
@@ -148,10 +159,9 @@ def test_adaline_and(adaline_historical):
     # Check weights finite
     assert np.all(np.isfinite(ad.weights)), "Weights should remain finite."
 
-    # Final predictions: allow 3 out of 4 correct (tolerance for random init)
+    # Final predictions should be perfect (bipolar targets solve AND)
     preds = ad.predict_quantized(X)
-    correct = np.sum(preds == y)
-    assert correct >= 3, f"Expected at least 3 correct, got {correct}"
+    assert np.array_equal(preds, y), f"Expected {y}, got {preds}"
 
 
 def test_hopfield_recovery(hopfield_historical):
