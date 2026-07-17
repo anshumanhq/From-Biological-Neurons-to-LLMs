@@ -1,6 +1,6 @@
 '''
 Widrow & Hoff (1960) – ADALINE and LMS Algorithm
-Pure NumPy implementation.
+Pure NumPy implementation – uses bipolar targets (-1/1) as in the original paper.
 '''
 
 import numpy as np
@@ -8,6 +8,7 @@ import numpy as np
 class ADALINE:
     """
     Widrow-Hoff ADALINE (1960).
+    Trains on bipolar targets (-1 for 0, +1 for 1) using the LMS rule.
     """
     def __init__(self, input_size, lr=0.01):
         self.weights = np.random.randn(input_size) * 0.01
@@ -19,18 +20,21 @@ class ADALINE:
         return np.dot(x, self.weights) + self.bias
 
     def forward_quantized(self, x):
-        """Return the binary output (sign function)."""
+        """Return the binary output (sign function on bipolar output)."""
         return 1 if self.forward_linear(x) >= 0 else 0
 
     def train(self, X, y, epochs=10):
         """
-        Train using LMS (Delta Rule).
+        Train using LMS (Delta Rule) with bipolar targets.
         X: Input matrix (samples x features).
-        y: Target continuous values.
+        y: Target values (0/1) – converted to bipolar internally.
         """
+        # Convert 0/1 targets to bipolar (-1, +1)
+        y_bipolar = np.where(y == 0, -1, 1)
+
         for epoch in range(epochs):
             total_error = 0.0
-            for xi, target in zip(X, y):
+            for xi, target in zip(X, y_bipolar):
                 v = self.forward_linear(xi)
                 error = target - v
                 self.weights += self.lr * error * xi
@@ -46,7 +50,7 @@ class ADALINE:
 
 # Demo
 if __name__ == "__main__":
-    # AND gate
+    # AND gate (0/1 targets)
     X = np.array([[0,0], [0,1], [1,0], [1,1]])
     y = np.array([0, 0, 0, 1])
     ad = ADALINE(input_size=2, lr=0.1)
