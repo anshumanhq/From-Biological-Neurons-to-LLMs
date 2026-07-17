@@ -1,0 +1,26 @@
+% Jordan Network (1990) – Core Equations
+
+% 1. Hidden layer activation with context feedback:
+\begin{equation}
+h(t) = f\left( W_{ih} x(t) + W_{ch} c(t) + b_h \right)
+\end{equation}
+
+% 2. Output layer:
+\begin{equation}
+y(t) = g\left( W_{ho} h(t) + b_o \right)
+\end{equation}
+
+% 3. Context update (feedback from output):
+\begin{equation}
+c(t+1) = \alpha \cdot y(t) + \beta \cdot c(t)
+\end{equation}
+
+% 4. Teacher forcing (context = target during training):
+\begin{equation}
+c(t+1) = y_{\text{target}}(t) \quad \text{(during training only)}
+\end{equation}
+
+% 5. Free running (context = actual output during generation):
+\begin{equation}
+c(t+1) = y_{\text{actual}}(t) \quad \text{(during generation)}
+\end{equation}
