@@ -1,0 +1,33 @@
+id: "1974_Werbos_Backpropagation"
+title: "Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences"
+authors:
+  - "Paul John Werbos"
+year: 1974
+venue: "PhD Thesis, Harvard University"
+primary_subject:
+  - "Dynamic Programming"
+  - "Optimal Control"
+  - "Neural Networks"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1960_Widrow_Hoff_ADALINE"
+  - "1969_Minsky_Papert_Perceptrons"
+successors:
+  - "1986_Rumelhart_Hinton_Williams_Backprop"
+knowledge_flow: |
+  Werbos (1974) proposed backpropagation—reverse-mode differentiation
+  applied to multi-layer networks—in his PhD thesis. The idea was
+  largely ignored until the 1986 PDP revival.
+phase: "The Revival"
+era: "1974-1986"
+status: "complete"
+last_updated: "2026-07-17"

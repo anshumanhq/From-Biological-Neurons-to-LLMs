@@ -1,0 +1,36 @@
+id: "1969_Minsky_Papert_Perceptrons"
+title: "Perceptrons: An Introduction to Computational Geometry"
+authors:
+  - "Marvin Minsky"
+  - "Seymour Papert"
+year: 1969
+venue: "MIT Press (Book)"
+isbn: "0-262-13043-2"
+primary_subject:
+  - "Computational Geometry"
+  - "Neural Network Theory"
+architectural_innovation: false
+learning_algorithm_innovation: false
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+implementation:
+  historical: true
+  modern: false
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1958_Rosenblatt_Perceptron"
+  - "1960_Widrow_Hoff_ADALINE"
+successors:
+  - "1974_Werbos_Backpropagation"
+  - "1986_Rumelhart_Hinton_Williams_Backprop"
+knowledge_flow: |
+  Minsky & Papert (1969) proved that single-layer Perceptrons
+  cannot compute XOR, parity, or connectedness. Their mathematical
+  rigor inadvertently triggered the First AI Winter and set the
+  stage for the multi-layer revival.
+phase: "The Mathematical Turn"
+era: "1960-1969"
+status: "complete"
+last_updated: "2026-07-17"

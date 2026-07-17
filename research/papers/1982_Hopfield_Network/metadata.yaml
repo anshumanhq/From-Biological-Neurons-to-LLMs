@@ -1,0 +1,32 @@
+id: "1982_Hopfield_Network"
+title: "Neural networks and physical systems with emergent collective computational abilities"
+authors:
+  - "John J. Hopfield"
+year: 1982
+venue: "Proceedings of the National Academy of Sciences, Vol. 79, No. 8"
+doi: "10.1073/pnas.79.8.2554"
+primary_subject:
+  - "Statistical Physics"
+  - "Associative Memory"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Advanced"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1949_Hebb_Organization"
+successors:
+  - "1985_Boltzmann_Machines"
+knowledge_flow: |
+  Hopfield (1982) introduced an energy-based recurrent network for
+  associative memory. This bridged neural networks with statistical
+  mechanics and revived interest in connectionism during the AI winter.
+phase: "The Revival"
+era: "1974-1986"
+status: "complete"
+last_updated: "2026-07-17"

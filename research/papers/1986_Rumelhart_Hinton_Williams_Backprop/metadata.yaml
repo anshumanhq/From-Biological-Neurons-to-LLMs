@@ -1,0 +1,37 @@
+id: "1986_Rumelhart_Hinton_Williams_Backprop"
+title: "Learning representations by back-propagating errors"
+authors:
+  - "David E. Rumelhart"
+  - "Geoffrey E. Hinton"
+  - "Ronald J. Williams"
+year: 1986
+venue: "Nature, Vol. 323"
+doi: "10.1038/323533a0"
+primary_subject:
+  - "Neural Networks"
+  - "Cognitive Science"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1974_Werbos_Backpropagation"
+  - "1982_Hopfield_Network"
+successors:
+  - "1989_LeCun_CNN"
+  - "1991_Hochreiter"
+knowledge_flow: |
+  Rumelhart, Hinton & Williams (1986) popularised backpropagation
+  through clear derivation and compelling experiments (XOR, encoder,
+  family tree). This paper triggered the connectionist revival and
+  remains the foundation of modern deep learning.
+phase: "The Revival"
+era: "1974-1986"
+status: "complete"
+last_updated: "2026-07-17"

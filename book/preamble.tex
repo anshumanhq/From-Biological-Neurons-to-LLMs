@@ -1,0 +1,117 @@
+% ============================================================
+% PREAMBLE: From Biological Neurons to Large Language Models
+% ============================================================
+
+\documentclass[11pt, oneside]{book}
+
+% -------------------- Language & Fonts --------------------
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage{csquotes}
+
+% -------------------- Mathematics --------------------
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}          % Bold math symbols
+
+% -------------------- Figures & Graphics --------------------
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, arrows, fit, calc, matrix}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% -------------------- Tables & Layout --------------------
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% -------------------- References (BibLaTeX) --------------------
+\usepackage[backend=biber,
+            style=authoryear,
+            maxcitenames=2,
+            mincitenames=1,
+            maxbibnames=10,
+            minbibnames=3,
+            uniquename=init,
+            dashed=false,
+            doi=true,
+            url=true,
+            isbn=true,
+            backref=true]{biblatex}
+\addbibresource{references.bib}
+
+% -------------------- Hyperlinks --------------------
+\usepackage[colorlinks=true,
+            linkcolor=blue!60!black,
+            citecolor=blue!60!black,
+            urlcolor=blue!60!black,
+            pdfauthor={[Your Name]},
+            pdftitle={From Biological Neurons to Large Language Models},
+            pdfsubject={Artificial Intelligence History}] {hyperref}
+\usepackage{bookmark}
+
+% -------------------- Headers & Footers --------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% -------------------- Custom Commands --------------------
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\note}[1]{\textcolor{blue}{[NOTE: #1]}}
+
+% -------------------- Equation Numbering (Chapter-wise) --------------------
+\numberwithin{equation}{chapter}
+
+% -------------------- Figure/Table Numbering (Chapter-wise) --------------------
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+
+% -------------------- Theorems & Proofs --------------------
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+% -------------------- Bibliography Formatting --------------------
+\DefineBibliographyStrings{english}{
+  bibliography = {References}
+}
+
+% -------------------- Line Spacing --------------------
+\usepackage{setspace}
+\onehalfspacing
+
+% -------------------- Page Geometry --------------------
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=1in,
+    bottom=1in,
+    left=1.2in,
+    right=0.8in,
+    headheight=14pt
+}
+
+% -------------------- Micro-typography --------------------
+\usepackage{microtype}
+
+% ============================================================
+% END OF PREAMBLE
+% ============================================================

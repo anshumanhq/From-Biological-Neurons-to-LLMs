@@ -1,0 +1,34 @@
+id: "1949_Hebb_Organization"
+title: "The Organization of Behavior: A Neuropsychological Theory"
+authors:
+  - "Donald O. Hebb"
+year: 1949
+venue: "John Wiley & Sons (Book)"
+isbn: "978-0-8058-4300-0"
+primary_subject:
+  - "Physiological Psychology"
+  - "Neuroplasticity"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: false
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1943_McCulloch_Pitts"
+successors:
+  - "1958_Rosenblatt_Perceptron"
+  - "1982_Hopfield_Network"
+knowledge_flow: |
+  Hebb (1949) provided the first physiological learning rule
+  ('cells that fire together, wire together'), which became the
+  basis for associative memory and later neural network learning
+  algorithms.
+phase: "Foundations"
+era: "1943-1958"
+status: "complete"
+last_updated: "2026-07-17"

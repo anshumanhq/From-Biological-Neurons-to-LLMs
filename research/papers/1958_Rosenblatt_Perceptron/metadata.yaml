@@ -1,0 +1,35 @@
+id: "1958_Rosenblatt_Perceptron"
+title: "The perceptron: A probabilistic model for information storage and organization in the brain"
+authors:
+  - "Frank Rosenblatt"
+year: 1958
+venue: "Psychological Review, Vol. 65, No. 6"
+doi: "10.1037/h0042519"
+primary_subject:
+  - "Neural Networks"
+  - "Pattern Recognition"
+architectural_innovation: true
+learning_algorithm_innovation: true
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: false
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1943_McCulloch_Pitts"
+  - "1949_Hebb_Organization"
+successors:
+  - "1960_Widrow_Hoff_ADALINE"
+  - "1969_Minsky_Papert_Perceptrons"
+knowledge_flow: |
+  Rosenblatt (1958) built the first trainable neural network
+  (the Perceptron), using a supervised error-correction rule.
+  It demonstrated that machines could learn from data but was
+  later shown to be limited to linearly separable problems.
+phase: "Foundations"
+era: "1943-1958"
+status: "complete"
+last_updated: "2026-07-17"

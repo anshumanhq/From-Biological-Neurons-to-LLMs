@@ -1,0 +1,21 @@
+% Rosenblatt (1958) – Perceptron Model and Update Rule
+
+% 1. The Perceptron Decision Rule:
+\begin{equation}
+\boxed{y = f\left( \sum_{i=1}^{n} w_i x_i - \theta \right)}
+\end{equation}
+
+% 2. The Perceptron Learning Rule (Weight Update):
+\begin{equation}
+\boxed{w_i(t+1) = w_i(t) + \eta \cdot (d - y) \cdot x_i}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $y$: Output (0 or 1)
+    \item $x_i$: Binary input from association unit $i$
+    \item $w_i$: Synaptic weight from unit $i$ to the response unit
+    \item $\theta$: Threshold (bias)
+    \item $d$: Desired (target) output
+    \item $\eta$: Learning rate (positive constant)
+\end{itemize}

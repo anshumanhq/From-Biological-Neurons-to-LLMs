@@ -1,0 +1,22 @@
+% LeCun (1989) – Core Equations for CNN
+
+% 1. Convolution operation (forward pass):
+\begin{equation}
+\mathbf{S}_{i,j} = \sum_{u=1}^{k} \sum_{v=1}^{k} \mathbf{X}_{i+u-1, j+v-1} \cdot \mathbf{K}_{u,v} + b
+\end{equation}
+
+% 2. Average pooling (subsampling):
+\begin{equation}
+\mathbf{P}_{i,j} = \frac{1}{p^2} \sum_{u=1}^{p} \sum_{v=1}^{p} \mathbf{S}_{p \cdot i + u, p \cdot j + v}
+\end{equation}
+
+% 3. Fully-connected layer activation:
+\begin{equation}
+a_j = f\left( \sum_{i} w_{ji} a_i + b_j \right)
+\end{equation}
+
+% 4. Backpropagation through convolution (gradient w.r.t. filters):
+\begin{equation}
+\frac{\partial E}{\partial \mathbf{K}} = \mathbf{X} \ast \delta
+\end{equation}
+% where delta is the backpropagated error signal.

@@ -1,0 +1,32 @@
+% Minsky & Papert (1969) – Core Mathematical Results
+
+% 1. Linear threshold predicate (the Perceptron)
+\begin{equation}
+f(\mathbf{x}) = \begin{cases}
+1 & \text{if } \sum_{i=1}^{n} w_i x_i > \theta \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+% 2. XOR impossibility (canonical contradiction)
+% For XOR: need w1 + w2 > theta, w1 > theta, w2 > theta, 0 < theta
+% No solution exists.
+\begin{equation}
+\text{XOR}(x_1, x_2) = x_1 \oplus x_2 \quad \text{is NOT linearly separable}
+\end{equation}
+
+% 3. Parity predicate (generalisation)
+\begin{equation}
+\text{Parity}_n(\mathbf{x}) = \left( \sum_{i=1}^{n} x_i \right) \bmod 2
+\end{equation}
+% A single-layer Perceptron cannot compute Parity_n for any n >= 2
+% without an exponential number of hidden units.
+
+% 4. Connectedness predicate
+\begin{equation}
+\text{Connected}(\mathbf{x}) = \begin{cases}
+1 & \text{if the set of 1's in }\mathbf{x}\text{ is connected} \\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+% Proved to be impossible for a single-layer Perceptron.

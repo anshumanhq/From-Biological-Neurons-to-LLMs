@@ -1,0 +1,6 @@
+$pdf_mode = 1;
+$bibtex_use = 1;
+$biblatex_use = 1;
+$pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
+$clean_ext = 'bbl bbl.bak run.xml %R-blx.bib';
+push @generated_exts, 'bbl', 'bbl.bak', 'run.xml', '%R-blx.bib';

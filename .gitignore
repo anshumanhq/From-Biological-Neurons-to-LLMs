@@ -1,0 +1,69 @@
+# ============================================================
+# .gitignore for From Biological Neurons to LLMs
+# ============================================================
+
+# ---------- LaTeX ----------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.ist
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.mw
+*.bbl
+*.blg
+
+# ---------- Python ----------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.venv/
+venv/
+ENV/
+env/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ---------- IDEs & Editors ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.spotlight/
+._*
+
+# ---------- Project Specific ----------
+research/pdfs/*.pdf
+!research/pdfs/.gitkeep
+*.bak
+*.tmp

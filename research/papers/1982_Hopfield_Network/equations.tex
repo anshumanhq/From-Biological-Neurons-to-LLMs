@@ -1,0 +1,26 @@
+% Hopfield (1982) – Core Equations
+
+% 1. Energy Function (Quadratic form):
+\begin{equation}
+E = -\frac{1}{2} \sum_{i \neq j} w_{ij} s_i s_j + \sum_{i} \theta_i s_i
+\end{equation}
+
+% 2. Asynchronous Update Rule (Binary ±1):
+\begin{equation}
+s_i \leftarrow \text{sgn}\left( \sum_{j} w_{ij} s_j - \theta_i \right)
+\end{equation}
+
+% 3. Hebbian Storage Rule:
+\begin{equation}
+w_{ij} = \frac{1}{N} \sum_{\mu=1}^{P} \xi_i^\mu \xi_j^\mu
+\end{equation}
+
+% 4. Storage Capacity (Rigorous result):
+\begin{equation}
+P_{\text{max}} \approx 0.138 N
+\end{equation}
+
+% 5. Energy Change for a Single Flip (Proof of convergence):
+\begin{equation}
+\Delta E_i = -\left( s_i' - s_i \right) \left( \sum_{j} w_{ij} s_j - \theta_i \right) \le 0
+\end{equation}

@@ -1,0 +1,26 @@
+% Werbos (1974) – Backpropagation Derivation
+
+% 1. Forward pass (layer l):
+\begin{equation}
+\mathbf{a}^{(l)} = f^{(l)}\left( \mathbf{W}^{(l)} \mathbf{a}^{(l-1)} + \mathbf{b}^{(l)} \right)
+\end{equation}
+
+% 2. Error at output layer:
+\begin{equation}
+\delta^{(N)}_j = (a^{(N)}_j - d_j) \cdot f'^{(N)}\left( z^{(N)}_j \right)
+\end{equation}
+
+% 3. Error propagation (chain rule) – the core of backprop:
+\begin{equation}
+\boxed{\delta^{(l)}_j = f'^{(l)}\left( z^{(l)}_j \right) \sum_{k} \delta^{(l+1)}_k \cdot w^{(l+1)}_{k j}}
+\end{equation}
+
+% 4. Weight gradient:
+\begin{equation}
+\frac{\partial E}{\partial w^{(l)}_{j i}} = \delta^{(l)}_j \cdot a^{(l-1)}_i
+\end{equation}
+
+% 5. Weight update (SGD):
+\begin{equation}
+w^{(l)}_{j i} \leftarrow w^{(l)}_{j i} - \eta \cdot \delta^{(l)}_j \cdot a^{(l-1)}_i
+\end{equation}

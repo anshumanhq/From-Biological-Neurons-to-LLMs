@@ -1,0 +1,7 @@
+# ============================================================
+# Requirements for NumPy Scratch Implementations
+# From Biological Neurons to Large Language Models
+# ============================================================
+
+numpy>=1.20.0
+matplotlib>=3.3.0  # Optional (for visualisations)

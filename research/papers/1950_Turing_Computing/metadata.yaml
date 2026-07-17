@@ -1,0 +1,33 @@
+id: "1950_Turing_Computing"
+title: "Computing Machinery and Intelligence"
+authors:
+  - "Alan M. Turing"
+year: 1950
+venue: "Mind, Vol. LIX, No. 236"
+doi: "10.1093/mind/LIX.236.433"
+primary_subject:
+  - "Philosophy of AI"
+  - "Computation"
+architectural_innovation: false
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Beginner"
+implementation:
+  historical: false
+  modern: true
+  language: "Python"
+  dependencies: "none"
+predecessors:
+  - "1936_Turing_Universal_Machine"
+successors:
+  - "1958_Rosenblatt_Perceptron"
+knowledge_flow: |
+  Turing (1950) framed the philosophical and practical question
+  of machine intelligence, proposing the Imitation Game (Turing Test)
+  and the concept of a 'child machine' that could learn through
+  education rather than explicit programming.
+phase: "Foundations"
+era: "1943-1958"
+status: "complete"
+last_updated: "2026-07-17"

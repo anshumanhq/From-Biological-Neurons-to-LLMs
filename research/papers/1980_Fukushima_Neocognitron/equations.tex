@@ -1,0 +1,18 @@
+% Fukushima (1980) – Neocognitron Core Equations
+
+% 1. S-cell response (weighted sum with normalisation):
+\begin{equation}
+u = \frac{\sum_{i} w_i x_i}{\sqrt{\sum_{i} w_i^2 + \sum_{i} x_i^2}}
+\end{equation}
+
+% 2. S-cell output after threshold:
+\begin{equation}
+s = \phi(u - \theta)
+\end{equation}
+where \( \phi(z) = z \) if \( z > 0 \), else \( 0 \), and \( \theta \) is the threshold.
+
+% 3. C-cell response (pooling):
+\begin{equation}
+c = \frac{\sum_{j} s_j}{1 + \alpha \sum_{j} s_j}
+\end{equation}
+where \( \alpha \) controls the degree of saturation.

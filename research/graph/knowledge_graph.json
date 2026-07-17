@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "1943_McCulloch_Pitts",
+      "label": "A logical calculus of the ideas immanent in nervou...",
+      "year": 1943,
+      "phase": "Foundations",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1949_Hebb_Organization",
+      "label": "The Organization of Behavior: A Neuropsychological...",
+      "year": 1949,
+      "phase": "Foundations",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1950_Turing_Computing",
+      "label": "Computing Machinery and Intelligence...",
+      "year": 1950,
+      "phase": "Foundations",
+      "historical_importance": 10,
+      "has_implementation": false
+    },
+    {
+      "id": "1958_Rosenblatt_Perceptron",
+      "label": "The perceptron: A probabilistic model for informat...",
+      "year": 1958,
+      "phase": "Foundations",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1960_Widrow_Hoff_ADALINE",
+      "label": "Adaptive Switching Circuits...",
+      "year": 1960,
+      "phase": "The Mathematical Turn",
+      "historical_importance": 9,
+      "has_implementation": true
+    },
+    {
+      "id": "1969_Minsky_Papert_Perceptrons",
+      "label": "Perceptrons: An Introduction to Computational Geom...",
+      "year": 1969,
+      "phase": "The Mathematical Turn",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1974_Werbos_Backpropagation",
+      "label": "Beyond Regression: New Tools for Prediction and An...",
+      "year": 1974,
+      "phase": "The Revival",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1980_Fukushima_Neocognitron",
+      "label": "Neocognitron: A self-organizing neural network mod...",
+      "year": 1980,
+      "phase": "The Revival",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1982_Hopfield_Network",
+      "label": "Neural networks and physical systems with emergent...",
+      "year": 1982,
+      "phase": "The Revival",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "label": "Learning representations by back-propagating error...",
+      "year": 1986,
+      "phase": "The Revival",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "1989_LeCun_CNN",
+      "label": "Backpropagation Applied to Handwritten Zip Code Re...",
+      "year": 1989,
+      "phase": "The Architecture Era",
+      "historical_importance": 10,
+      "has_implementation": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "1943_McCulloch_Pitts",
+      "target": "1949_Hebb_Organization",
+      "type": "influences"
+    },
+    {
+      "source": "1943_McCulloch_Pitts",
+      "target": "1958_Rosenblatt_Perceptron",
+      "type": "influences"
+    },
+    {
+      "source": "1943_McCulloch_Pitts",
+      "target": "1949_Hebb_Organization",
+      "type": "influences"
+    },
+    {
+      "source": "1949_Hebb_Organization",
+      "target": "1958_Rosenblatt_Perceptron",
+      "type": "influences"
+    },
+    {
+      "source": "1949_Hebb_Organization",
+      "target": "1982_Hopfield_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1936_Turing_Universal_Machine",
+      "target": "1950_Turing_Computing",
+      "type": "influences"
+    },
+    {
+      "source": "1950_Turing_Computing",
+      "target": "1958_Rosenblatt_Perceptron",
+      "type": "influences"
+    },
+    {
+      "source": "1943_McCulloch_Pitts",
+      "target": "1958_Rosenblatt_Perceptron",
+      "type": "influences"
+    },
+    {
+      "source": "1949_Hebb_Organization",
+      "target": "1958_Rosenblatt_Perceptron",
+      "type": "influences"
+    },
+    {
+      "source": "1958_Rosenblatt_Perceptron",
+      "target": "1960_Widrow_Hoff_ADALINE",
+      "type": "influences"
+    },
+    {
+      "source": "1958_Rosenblatt_Perceptron",
+      "target": "1969_Minsky_Papert_Perceptrons",
+      "type": "influences"
+    },
+    {
+      "source": "1958_Rosenblatt_Perceptron",
+      "target": "1960_Widrow_Hoff_ADALINE",
+      "type": "influences"
+    },
+    {
+      "source": "1960_Widrow_Hoff_ADALINE",
+      "target": "1974_Werbos_Backpropagation",
+      "type": "influences"
+    },
+    {
+      "source": "1960_Widrow_Hoff_ADALINE",
+      "target": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "type": "influences"
+    },
+    {
+      "source": "1958_Rosenblatt_Perceptron",
+      "target": "1969_Minsky_Papert_Perceptrons",
+      "type": "influences"
+    },
+    {
+      "source": "1960_Widrow_Hoff_ADALINE",
+      "target": "1969_Minsky_Papert_Perceptrons",
+      "type": "influences"
+    },
+    {
+      "source": "1969_Minsky_Papert_Perceptrons",
+      "target": "1974_Werbos_Backpropagation",
+      "type": "influences"
+    },
+    {
+      "source": "1969_Minsky_Papert_Perceptrons",
+      "target": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "type": "influences"
+    },
+    {
+      "source": "1960_Widrow_Hoff_ADALINE",
+      "target": "1974_Werbos_Backpropagation",
+      "type": "influences"
+    },
+    {
+      "source": "1969_Minsky_Papert_Perceptrons",
+      "target": "1974_Werbos_Backpropagation",
+      "type": "influences"
+    },
+    {
+      "source": "1974_Werbos_Backpropagation",
+      "target": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "type": "influences"
+    },
+    {
+      "source": "1962_Hubel_Wiesel",
+      "target": "1980_Fukushima_Neocognitron",
+      "type": "influences"
+    },
+    {
+      "source": "1980_Fukushima_Neocognitron",
+      "target": "1989_LeCun_CNN",
+      "type": "influences"
+    },
+    {
+      "source": "1949_Hebb_Organization",
+      "target": "1982_Hopfield_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1982_Hopfield_Network",
+      "target": "1985_Boltzmann_Machines",
+      "type": "influences"
+    },
+    {
+      "source": "1974_Werbos_Backpropagation",
+      "target": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "type": "influences"
+    },
+    {
+      "source": "1982_Hopfield_Network",
+      "target": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "type": "influences"
+    },
+    {
+      "source": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "target": "1989_LeCun_CNN",
+      "type": "influences"
+    },
+    {
+      "source": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "target": "1991_Hochreiter",
+      "type": "influences"
+    },
+    {
+      "source": "1980_Fukushima_Neocognitron",
+      "target": "1989_LeCun_CNN",
+      "type": "influences"
+    },
+    {
+      "source": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "target": "1989_LeCun_CNN",
+      "type": "influences"
+    },
+    {
+      "source": "1989_LeCun_CNN",
+      "target": "1998_LeNet-5",
+      "type": "influences"
+    },
+    {
+      "source": "1989_LeCun_CNN",
+      "target": "2012_AlexNet",
+      "type": "influences"
+    }
+  ],
+  "metadata": {
+    "total_nodes": 11,
+    "total_edges": 33,
+    "generated": "2026-07-17T15:36:13.317462"
+  }
+}

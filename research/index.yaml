@@ -1,0 +1,145 @@
+project:
+  name: From Biological Neurons to Large Language Models
+  version: 0.3.0
+  last_updated: '2026-07-17T15:42:40.893303'
+summary:
+  total_papers: 11
+  completed: 11
+  pending: 0
+papers:
+- id: 1943_McCulloch_Pitts
+  title: A logical calculus of the ideas immanent in nervous activity
+  year: 1943
+  authors:
+  - Warren S. McCulloch
+  - Walter H. Pitts
+  venue: Bulletin of Mathematical Biophysics
+  doi: 10.1007/BF02478259
+  phase: Foundations
+  era: 1943-1958
+  status: complete
+  historical_importance: 10
+- id: 1949_Hebb_Organization
+  title: 'The Organization of Behavior: A Neuropsychological Theory'
+  year: 1949
+  authors:
+  - Donald O. Hebb
+  venue: John Wiley & Sons (Book)
+  doi: ''
+  phase: Foundations
+  era: 1943-1958
+  status: complete
+  historical_importance: 10
+- id: 1950_Turing_Computing
+  title: Computing Machinery and Intelligence
+  year: 1950
+  authors:
+  - Alan M. Turing
+  venue: Mind, Vol. LIX, No. 236
+  doi: 10.1093/mind/LIX.236.433
+  phase: Foundations
+  era: 1943-1958
+  status: complete
+  historical_importance: 10
+- id: 1958_Rosenblatt_Perceptron
+  title: 'The perceptron: A probabilistic model for information storage and organization
+    in the brain'
+  year: 1958
+  authors:
+  - Frank Rosenblatt
+  venue: Psychological Review, Vol. 65, No. 6
+  doi: 10.1037/h0042519
+  phase: Foundations
+  era: 1943-1958
+  status: complete
+  historical_importance: 10
+- id: 1960_Widrow_Hoff_ADALINE
+  title: Adaptive Switching Circuits
+  year: 1960
+  authors:
+  - Bernard Widrow
+  - Marcian E. Hoff
+  venue: IRE WESCON Convention Record
+  doi: ''
+  phase: The Mathematical Turn
+  era: 1960-1969
+  status: complete
+  historical_importance: 9
+- id: 1969_Minsky_Papert_Perceptrons
+  title: 'Perceptrons: An Introduction to Computational Geometry'
+  year: 1969
+  authors:
+  - Marvin Minsky
+  - Seymour Papert
+  venue: MIT Press (Book)
+  doi: ''
+  phase: The Mathematical Turn
+  era: 1960-1969
+  status: complete
+  historical_importance: 10
+- id: 1974_Werbos_Backpropagation
+  title: 'Beyond Regression: New Tools for Prediction and Analysis in the Behavioral
+    Sciences'
+  year: 1974
+  authors:
+  - Paul John Werbos
+  venue: PhD Thesis, Harvard University
+  doi: ''
+  phase: The Revival
+  era: 1974-1986
+  status: complete
+  historical_importance: 10
+- id: 1980_Fukushima_Neocognitron
+  title: 'Neocognitron: A self-organizing neural network model for a mechanism of
+    pattern recognition unaffected by shift in position'
+  year: 1980
+  authors:
+  - Kunihiko Fukushima
+  venue: Biological Cybernetics, Vol. 36, No. 4
+  doi: 10.1007/BF00344251
+  phase: The Revival
+  era: 1974-1986
+  status: complete
+  historical_importance: 10
+- id: 1982_Hopfield_Network
+  title: Neural networks and physical systems with emergent collective computational
+    abilities
+  year: 1982
+  authors:
+  - John J. Hopfield
+  venue: Proceedings of the National Academy of Sciences, Vol. 79, No. 8
+  doi: 10.1073/pnas.79.8.2554
+  phase: The Revival
+  era: 1974-1986
+  status: complete
+  historical_importance: 10
+- id: 1986_Rumelhart_Hinton_Williams_Backprop
+  title: Learning representations by back-propagating errors
+  year: 1986
+  authors:
+  - David E. Rumelhart
+  - Geoffrey E. Hinton
+  - Ronald J. Williams
+  venue: Nature, Vol. 323
+  doi: 10.1038/323533a0
+  phase: The Revival
+  era: 1974-1986
+  status: complete
+  historical_importance: 10
+- id: 1989_LeCun_CNN
+  title: Backpropagation Applied to Handwritten Zip Code Recognition
+  year: 1989
+  authors:
+  - Yann LeCun
+  - B. Boser
+  - J. S. Denker
+  - D. Henderson
+  - R. E. Howard
+  - W. Hubbard
+  - L. D. Jackel
+  venue: Neural Computation, Vol. 1, No. 4
+  doi: 10.1162/neco.1989.1.4.541
+  phase: The Architecture Era
+  era: 1989-1997
+  status: complete
+  historical_importance: 10

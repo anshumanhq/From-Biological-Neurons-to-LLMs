@@ -1,0 +1,31 @@
+% Rumelhart, Hinton & Williams (1986) – Backpropagation Equations
+
+% 1. Activation of unit j in layer l:
+\begin{equation}
+a^{(l)}_j = f\left( \sum_{i} w^{(l)}_{ji} a^{(l-1)}_i + b^{(l)}_j \right)
+\end{equation}
+
+% 2. Output error (MSE):
+\begin{equation}
+E = \frac{1}{2} \sum_{j} \left( d_j - a^{(L)}_j \right)^2
+\end{equation}
+
+% 3. Output layer delta:
+\begin{equation}
+\delta^{(L)}_j = (a^{(L)}_j - d_j) \cdot f' \left( z^{(L)}_j \right)
+\end{equation}
+
+% 4. Hidden layer delta (backpropagation of error):
+\begin{equation}
+\boxed{\delta^{(l)}_j = f' \left( z^{(l)}_j \right) \sum_{k} \delta^{(l+1)}_k \cdot w^{(l+1)}_{k j}}
+\end{equation}
+
+% 5. Weight update (gradient descent):
+\begin{equation}
+\Delta w^{(l)}_{ji} = -\eta \cdot \delta^{(l)}_j \cdot a^{(l-1)}_i
+\end{equation}
+
+% 6. Bias update (treat bias as weight with constant input +1):
+\begin{equation}
+\Delta b^{(l)}_j = -\eta \cdot \delta^{(l)}_j
+\end{equation}

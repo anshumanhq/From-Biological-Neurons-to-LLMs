@@ -1,0 +1,41 @@
+id: "1989_LeCun_CNN"
+title: "Backpropagation Applied to Handwritten Zip Code Recognition"
+authors:
+  - "Yann LeCun"
+  - "B. Boser"
+  - "J. S. Denker"
+  - "D. Henderson"
+  - "R. E. Howard"
+  - "W. Hubbard"
+  - "L. D. Jackel"
+year: 1989
+venue: "Neural Computation, Vol. 1, No. 4"
+doi: "10.1162/neco.1989.1.4.541"
+primary_subject:
+  - "Computer Vision"
+  - "Convolutional Neural Networks"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1980_Fukushima_Neocognitron"
+  - "1986_Rumelhart_Hinton_Williams_Backprop"
+successors:
+  - "1998_LeNet-5"
+  - "2012_AlexNet"
+knowledge_flow: |
+  LeCun (1989) applied backpropagation to a convolutional architecture
+  (CNN), combining Fukushima's architectural blueprint with the learning
+  algorithm from Rumelhart et al. This created the first practical
+  supervised system for handwritten digit recognition.
+phase: "The Architecture Era"
+era: "1989-1997"
+status: "complete"
+last_updated: "2026-07-17"

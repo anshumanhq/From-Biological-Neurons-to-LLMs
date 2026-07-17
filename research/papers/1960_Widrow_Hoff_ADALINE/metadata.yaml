@@ -1,0 +1,34 @@
+id: "1960_Widrow_Hoff_ADALINE"
+title: "Adaptive Switching Circuits"
+authors:
+  - "Bernard Widrow"
+  - "Marcian E. Hoff"
+year: 1960
+venue: "IRE WESCON Convention Record"
+primary_subject:
+  - "Adaptive Signal Processing"
+  - "Neural Networks"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 9
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1958_Rosenblatt_Perceptron"
+successors:
+  - "1974_Werbos_Backpropagation"
+  - "1986_Rumelhart_Hinton_Williams_Backprop"
+knowledge_flow: |
+  Widrow & Hoff (1960) introduced the LMS (Delta) rule, replacing
+  binary error correction with continuous gradient descent. This
+  transformed neural network learning from a biological metaphor to
+  a mathematical optimization problem.
+phase: "The Mathematical Turn"
+era: "1960-1969"
+status: "complete"
+last_updated: "2026-07-17"

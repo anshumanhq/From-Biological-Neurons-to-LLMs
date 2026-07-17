@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this repository's research archive or code for academic work, please cite it as follows."
+title: "From Biological Neurons to Large Language Models: An Evolution of Artificial Intelligence (1943–2026)"
+authors:
+  - family-names: "Singh"
+    given-names: "Anshuman"
+    orcid: "[Your ORCID ID]"
+date-released: 2026-07-17
+url: "https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs"
+repository-code: "https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs"
+version: "0.2.1"
+license: "CC-BY-NC-ND-4.0"
+keywords:
+  - artificial-intelligence
+  - deep-learning
+  - history-of-science
+  - neural-networks
+  - transformers
+  - llms
+abstract: "A comprehensive research archive and book manuscript tracing the evolution of AI from the McCulloch-Pitts neuron (1943) to modern large language models (2026), featuring NumPy scratch implementations and 10-point paper analyses."

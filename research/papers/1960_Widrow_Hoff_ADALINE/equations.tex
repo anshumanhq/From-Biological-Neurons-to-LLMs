@@ -1,0 +1,27 @@
+% Widrow & Hoff (1960) – LMS Algorithm (Delta Rule)
+
+% 1. Linear Output:
+\begin{equation}
+v = \sum_{i=1}^{n} w_i x_i + b
+\end{equation}
+
+% 2. Quantized Output (for classification):
+\begin{equation}
+y = \text{sgn}(v)
+\end{equation}
+
+% 3. LMS Weight Update (Stochastic Gradient Descent):
+\begin{equation}
+\boxed{\mathbf{w}(t+1) = \mathbf{w}(t) + \eta \cdot (d - v) \cdot \mathbf{x}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $v$: Continuous (analog) output before quantization
+    \item $y$: Binary output after threshold
+    \item $d$: Desired (target) response
+    \item $\eta$: Learning rate (step size)
+    \item $\mathbf{x}$: Input vector
+    \item $\mathbf{w}$: Weight vector
+    \item $b$: Bias term
+\end{itemize}

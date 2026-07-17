@@ -1,0 +1,34 @@
+id: "1943_McCulloch_Pitts"
+title: "A logical calculus of the ideas immanent in nervous activity"
+authors:
+  - "Warren S. McCulloch"
+  - "Walter H. Pitts"
+year: 1943
+venue: "Bulletin of Mathematical Biophysics"
+doi: "10.1007/BF02478259"
+primary_subject:
+  - "Neurophysiology"
+  - "Mathematical Logic"
+  - "Neural Networks"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: false
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors: []
+successors:
+  - "1949_Hebb_Organization"
+  - "1958_Rosenblatt_Perceptron"
+knowledge_flow: |
+  McCulloch & Pitts (1943) established the formal mathematical model of a neuron
+  as a threshold logic unit capable of computing propositional logic.
+  This created the foundation for all subsequent neural network research.
+phase: "Foundations"
+era: "1943-1958"
+status: "complete"
+last_updated: "2026-07-17"

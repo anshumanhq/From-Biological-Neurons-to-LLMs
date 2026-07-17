@@ -1,0 +1,54 @@
+# ============================================================
+# PAPER METADATA TEMPLATE
+# Copy this file to each paper folder as metadata.yaml
+# ============================================================
+
+id: "YYYY_Author_ShortTitle"
+title: "Full Paper Title"
+authors:
+  - "Author 1"
+  - "Author 2"
+  - "Author 3"
+year: 1989
+venue: "Journal or Conference Name"
+doi: "10.xxxx/xxxxx"
+primary_subject:
+  - "Computer Vision"
+  - "Neural Networks"
+  - "Deep Learning"
+
+# Historical context
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10  # Scale of 1-10
+difficulty: "Intermediate"  # Beginner / Intermediate / Advanced
+
+# Implementation metadata
+implementation:
+  historical: true  # Does a historically faithful implementation exist?
+  modern: true      # Does a modern pedagogical implementation exist?
+  language: "NumPy"
+  dependencies: "numpy"
+
+# Cross-references
+predecessors:
+  - "1962_Hubel_Wiesel"
+  - "1980_Fukushima_Neocognitron"
+successors:
+  - "1998_LeNet-5"
+  - "2012_AlexNet"
+
+# Knowledge flow
+knowledge_flow: |
+  Fukushima (1980) provided the architectural blueprint.
+  Rumelhart, Hinton & Williams (1986) provided backpropagation.
+  LeCun (1989) combined them into a supervised CNN.
+
+# Timeline integration
+phase: "The Architecture Era"
+era: "1980-1989"
+
+# Status
+status: "complete"  # pending / in_progress / complete / revised
+last_updated: "2026-07-17"
