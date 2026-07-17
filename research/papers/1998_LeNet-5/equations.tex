@@ -1,0 +1,21 @@
+% LeNet-5 (1998) – Core Equations
+
+% 1. Convolution operation:
+\begin{equation}
+\mathbf{S}_{i,j} = \sum_{u=1}^{k} \sum_{v=1}^{k} \mathbf{X}_{i+u-1, j+v-1} \cdot \mathbf{K}_{u,v} + b
+\end{equation}
+
+% 2. Subsampling (average pooling) — LeNet-5 uses average pooling, not max:
+\begin{equation}
+\mathbf{P}_{i,j} = \frac{1}{p^2} \sum_{u=1}^{p} \sum_{v=1}^{p} \mathbf{S}_{p \cdot i + u, p \cdot j + v}
+\end{equation}
+
+% 3. Fully-connected layer:
+\begin{equation}
+a_j = f\left( \sum_{i} w_{ji} a_i + b_j \right)
+\end{equation}
+
+% 4. Backpropagation through convolution:
+\begin{equation}
+\frac{\partial E}{\partial \mathbf{K}} = \mathbf{X} \ast \delta
+\end{equation}
