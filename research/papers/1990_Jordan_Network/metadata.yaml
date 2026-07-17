@@ -1,0 +1,41 @@
+id: "1990_Jordan_Network"
+title: "Attractor Dynamics and Parallelism in a Connectionist Sequential Machine"
+authors:
+  - "Michael I. Jordan"
+year: 1990
+venue: "Proceedings of the Eighth Annual Conference of the Cognitive Science Society"
+primary_subject:
+  - "Recurrent Neural Networks"
+  - "Sequence Learning"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: false
+historical_importance: 8
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1986_Rumelhart_Hinton_Williams_Backprop"
+successors:
+  - "1991_Elman_Network"
+  - "1997_LSTM"
+knowledge_flow: |
+  Jordan Network (1990) introduced context units that provide feedback
+  from the output layer to the hidden layer, enabling the network to
+  process sequences by maintaining a state. This was the first practical
+  recurrent network architecture for sequence learning.
+phase: "The Architecture Era"
+era: "1990-1997"
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-17"
