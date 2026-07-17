@@ -1,0 +1,45 @@
+id: "1998_LeCun_LeNet5"
+title: "Gradient-Based Learning Applied to Document Recognition"
+authors:
+  - "Yann LeCun"
+  - "Léon Bottou"
+  - "Yoshua Bengio"
+  - "Patrick Haffner"
+year: 1998
+venue: "Proceedings of the IEEE, Vol. 86, No. 11"
+doi: "10.1109/5.726791"
+primary_subject:
+  - "Computer Vision"
+  - "Convolutional Neural Networks"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: true
+historical_importance: 10
+difficulty: "Intermediate"
+implementation:
+  historical: true
+  modern: true
+  language: "NumPy"
+  dependencies: "numpy"
+predecessors:
+  - "1989_LeCun_CNN"
+  - "1980_Fukushima_Neocognitron"
+successors:
+  - "2012_AlexNet"
+  - "2015_ResNet"
+knowledge_flow: |
+  LeNet-5 (1998) refined the CNN architecture from LeCun (1989),
+  establishing the canonical 7-layer structure (conv → pool → conv → pool → FC → FC → output)
+  that became the blueprint for modern convolutional networks.
+phase: "The Architecture Era"
+era: "1989-1997"
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-17"
