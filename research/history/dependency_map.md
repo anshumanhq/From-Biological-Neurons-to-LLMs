@@ -44,7 +44,7 @@
 | **1989 – LeCun** | 1980 – Fukushima, 1986 – Rumelhart | Handwritten digit recognition | Supervised CNN (backprop + convolution) | LeNet-5, AlexNet, modern computer vision |
 | **1990 – Jordan** | 1982 – Hopfield | Recurrent networks for sequential data | Jordan Network (recurrent connections) | Sequence modelling |
 | **1991 – Elman** | 1990 – Jordan | Simple recurrent networks | Elman Network (context units) | RNNs for language |
-| **1997 – LSTM** | 1991 – Elman | Vanishing gradients in RNNs | LSTM (forget gates, memory cells) | Seq2Seq, Transformers, modern NLP |
+| **1997 – LSTM** | 1991 – Elman | Vanishing gradients in RNNs | LSTM (CEC, input/output gates; forget gate added later) | Seq2Seq, Transformers, modern NLP |
 
 ---
 

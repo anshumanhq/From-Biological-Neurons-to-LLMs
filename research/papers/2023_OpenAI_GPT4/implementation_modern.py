@@ -15,7 +15,7 @@ def gpt4_overview():
     print("various professional and academic benchmarks.")
     print("Key characteristics:")
     print("  - Transformer decoder architecture")
-    print("  - Massive scale (reportedly >1 trillion parameters)")
+    print("  - Parameter count not publicly disclosed")
     print("  - Multimodal input capability (in later API versions)")
     print("  - Extensive post-training alignment (RLHF)")
     print("  - Improved reasoning, reliability, and safety")

@@ -8,7 +8,7 @@
 
 ## Historical Importance
 
-Mixtral 8×7B introduced a sparse Mixture of Experts (MoE) architecture, extending the efficiency philosophy of Mistral 7B. The model has 8 expert networks, each with approximately 7 billion parameters, but uses only a sparse subset of experts (top‑2 routing) per token. This results in a large total parameter pool (~47B) while maintaining inference efficiency close to a dense 7B model. Mixtral demonstrated strong performance, outperforming Llama 2 70B and GPT‑3.5 on several benchmarks. The open‑weight release further solidified Mistral AI's position in the open‑weight ecosystem.
+Mixtral 8×7B introduced a sparse Mixture of Experts (MoE) architecture, extending the efficiency philosophy of Mistral 7B. The model has 8 expert networks, each with approximately 7 billion parameters (total ~47B), but uses only a sparse subset of experts (top‑2 routing) per token, resulting in ~13B active parameters during inference. This maintains inference efficiency close to a dense 7B model while providing the capacity of a much larger model. Mixtral demonstrated strong performance, outperforming Llama 2 70B and GPT‑3.5 on several benchmarks. The open‑weight release further solidified Mistral AI's position in the open‑weight ecosystem.
 
 ---
 
@@ -39,6 +39,7 @@ Mixtral 8×7B introduced a sparse Mixture of Experts (MoE) architecture, extendi
 
 - **Sparse Mixture of Experts (MoE):** 8 experts, top‑2 routing.
 - **Total parameters:** ~47B (8 × ~7B) but sparse activation.
+- **Active parameters per token:** ~13B (only 2 experts active).
 - **Inference efficiency:** Comparable to a 7B dense model.
 
 ---
