@@ -1,0 +1,27 @@
+% GPT-2 (2019) – Core Equations
+
+% 1. Autoregressive language modelling objective:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log P(u_i \mid u_{<i}; \Theta)
+\end{equation}
+
+% 2. Transformer decoder layer with causal masking:
+\begin{equation}
+h_l = \text{block}(h_{l-1}) \quad \forall l \in [1, L]
+\end{equation}
+
+% 3. Causal masked self-attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} + M \right) V
+\end{equation}
+where \(M\) is a mask matrix (upper triangular of \(-\infty\)) to prevent attending to future tokens.
+
+% 4. Byte-level BPE tokenization:
+\begin{equation}
+\text{ByteBPE}(x) = \text{merge}(\text{bytes}(x), \text{merges})
+\end{equation}
+
+% 5. Language model as task solver (zero-shot):
+\begin{equation}
+P(\text{answer} \mid \text{context}) = \text{LM}(\text{prompt})
+\end{equation}

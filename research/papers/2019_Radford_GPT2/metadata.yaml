@@ -1,0 +1,61 @@
+id: "2019_Radford_GPT2"
+title: "Language Models are Unsupervised Multitask Learners"
+authors:
+  - "Alec Radford"
+  - "Jeffrey Wu"
+  - "Rewon Child"
+  - "David Luan"
+  - "Dario Amodei"
+  - "Ilya Sutskever"
+year: 2019
+venue: "OpenAI Technical Report"
+doi: "10.48550/arXiv.2502.09733"  # Placeholder - original paper on OpenAI website
+primary_subject:
+  - "Natural Language Processing"
+  - "Generative Pre-training"
+  - "Zero-shot Learning"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2018_Radford_GPT"
+  - "2017_Vaswani_Transformer"
+successors:
+  - "2020_Brown_GPT3"
+  - "2022_Ouyang_InstructGPT"
+knowledge_flow: |
+  GPT-2 (2019) demonstrated that scaling a Transformer language model
+  to 1.5 billion parameters and training on a large, diverse web corpus
+  (WebText, 40GB) could produce strong zero-shot task performance without
+  task-specific fine-tuning. The model family included four sizes:
+  Small (117M), Medium (345M), Large (774M), and XL (1.5B). The paper
+  also introduced byte-level BPE tokenization and established language
+  modelling as a general-purpose learning framework.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "forward_pass_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
