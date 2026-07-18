@@ -12,7 +12,11 @@ The original 1997 LSTM introduced the **Constant Error Carousel (CEC)** and **ga
 
 ---
 
-## Architecture Diagram (1997)
+## Architecture Diagram (1997 – Educational Abstraction)
+
+- **Cell State** `c_t` updates additively: `c_t = c_{t-1} + i_t * c_tilde`.
+- **No forget gate** – the original architecture had no learned forget mechanism for adaptively resetting the cell state. (Adaptive resetting came later.)
+
 
 ```text
          Input     Output
@@ -35,7 +39,7 @@ The original 1997 LSTM introduced the **Constant Error Carousel (CEC)** and **ga
 ```
 
 - **Cell State** `c_t` updates additively: `c_t = c_{t-1} + i_t * c_tilde`.
-- **No forget gate** – the memory never resets (adaptive resetting came later).
+- **No forget gate** – the original architecture had no learned forget mechanism for adaptively resetting the cell state. (Adaptive resetting came later.)
 
 ---
 
@@ -44,6 +48,7 @@ The original 1997 LSTM introduced the **Constant Error Carousel (CEC)** and **ga
 - **Constant Error Carousel** – gradient flow preserved over long time intervals.
 - **Input/Output gating** – controls what is stored and emitted.
 - **Long-range dependency learning** – demonstrated on tasks >100 time steps.
+- **No learned adaptive reset mechanism** – the cell state could still be initialised externally between sequences, but there was no learned forget gate.
 
 ---
 

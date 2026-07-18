@@ -27,45 +27,47 @@ LSTM was not directly inspired by biology. However, the idea of a memory cell th
 
 ---
 
-## 4. Mathematical Formulation (Original 1997)
+## 4. Mathematical Formulation (Educational Abstraction of the Original 1997 LSTM)
+
+The following equations are a modern pedagogical abstraction of the original 1997 LSTM recurrence. The original paper's formulation was more complex, involving the Constant Error Carousel (CEC) and multiplicative gate units with specific architectural details. The simplified version below captures the core idea:
 
 **Cell State** \(c_t\) updates additively, with **no forget gate**:
 
-```latex
+'''latex
 c_t = c_{t-1} + i_t \odot \tilde{c}_t
-```
+'''
 
 **Input gate** (sigmoid):
 
-```latex
+'''latex
 i_t = \sigma\left( W_i \cdot [h_{t-1}, x_t] + b_i \right)
-```
+'''
 
 **Candidate cell state** (tanh):
 
-```latex
+'''latex
 \tilde{c}_t = \tanh\left( W_c \cdot [h_{t-1}, x_t] + b_c \right)
-```
+'''
 
 **Output gate** (sigmoid):
 
-```latex
+'''latex
 o_t = \sigma\left( W_o \cdot [h_{t-1}, x_t] + b_o \right)
-```
+'''
 
 **Hidden state**:
 
-```latex
+'''latex
 h_t = o_t \odot \tanh(c_t)
-```
+'''
 
 **Constant Error Carousel**: because the cell state update is linear with coefficient 1, the gradient flows back as:
 
-```latex
+'''latex
 \frac{\partial c_t}{\partial c_{t-1}} = 1 \quad \text{(idealised, when no external interference)}
-```
+'''
 
-This is the key mechanism that prevents vanishing gradients.
+This is the key mechanism that prevents vanishing gradients in the original 1997 LSTM.
 
 ---
 

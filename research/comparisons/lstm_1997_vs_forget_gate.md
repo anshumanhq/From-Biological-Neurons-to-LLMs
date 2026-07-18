@@ -9,7 +9,8 @@ The original 1997 LSTM (Hochreiter & Schmidhuber) had no mechanism to reset its 
 | **Cell state update** | \( c_t = c_{t-1} + i_t \odot \tilde{c}_t \) | \( c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \) |
 | **Forget gate** | No | Yes (\( f_t \)) |
 | **Gradient flow** | \(\partial c_t/\partial c_{t-1} = 1\) (idealised) | \(\partial c_t/\partial c_{t-1} = f_t\) (adaptive) |
-| **Memory reset** | Not possible (CEC always retains) | Possible via \( f_t \to 0 \) |
+| **Memory reset** | Not possible via learned mechanism | Possible via \( f_t \to 0 \) |
+| **Key limitation** | No learned adaptive reset mechanism | Adaptive forgetting for continuous streams |
 | **Use case** | Memory retention over fixed intervals | Continuous input streams (e.g., speech) |
 
 ## Why the Forget Gate Matters
