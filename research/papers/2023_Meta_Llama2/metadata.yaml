@@ -1,0 +1,129 @@
+id: "2023_Meta_Llama2"
+title: "Llama 2: Open Foundation and Fine-Tuned Chat Models"
+authors:
+  - "Hugo Touvron"
+  - "Louis Martin"
+  - "Kevin Stone"
+  - "Peter Albert"
+  - "Amjad Almahairi"
+  - "Yasmine Babaei"
+  - "Nikolay Bashlykov"
+  - "Soumya Batra"
+  - "Prajjwal Bhargava"
+  - "Shruti Bhosale"
+  - "Dan Bikel"
+  - "Lukas Blecher"
+  - "Cristian Canton Ferrer"
+  - "Moya Chen"
+  - "Guillem Cucurull"
+  - "David Esiobu"
+  - "Jude Fernandes"
+  - "Jeremy Fu"
+  - "Wenyin Fu"
+  - "Brian Fuller"
+  - "Cynthia Gao"
+  - "Vedanuj Goswami"
+  - "Naman Goyal"
+  - "Anthony Hartshorn"
+  - "Saghar Hosseini"
+  - "Rui Hou"
+  - "Hakan Inan"
+  - "Marcin Kardas"
+  - "Viktor Kerkez"
+  - "Madian Khabsa"
+  - "Isabel Kloumann"
+  - "Artem Korenev"
+  - "Punit Singh Koura"
+  - "Marie-Anne Lachaux"
+  - "Thibaut Lavril"
+  - "Jenya Lee"
+  - "Diana Liskovich"
+  - "Yinghai Lu"
+  - "Yuning Mao"
+  - "Xavier Martinet"
+  - "Todor Mihaylov"
+  - "Pushkar Mishra"
+  - "Igor Molybog"
+  - "Yixin Nie"
+  - "Andrew Poulton"
+  - "Jeremy Reizenstein"
+  - "Rashmi Rungta"
+  - "Kalyan Saladi"
+  - "Alan Schelten"
+  - "Ruan Silva"
+  - "Eric Michael Smith"
+  - "Ranjan Subramanian"
+  - "Xiaoqing Ellen Tan"
+  - "Binh Tang"
+  - "Ross Taylor"
+  - "Adina Williams"
+  - "Jian Xiang Kuan"
+  - "Puxin Xu"
+  - "Zheng Yan"
+  - "Iliyan Zarov"
+  - "Yuchen Zhang"
+  - "Angela Fan"
+  - "Melanie Kambadur"
+  - "Sharan Narang"
+  - "Aurelien Rodriguez"
+  - "Robert Stojnic"
+  - "Sergey Edunov"
+  - "Thomas Scialom"
+year: 2023
+venue: "arXiv preprint"
+doi: "10.48550/arXiv.2307.09288"
+primary_subject:
+  - "Natural Language Processing"
+  - "Open-weight Models"
+  - "Instruction Tuning"
+  - "Reinforcement Learning from Human Feedback"
+architectural_innovation: false
+learning_algorithm_innovation: true  # RLHF pipeline and fine-tuning innovations
+scaling_innovation: false
+efficiency_innovation: true
+open_weight_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "conceptual_only"
+    verified: false
+  modern:
+    status: "conceptual_only"
+    verified: false
+reproducibility:
+  python: "N/A"
+  numpy: "N/A"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2023_Meta_LLaMA"
+  - "2022_Ouyang_InstructGPT"
+  - "2020_Brown_GPT3"
+successors:
+  - "2023_Mistral_7B"
+  - "2024_Open_LLMs"
+knowledge_flow: |
+  Llama 2 (2023) significantly extended the LLaMA family by releasing models
+  with up to 70B parameters, including both base models and chat‑fine‑tuned
+  versions (Llama 2‑Chat). The paper introduced a comprehensive RLHF pipeline
+  with safety‑specific reward models and explored the trade‑offs between
+  helpfulness and safety. The models were released under a more permissive
+  licence than the original LLaMA, enabling wider commercial use. Llama 2
+  established a new standard for open‑weight foundation models and catalysed
+  the development of numerous derivative models.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "conceptual_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
