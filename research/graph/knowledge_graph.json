@@ -213,6 +213,17 @@
         "status": "forward_pass_only",
         "verified": false
       }
+    },
+    {
+      "id": "2022_Ouyang_InstructGPT",
+      "label": "Training Language Models to Follow Instructions wi...",
+      "year": 2022,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -630,11 +641,31 @@
       "source": "2020_Brown_GPT3",
       "target": "2022_OpenAI_ChatGPT",
       "type": "influences"
+    },
+    {
+      "source": "2020_Brown_GPT3",
+      "target": "2022_Ouyang_InstructGPT",
+      "type": "influences"
+    },
+    {
+      "source": "2019_Radford_GPT2",
+      "target": "2022_Ouyang_InstructGPT",
+      "type": "influences"
+    },
+    {
+      "source": "2022_Ouyang_InstructGPT",
+      "target": "2022_OpenAI_ChatGPT",
+      "type": "influences"
+    },
+    {
+      "source": "2022_Ouyang_InstructGPT",
+      "target": "2023_OpenAI_GPT4",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 23,
-    "total_edges": 83,
-    "generated": "2026-07-18T13:41:08.857392"
+    "total_nodes": 24,
+    "total_edges": 87,
+    "generated": "2026-07-18T13:47:15.540564"
   }
 }
