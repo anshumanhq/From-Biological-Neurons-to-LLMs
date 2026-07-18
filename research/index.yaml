@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T13:47:14.867598'
+  last_updated: '2026-07-18T13:56:53.027769'
 summary:
-  total_papers: 24
-  completed: 24
+  total_papers: 25
+  completed: 25
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -422,6 +422,25 @@ papers:
   - Dario Amodei
   venue: Advances in Neural Information Processing Systems (NeurIPS) 33
   doi: 10.48550/arXiv.2005.14165
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: forward_pass_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2022_OpenAI_ChatGPT
+  title: Introducing ChatGPT
+  year: 2022
+  authors:
+  - OpenAI
+  venue: OpenAI Research Preview / Technical Release
+  doi: null
   phase: The Transformer & LLM Era
   era: 2017-2026
   status:

@@ -215,6 +215,17 @@
       }
     },
     {
+      "id": "2022_OpenAI_ChatGPT",
+      "label": "Introducing ChatGPT...",
+      "year": 2022,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
+    },
+    {
       "id": "2022_Ouyang_InstructGPT",
       "label": "Training Language Models to Follow Instructions wi...",
       "year": 2022,
@@ -643,6 +654,26 @@
       "type": "influences"
     },
     {
+      "source": "2022_Ouyang_InstructGPT",
+      "target": "2022_OpenAI_ChatGPT",
+      "type": "influences"
+    },
+    {
+      "source": "2020_Brown_GPT3",
+      "target": "2022_OpenAI_ChatGPT",
+      "type": "influences"
+    },
+    {
+      "source": "2022_OpenAI_ChatGPT",
+      "target": "2023_OpenAI_GPT4",
+      "type": "influences"
+    },
+    {
+      "source": "2022_OpenAI_ChatGPT",
+      "target": "2024_OpenAI_AgenticAI",
+      "type": "influences"
+    },
+    {
       "source": "2020_Brown_GPT3",
       "target": "2022_Ouyang_InstructGPT",
       "type": "influences"
@@ -664,8 +695,8 @@
     }
   ],
   "metadata": {
-    "total_nodes": 24,
-    "total_edges": 87,
-    "generated": "2026-07-18T13:47:15.540564"
+    "total_nodes": 25,
+    "total_edges": 91,
+    "generated": "2026-07-18T13:56:53.723714"
   }
 }
