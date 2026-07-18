@@ -17,6 +17,8 @@
 | 1991 | Elman | Simple RNN with hidden-state recurrence |
 | 1997 | Hochreiter & Schmidhuber | LSTM – solves vanishing gradients |
 | 1998 | LeCun et al. | LeNet-5 – mature CNN architecture |
+| 1999 | Gers, Schmidhuber & Cummins | Forget-gate LSTM introduced (adaptive resetting) |
+| 2000 | Gers et al. | "Learning to Forget" – forget gate formalised |
 | 2006 | Hinton et al. | Deep Belief Networks – deep learning revival |
 | 2012 | Krizhevsky et al. | AlexNet – ImageNet breakthrough |
 | 2014 | Sutskever et al. | Seq2Seq – neural machine translation |

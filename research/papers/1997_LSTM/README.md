@@ -1,4 +1,4 @@
-# 1997_LSTM — Long Short-Term Memory
+# 1997_LSTM — Long Short-Term Memory (Original)
 
 **Authors:** Sepp Hochreiter, Jürgen Schmidhuber  
 **Year:** 1997  
@@ -8,23 +8,23 @@
 
 ## Historical Importance
 
-LSTM is the most influential recurrent architecture before Transformers. It introduced the **gated cell state** and **Constant Error Carousel**, which allow the network to preserve gradients over hundreds of time steps. This made it possible to train deep RNNs for tasks like speech recognition, machine translation, and handwriting recognition.
+The original 1997 LSTM introduced the **Constant Error Carousel (CEC)** and **gated input/output** mechanisms, enabling reliable learning of long-term dependencies. **This version did not include a forget gate** (that was added in 1999/2000).
 
 ---
 
-## Architecture Diagram
+## Architecture Diagram (1997)
 
 ```text
-         Input     Forget    Output
-          Gate      Gate      Gate
-            |         |         |
-    x_t ----+---------+---------+----> h_t
-            |         |         |
-            v         v         v
+         Input     Output
+          Gate      Gate
+            |         |
+    x_t ----+---------+----> h_t
+            |         |
+            v         v
           ┌─────────────────────┐
           │   LSTM Cell         │
           │                     │
-          │   c_t = f_t*c_{t-1} │
+          │   c_t = c_{t-1}     │
           │        + i_t*c_tilde│
           │                     │
           │   h_t = o_t*tanh(c_t)│
@@ -34,16 +34,16 @@ LSTM is the most influential recurrent architecture before Transformers. It intr
                c_{t-1}  h_{t-1}
 ```
 
-- **Cell State** `c_t` is the memory that flows through time with minimal transformation.
-- **Gates** control what to forget, what to store, and what to output.
+- **Cell State** `c_t` updates additively: `c_t = c_{t-1} + i_t * c_tilde`.
+- **No forget gate** – the memory never resets (adaptive resetting came later).
 
 ---
 
 ## Key Contributions
 
-- **Constant Error Carousel** – allows error to flow unchanged through the cell state.
-- **Gated Architecture** – learn when to remember and when to forget.
-- **Long-range Dependency Learning** – enables modelling of sequences with >100 steps.
+- **Constant Error Carousel** – gradient flow preserved over long time intervals.
+- **Input/Output gating** – controls what is stored and emitted.
+- **Long-range dependency learning** – demonstrated on tasks >100 time steps.
 
 ---
 
@@ -53,14 +53,14 @@ LSTM is the most influential recurrent architecture before Transformers. It intr
 | :--- | :--- |
 | `notes.md` | Full 18‑section historical analysis |
 | `summary.md` | One‑page abstract |
-| `equations.tex` | Core LaTeX equations |
+| `equations.tex` | Core LaTeX equations (no forget gate) |
 | `bibliography.bib` | BibTeX entry |
 | `timeline.md` | Historical timeline context |
 | `questions.md` | Open questions and debates |
 | `metadata.yaml` | Structured metadata |
 | `paper_source.md` | DOI, publisher, access notes |
-| `implementation_historical.py` | Simplified educational forward pass |
-| `implementation_modern.py` | Modern pedagogical stub (with NotImplementedError) |
+| `implementation_historical.py` | Forward-pass demo (no training) |
+| `implementation_modern.py` | Modern educational forward stub |
 
 ---
 
@@ -69,6 +69,6 @@ LSTM is the most influential recurrent architecture before Transformers. It intr
 | Relationship | Paper |
 | :--- | :--- |
 | Predecessor (RNN) | 1991_Elman_Network |
-| Predecessor (RNN) | 1990_Jordan_Network |
+| Successor (Forget Gate) | 1999_LSTM_ForgetGate |
 | Successor | 2014_Seq2Seq |
 | Successor | 2017_Transformer |

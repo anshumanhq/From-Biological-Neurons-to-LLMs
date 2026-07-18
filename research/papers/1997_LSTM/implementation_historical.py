@@ -1,29 +1,23 @@
 '''
-LSTM (1997) – Historical Implementation (Educational)
+Original LSTM (1997) – Forward-Pass Demonstration
 Architecture:
-- Input, forget, output gates with sigmoid activation
-- Candidate cell state with tanh
-- Cell state update with element-wise multiplication
+- Input gate (sigmoid) and output gate (sigmoid)
+- Candidate cell state (tanh)
+- Cell state update: c_t = c_{t-1} + i_t * c_tilde  (no forget gate)
 
-Note: The original LSTM used a fully connected recurrent structure;
-this version is a simplified educational implementation for a single cell.
+Note: This is a forward-pass-only implementation, not full BPTT.
+The original 1997 LSTM did not include a forget gate.
 '''
 
 import numpy as np
 
-class LSTMCell:
-    """
-    A single LSTM cell for a single time step.
-    """
-    def __init__(self, input_size, hidden_size, output_size, lr=0.01):
-        self.lr = lr
+class LSTMCell_1997:
+    def __init__(self, input_size, hidden_size):
         self.hidden_size = hidden_size
-        # Concatenated input size: [h_prev, x_t]
-        self.W_f = np.random.randn(hidden_size + input_size, hidden_size) * 0.1
+        # Weights for input, candidate, output
         self.W_i = np.random.randn(hidden_size + input_size, hidden_size) * 0.1
         self.W_c = np.random.randn(hidden_size + input_size, hidden_size) * 0.1
         self.W_o = np.random.randn(hidden_size + input_size, hidden_size) * 0.1
-        self.b_f = np.zeros((1, hidden_size))
         self.b_i = np.zeros((1, hidden_size))
         self.b_c = np.zeros((1, hidden_size))
         self.b_o = np.zeros((1, hidden_size))
@@ -37,57 +31,24 @@ class LSTMCell:
     def forward(self, x, h_prev, c_prev):
         """
         Forward pass for one time step.
-        x: input vector (1 x input_size)
-        h_prev: previous hidden state (1 x hidden_size)
-        c_prev: previous cell state (1 x hidden_size)
+        x: (1, input_size)
+        h_prev: (1, hidden_size)
+        c_prev: (1, hidden_size)
         Returns: h_next, c_next
         """
-        # Concatenate h_prev and x
-        combined = np.concatenate([h_prev, x], axis=1)  # (1, hidden_size + input_size)
-        # Gates
-        f = self.sigmoid(np.dot(combined, self.W_f) + self.b_f)
+        combined = np.concatenate([h_prev, x], axis=1)
         i = self.sigmoid(np.dot(combined, self.W_i) + self.b_i)
         c_tilde = self.tanh(np.dot(combined, self.W_c) + self.b_c)
         o = self.sigmoid(np.dot(combined, self.W_o) + self.b_o)
-        # Cell state update
-        c_next = f * c_prev + i * c_tilde
-        # Hidden state
+        c_next = c_prev + i * c_tilde   # Constant Error Carousel: linear self-connection with weight 1
         h_next = o * self.tanh(c_next)
-        return h_next, c_next, (f, i, c_tilde, o)
-
-    def backward(self, x, h_prev, c_prev, target, pred, h_next, c_next, gates):
-        """
-        Simplified BPTT for one time step (educational).
-        Updates weights based on prediction error.
-        """
-        # Compute output error (assuming output = h_next)
-        error = target - pred
-        d_h = error  # derivative of loss w.r.t. h_next (simplified)
-        # For full BPTT, we'd need to backpropagate through time.
-        # Here we just demonstrate a basic gradient step.
-        # (Full implementation would require careful gradient propagation)
-        return np.mean(error ** 2)
-
-    def train_sequence(self, X, y, epochs=100):
-        """
-        Train on a sequence.
-        X: input sequence (timesteps x input_size)
-        y: target sequence (timesteps x output_size)
-        """
-        T = X.shape[0]
-        for epoch in range(epochs):
-            h = np.zeros((1, self.hidden_size))
-            c = np.zeros((1, self.hidden_size))
-            total_loss = 0.0
-            for t in range(T):
-                x_t = X[t:t+1, :]
-                y_t = y[t:t+1, :]
-                h, c, gates = self.forward(x_t, h, c)
-                loss = self.backward(x_t, h, c, y_t, h, h, c, gates)  # simplified
-                total_loss += loss
-            if epoch % 10 == 0:
-                print(f"Epoch {epoch}, Loss: {total_loss:.6f}")
+        return h_next, c_next
 
 if __name__ == "__main__":
-    print("=== LSTM Historical Demo (Educational) ===")
-    print("Note: This is a simplified demonstration of the LSTM forward pass.")
+    print("=== LSTM 1997 Forward-Pass Demo (No Forget Gate) ===")
+    cell = LSTMCell_1997(input_size=2, hidden_size=3)
+    x = np.random.randn(1, 2)
+    h = np.zeros((1, 3))
+    c = np.zeros((1, 3))
+    h_new, c_new = cell.forward(x, h, c)
+    print(f"Input: {x}\nNew hidden: {h_new}\nNew cell: {c_new}")
