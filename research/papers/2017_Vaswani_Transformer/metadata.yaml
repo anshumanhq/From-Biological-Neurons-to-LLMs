@@ -1,0 +1,63 @@
+id: "2017_Vaswani_Transformer"
+title: "Attention Is All You Need"
+authors:
+  - "Ashish Vaswani"
+  - "Noam Shazeer"
+  - "Niki Parmar"
+  - "Jakob Uszkoreit"
+  - "Llion Jones"
+  - "Aidan N. Gomez"
+  - "Łukasz Kaiser"
+  - "Illia Polosukhin"
+year: 2017
+venue: "Advances in Neural Information Processing Systems (NeurIPS) 30"
+doi: "10.48550/arXiv.1706.03762"
+primary_subject:
+  - "Sequence Transduction"
+  - "Attention Mechanisms"
+  - "Deep Learning"
+architectural_innovation: true
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2014_Sutskever_Seq2Seq"
+  - "2014_Bahdanau_Attention"
+successors:
+  - "2018_GPT"
+  - "2018_BERT"
+  - "2020_GPT3"
+knowledge_flow: |
+  The Transformer (2017) introduced a sequence transduction architecture
+  based solely on attention mechanisms, eliminating recurrence and convolution.
+  The scaled dot-product attention (softmax(QK^T/√d_k)V) and multi-head
+  attention allow parallel processing of sequences, enabling efficient training
+  and state-of-the-art results on machine translation. This architecture
+  became the foundation for all modern large language models.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "forward_pass_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

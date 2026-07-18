@@ -1,0 +1,50 @@
+% Transformer (2017) – Core Equations
+
+% 1. Scaled Dot-Product Attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
+\end{equation}
+
+% 2. Multi-Head Attention:
+\begin{equation}
+\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h) W^O
+\end{equation}
+where:
+\begin{equation}
+\text{head}_i = \text{Attention}(Q W_i^Q, K W_i^K, V W_i^V)
+\end{equation}
+
+% 3. Positional Encoding (sin/cos):
+\begin{equation}
+\text{PE}(pos, 2i) = \sin\left( \frac{pos}{10000^{2i/d_{\text{model}}}} \right)
+\end{equation}
+\begin{equation}
+\text{PE}(pos, 2i+1) = \cos\left( \frac{pos}{10000^{2i/d_{\text{model}}}} \right)
+\end{equation}
+
+% 4. Position-wise Feed-Forward Network:
+\begin{equation}
+\text{FFN}(x) = \max(0, xW_1 + b_1) W_2 + b_2
+\end{equation}
+
+% 5. Layer Normalization (during training):
+\begin{equation}
+\text{LayerNorm}(x) = \frac{x - \mu}{\sigma + \epsilon} \odot \gamma + \beta
+\end{equation}
+
+% 6. Self-Attention in Encoder:
+\begin{equation}
+\text{SelfAttention}(X) = \text{MultiHead}(X, X, X)
+\end{equation}
+
+% 7. Cross-Attention in Decoder:
+\begin{equation}
+\text{CrossAttention}(Q, K, V) = \text{MultiHead}(Q, K, V)
+\end{equation}
+where Q = decoder hidden states, K, V = encoder outputs.
+
+% 8. Masked Self-Attention in Decoder (for autoregressive generation):
+\begin{equation}
+\text{MaskedAttention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} + M \right) V
+\end{equation}
+where M is a mask matrix (upper triangular of -∞).
