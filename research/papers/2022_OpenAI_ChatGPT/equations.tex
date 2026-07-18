@@ -1,0 +1,25 @@
+% ChatGPT (2022) – Core Equations
+% Note: ChatGPT is a product/release milestone, not an architectural innovation.
+% The RLHF equations are inherited from InstructGPT.
+
+% 1. Supervised Fine-Tuning (SFT) objective:
+\begin{equation}
+\mathcal{L}_{\text{SFT}} = -\mathbb{E}_{(x, y) \sim \mathcal{D}_{\text{SFT}}} \log \pi_{\theta}(y \mid x)
+\end{equation}
+
+% 2. Reward Model (RM) objective:
+\begin{equation}
+\mathcal{L}_{\text{RM}} = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}_{\text{RM}}}
+\log \sigma\left( r_{\phi}(x, y_w) - r_{\phi}(x, y_l) \right)
+\end{equation}
+
+% 3. PPO (RLHF) objective with KL penalty:
+\begin{equation}
+\mathcal{L}_{\text{RL}} = -\mathbb{E}_{x \sim \mathcal{D}_{\text{RL}}, y \sim \pi_{\theta}(x)}
+\left[ r_{\phi}(x, y) - \beta \cdot \text{KL}\left( \pi_{\theta} \parallel \pi_{\text{ref}} \right) \right]
+\end{equation}
+
+% 4. Chat interface (conversational interaction):
+\begin{equation}
+\text{Response} = \text{LM}(\text{Conversation History} \oplus \text{User Prompt})
+\end{equation}

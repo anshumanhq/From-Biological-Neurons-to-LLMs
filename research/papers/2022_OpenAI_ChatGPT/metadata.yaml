@@ -1,0 +1,56 @@
+id: "2022_OpenAI_ChatGPT"
+title: "Introducing ChatGPT"
+authors:
+  - "OpenAI"
+year: 2022
+venue: "OpenAI Research Preview / Technical Release"
+doi: null
+primary_subject:
+  - "Conversational AI"
+  - "Product Deployment"
+  - "Human-Computer Interaction"
+architectural_innovation: false
+learning_algorithm_innovation: false
+product_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Beginner"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2022_Ouyang_InstructGPT"
+  - "2020_Brown_GPT3"
+successors:
+  - "2023_OpenAI_GPT4"
+  - "2024_OpenAI_AgenticAI"
+knowledge_flow: |
+  ChatGPT (2022) was released as a conversational interface built on top
+  of InstructGPT-style aligned language models (GPT-3.5). It did not
+  introduce a new RLHF algorithm or neural architecture. Its historical
+  importance lies in making aligned LLMs accessible through a simple
+  conversational interface, rapidly achieving 100 million users within
+  two months and sparking mainstream adoption of generative AI.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "forward_pass_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
