@@ -191,6 +191,17 @@
         "status": "forward_pass_only",
         "verified": false
       }
+    },
+    {
+      "id": "2019_Radford_GPT2",
+      "label": "Language Models are Unsupervised Multitask Learner...",
+      "year": 2019,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -568,11 +579,31 @@
       "source": "2018_Radford_GPT",
       "target": "2020_Brown_GPT3",
       "type": "influences"
+    },
+    {
+      "source": "2018_Radford_GPT",
+      "target": "2019_Radford_GPT2",
+      "type": "influences"
+    },
+    {
+      "source": "2017_Vaswani_Transformer",
+      "target": "2019_Radford_GPT2",
+      "type": "influences"
+    },
+    {
+      "source": "2019_Radford_GPT2",
+      "target": "2020_Brown_GPT3",
+      "type": "influences"
+    },
+    {
+      "source": "2019_Radford_GPT2",
+      "target": "2022_Ouyang_InstructGPT",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 21,
-    "total_edges": 75,
-    "generated": "2026-07-18T13:28:36.897932"
+    "total_nodes": 22,
+    "total_edges": 79,
+    "generated": "2026-07-18T13:35:21.108540"
   }
 }
