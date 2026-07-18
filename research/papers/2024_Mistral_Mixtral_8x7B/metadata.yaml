@@ -1,0 +1,83 @@
+id: "2024_Mistral_Mixtral_8x7B"
+title: "Mixtral of Experts"
+authors:
+  - "Albert Q. Jiang"
+  - "Alexandre Sablayrolles"
+  - "Antoine Roux"
+  - "Arthur Mensch"
+  - "Baptiste Savary"
+  - "Chris Bamford"
+  - "Devendra Singh Chaplot"
+  - "Diego de las Casas"
+  - "Emma Bou Hanna"
+  - "Florian Bressand"
+  - "Gianna Lengyel"
+  - "Guillaume Lample"
+  - "Lélio Renard Lavaud"
+  - "Lucile Saulnier"
+  - "Marie-Anne Lachaux"
+  - "Pierre Stock"
+  - "Sandro Manoel"
+  - "Teven Le Scao"
+  - "Thibaut Lavril"
+  - "Thomas Wang"
+  - "Timothée Lacroix"
+  - "William El Sayed"
+year: 2024
+venue: "arXiv preprint"
+doi: "10.48550/arXiv.2401.04088"
+primary_subject:
+  - "Natural Language Processing"
+  - "Mixture of Experts"
+  - "Efficient Transformers"
+  - "Open-weight Models"
+architectural_innovation: true  # Sparse Mixture of Experts (MoE)
+learning_algorithm_innovation: false
+scaling_innovation: true
+efficiency_innovation: true
+open_weight_innovation: true
+biological_inspiration: false
+historical_importance: 9
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "conceptual_only"
+    verified: false
+  modern:
+    status: "conceptual_only"
+    verified: false
+reproducibility:
+  python: "N/A"
+  numpy: "N/A"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2023_Mistral_7B"
+  - "2023_Meta_Llama2"
+successors:
+  - "2024_Open_LLMs"
+  - "2024_AgenticAI"
+knowledge_flow: |
+  Mixtral 8×7B (2024) introduced a sparse Mixture of Experts (MoE)
+  architecture, extending the efficiency philosophy of Mistral 7B.
+  The model has 8 expert networks, each with approximately 7 billion
+  parameters, but uses only a sparse subset of experts (top‑2 routing)
+  per token. This results in a large total parameter pool (~47B)
+  while maintaining inference efficiency close to a dense 7B model.
+  Mixtral demonstrated strong performance, outperforming Llama 2 70B
+  and GPT‑3.5 on several benchmarks. The open‑weight release further
+  solidified Mistral AI's position in the open‑weight ecosystem.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "conceptual_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

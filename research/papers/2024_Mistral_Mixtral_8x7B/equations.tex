@@ -1,0 +1,36 @@
+% Mixtral 8×7B (2024) – Core Equations
+
+% 1. Sparse Mixture of Experts (MoE) layer:
+\begin{equation}
+y = \sum_{i=1}^{N} G(x)_i \cdot E_i(x)
+\end{equation}
+where \(E_i\) are expert networks, and \(G(x)\) is the router (gating) output.
+
+% 2. Top‑2 routing (sparse gating):
+\begin{equation}
+G(x) = \text{softmax}\left( \text{top-2}(x W_g + b_g) \right)
+\end{equation}
+where only the top‑2 experts are activated per token.
+
+% 3. Router probability:
+\begin{equation}
+G(x)_i = \frac{\exp(g_i(x))}{\sum_{j \in \mathcal{T}} \exp(g_j(x))}
+\end{equation}
+with \(\mathcal{T}\) being the set of selected experts.
+
+% 4. Total parameter count (approximate):
+\begin{equation}
+\text{TotalParams} \approx 8 \times 7\text{B} = 56\text{B}
+\end{equation}
+but only a sparse subset is used per token.
+
+% 5. Inference cost comparison:
+\begin{equation}
+\text{Cost}_{\text{inference}} \approx \text{Cost}_{7\text{B}} \times k
+\end{equation}
+where \(k\) is the number of active experts (2 in Mixtral).
+
+% 6. Sliding Window Attention (same as Mistral 7B):
+\begin{equation}
+\text{SWA}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \odot M_{\text{window}} \right) V
+\end{equation}
