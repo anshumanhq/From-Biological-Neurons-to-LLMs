@@ -10,13 +10,41 @@ The book manuscript itself will follow a separate `v1.0` release when fully draf
 
 ## [Unreleased]
 
-### Planned (v0.6.0+)
-- Populate GPT-4 (2023) archive
-- Populate Agentic AI (2024–2026) overview
+### Planned (v0.7.0+)
+- Populate BERT (2018) archive
+- Populate Mixtral 8x7B (2024) archive
+- Populate Word2Vec (2013) archive
+- Populate Bahdanau Attention (2014) archive
+- Populate Batch Normalization (2015) archive
+- Populate RAG / Tool Use / Agentic AI (2024–2026) overview
 - Draft Chapter 1: The Brain Before AI
 - Draft Chapter 2: McCulloch-Pitts Neuron
 - Generate TikZ figures for all milestone architectures
 - Complete LaTeX project setup (`book/main.tex`, `latexmkrc`)
+
+---
+
+## [0.6.0] – 2026-07-18
+
+### Added : Modern LLMs & Open-Weight Era (2023)
+
+#### New Paper Archives
+- **2023_OpenAI_GPT4** — Capability leap, reasoning, multimodal potential
+- **2023_Meta_LLaMA** — Open-weight research access, efficient foundation models
+- **2023_Meta_Llama2** — Open-weight commercial release, RLHF chat models
+- **2023_Mistral_7B** — Efficiency innovations (GQA, SWA)
+
+#### Historical Narratives
+- `narrative_1989_1997.md` — The Architecture Era
+- `narrative_1998_2012.md` — Deep Learning Maturation
+- `narrative_2013_2017.md` — Modern Neural Networks
+- `narrative_2018_2026.md` — The LLM Era
+
+#### Infrastructure Improvements
+- **Knowledge Graph** — Updated to 29 nodes, 110 edges
+- **Master Timeline** — Updated with all 29 papers
+- **README** — Updated paper count and roadmap
+- **CHANGELOG** — Updated with all recent additions
 
 ---
 
@@ -114,7 +142,7 @@ The book manuscript itself will follow a separate `v1.0` release when fully draf
 - Root files: `README.md`, `STYLE_GUIDE.md`, `CONTRIBUTING.md`, `LICENSE`, `CHANGELOG.md`
 
 #### Literature Collection
-- 25 milestone papers archived (1943–2022)
+- 29 milestone papers archived (1943–2023)
 - Verified DOIs and metadata
 
 #### Historical Narratives
@@ -137,7 +165,10 @@ The book manuscript itself will follow a separate `v1.0` release when fully draf
 
 ---
 
-*The next milestone (v0.6.0) will focus on completing the LLM Era:*
-- *2023: GPT-4*
-- *2024–2026: Agentic AI*
-- *Book chapters and narrative completion*
+*The next milestone (v0.7.0) will focus on completing the remaining Transformer-era landmarks:*
+- *2018: BERT (bidirectional pre-training)*
+- *2024: Mixtral 8x7B (Mixture of Experts)*
+- *2013: Word2Vec*
+- *2014: Bahdanau Attention*
+- *2015: Batch Normalization*
+- *2024–2026: RAG / Tool Use / Agentic AI overview*

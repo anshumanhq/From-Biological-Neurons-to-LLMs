@@ -3,7 +3,7 @@
 **Project:** From Biological Neurons to Large Language Models  
 **Last Updated:** 2026-07-18  
 **Current Scope (v1):** Landmark papers across the historical evolution of AI  
-**Total Papers Archived:** 25 (all completed)
+**Total Papers Archived:** 29 (all completed)
 
 ---
 
@@ -85,8 +85,12 @@
 | **2020** | Brown et al. — *Language Models are Few-Shot Learners* | GPT-3 (175B, few-shot) | ✅ Complete |
 | **2022** | Ouyang et al. — *Training Language Models to Follow Instructions with Human Feedback* | InstructGPT (RLHF) | ✅ Complete |
 | **2022** | OpenAI — *Introducing ChatGPT* | ChatGPT (Conversational product) | ✅ Complete |
-| **2023** | OpenAI — *GPT-4 Technical Report* | GPT-4 (Multimodal) | 📅 Planned |
-| **2024–2026** | Various — Mixture of Experts, RAG, Agentic AI | Modern LLMs (Agents) | 📅 Planned |
+| **2023** | OpenAI — *GPT-4 Technical Report* | GPT-4 (Capability leap, multimodal potential) | ✅ Complete |
+| **2023** | Touvron et al. — *LLaMA: Open and Efficient Foundation Language Models* | Open-weight research access | ✅ Complete |
+| **2023** | Touvron et al. — *Llama 2: Open Foundation and Fine-Tuned Chat Models* | Open-weight commercial release, RLHF | ✅ Complete |
+| **2023** | Jiang et al. — *Mistral 7B* | Efficiency innovations (GQA, SWA) | ✅ Complete |
+| **2024** | Jiang et al. — *Mixtral 8x7B* | Mixture of Experts (MoE) | 📅 Planned |
+| **2024–2026** | Various — RAG, Tool Use, Agentic AI, Reasoning Models | Modern LLMs (Agents) | 📅 Planned |
 
 ---
 
@@ -97,7 +101,7 @@
 | `narrative_1943_1958.md` | Foundations | ✅ Complete |
 | `narrative_1960_1969.md` | The Mathematical Turn | ✅ Complete |
 | `narrative_1974_1986.md` | The Revival | ✅ Complete |
-| `narrative_1989_1997.md` | The Architecture Era | 📅 Planned |
-| `narrative_1998_2012.md` | Deep Learning Maturation | 📅 Planned |
-| `narrative_2013_2017.md` | Modern Neural Networks | 📅 Planned |
-| `narrative_2018_2026.md` | The LLM Era | 📅 Planned |
+| `narrative_1989_1997.md` | The Architecture Era | ✅ Complete |
+| `narrative_1998_2012.md` | Deep Learning Maturation | ✅ Complete |
+| `narrative_2013_2017.md` | Modern Neural Networks | ✅ Complete |
+| `narrative_2018_2026.md` | The LLM Era | ✅ Complete |
