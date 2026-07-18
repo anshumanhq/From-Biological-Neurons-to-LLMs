@@ -169,6 +169,17 @@
         "status": "forward_pass_only",
         "verified": false
       }
+    },
+    {
+      "id": "2017_Vaswani_Transformer",
+      "label": "Attention Is All You Need...",
+      "year": 2017,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -506,11 +517,36 @@
       "source": "2015_He_ResNet",
       "target": "2018_GPT",
       "type": "influences"
+    },
+    {
+      "source": "2014_Sutskever_Seq2Seq",
+      "target": "2017_Vaswani_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Bahdanau_Attention",
+      "target": "2017_Vaswani_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "2017_Vaswani_Transformer",
+      "target": "2018_GPT",
+      "type": "influences"
+    },
+    {
+      "source": "2017_Vaswani_Transformer",
+      "target": "2018_BERT",
+      "type": "influences"
+    },
+    {
+      "source": "2017_Vaswani_Transformer",
+      "target": "2020_GPT3",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 19,
-    "total_edges": 67,
-    "generated": "2026-07-18T13:12:36.335824"
+    "total_nodes": 20,
+    "total_edges": 72,
+    "generated": "2026-07-18T13:19:28.524097"
   }
 }

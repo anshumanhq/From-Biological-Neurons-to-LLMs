@@ -22,6 +22,7 @@ digraph KnowledgeGraph {
   "2014_Goodfellow_GAN" [label="Generative Adversarial Nets...\n(2014)"];
   "2014_Sutskever_Seq2Seq" [label="Sequence to Sequence Learning with Neural Networks...\n(2014)"];
   "2015_He_ResNet" [label="Deep Residual Learning for Image Recognition...\n(2015)"];
+  "2017_Vaswani_Transformer" [label="Attention Is All You Need...\n(2017)"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
   "1943_McCulloch_Pitts" -> "1958_Rosenblatt_Perceptron" [label="influences"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
@@ -89,4 +90,9 @@ digraph KnowledgeGraph {
   "1998_LeCun_LeNet5" -> "2015_He_ResNet" [label="influences"];
   "2015_He_ResNet" -> "2017_Transformer" [label="influences"];
   "2015_He_ResNet" -> "2018_GPT" [label="influences"];
+  "2014_Sutskever_Seq2Seq" -> "2017_Vaswani_Transformer" [label="influences"];
+  "2014_Bahdanau_Attention" -> "2017_Vaswani_Transformer" [label="influences"];
+  "2017_Vaswani_Transformer" -> "2018_GPT" [label="influences"];
+  "2017_Vaswani_Transformer" -> "2018_BERT" [label="influences"];
+  "2017_Vaswani_Transformer" -> "2020_GPT3" [label="influences"];
 }
