@@ -1,0 +1,37 @@
+% InstructGPT (2022) – Core Equations
+
+% 1. Supervised Fine-Tuning (SFT) objective:
+\begin{equation}
+\mathcal{L}_{\text{SFT}} = -\mathbb{E}_{(x, y) \sim \mathcal{D}_{\text{SFT}}} \log \pi_{\theta}(y \mid x)
+\end{equation}
+
+% 2. Reward Model (RM) objective (pairwise ranking):
+\begin{equation}
+\mathcal{L}_{\text{RM}} = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}_{\text{RM}}}
+\log \sigma\left( r_{\phi}(x, y_w) - r_{\phi}(x, y_l) \right)
+\end{equation}
+
+% 3. PPO (Reinforcement Learning) objective:
+\begin{equation}
+\mathcal{L}_{\text{RL}} = -\mathbb{E}_{x \sim \mathcal{D}_{\text{RL}}, y \sim \pi_{\theta}(x)}
+\left[ r_{\phi}(x, y) - \beta \cdot \text{KL}\left( \pi_{\theta} \parallel \pi_{\text{ref}} \right) \right]
+\end{equation}
+
+% 4. KL penalty term:
+\begin{equation}
+\text{KL}\left( \pi_{\theta} \parallel \pi_{\text{ref}} \right) =
+\mathbb{E}_{y \sim \pi_{\theta}} \log \frac{\pi_{\theta}(y \mid x)}{\pi_{\text{ref}}(y \mid x)}
+\end{equation}
+
+% 5. PPO clipped objective (simplified):
+\begin{equation}
+\mathcal{L}^{\text{PPO}} = -\mathbb{E}_{t} \min\left(
+\frac{\pi_{\theta}(a_t \mid s_t)}{\pi_{\text{old}}(a_t \mid s_t)} \hat{A}_t,
+\text{clip}\left( \frac{\pi_{\theta}(a_t \mid s_t)}{\pi_{\text{old}}(a_t \mid s_t)}, 1-\epsilon, 1+\epsilon \right) \hat{A}_t
+\right)
+\end{equation}
+
+% 6. Overall pipeline:
+\begin{equation}
+\pi_{\text{GPT-3}} \xrightarrow{\text{SFT}} \pi_{\text{SFT}} \xrightarrow{\text{RM}} r_{\phi} \xrightarrow{\text{PPO/RLHF}} \pi_{\text{InstructGPT}}
+\end{equation}
