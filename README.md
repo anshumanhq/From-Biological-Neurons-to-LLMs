@@ -1,6 +1,6 @@
 # From Biological Neurons to Large Language Models
 
-**Version:** 0.3.0 (Infrastructure Complete)  
+**Version:** 0.4.0 (Classical Neural Networks Complete)  
 **License:** CC BY-NC-ND 4.0
 
 ---
@@ -10,7 +10,7 @@
 [![Validation](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml/badge.svg)](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Papers Archived](https://img.shields.io/badge/Papers%20Archived-11-brightgreen)](research/index.yaml)
+[![Papers Archived](https://img.shields.io/badge/Papers%20Archived-17-brightgreen)](research/index.yaml)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](.pre-commit-config.yaml)
 
 ---
@@ -30,9 +30,9 @@ Unlike typical history books, this repository treats the book as a **living rese
 | **v0.1.0** | Repository Governance | ✅ Complete |
 | **v0.2.0** | LaTeX Infrastructure | ✅ Complete |
 | **v0.2.1** | Repository Infrastructure | ✅ Complete |
-| **v0.3.0** | **Infrastructure Automation** | ✅ **Complete** |
-| **v0.4.0** | Classical Neural Networks (1943–1998) | 🚧 In Progress |
-| **v0.5.0** | Deep Learning Era (2006–2015) | 📅 Planned |
+| **v0.3.0** | Infrastructure Automation | ✅ Complete |
+| **v0.4.0** | Classical Neural Networks (1943–1998) | ✅ **Complete** |
+| **v0.5.0** | Deep Learning Era (2012–2017) | 🚧 In Progress |
 | **v1.0.0** | Transformer → GPT → LLMs Complete | 📅 Planned |
 
 ---
@@ -42,7 +42,7 @@ Unlike typical history books, this repository treats the book as a **living rese
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/From-Biological-Neurons-to-LLMs.git
+git clone https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs.git
 cd From-Biological-Neurons-to-LLMs
 ```
 
@@ -74,11 +74,13 @@ python scripts/build_graph.py
 From-Biological-Neurons-to-LLMs/
 ├── book/                    # LaTeX manuscript
 ├── research/                # The Archive
-│   ├── papers/              # Per-paper folders (1943–1989)
+│   ├── papers/              # Per-paper folders (1943–2014)
 │   ├── history/             # Narratives + dependency map
 │   ├── graph/               # Knowledge graph (JSON/DOT/SVG)
 │   ├── index.yaml           # Machine-readable index
-│   └── PAPER_TEMPLATE.md    # 18-section template
+│   ├── chronology/          # Master chronology
+│   ├── comparisons/         # Paper comparisons
+│   └── glossary/            # Terminology definitions
 ├── code/                    # NumPy implementations
 ├── bibliography/            # BibTeX sources
 ├── scripts/                 # Automation scripts
@@ -89,32 +91,37 @@ From-Biological-Neurons-to-LLMs/
 
 ---
 
-## Current Papers Archived (11)
+## Current Papers Archived (17)
 
-| Year | Paper | Status |
-| :--- | :--- | :--- |
-| 1943 | McCulloch & Pitts | ✅ Complete |
-| 1949 | Hebb | ✅ Complete |
-| 1950 | Turing | ✅ Complete |
-| 1958 | Rosenblatt | ✅ Complete |
-| 1960 | Widrow & Hoff | ✅ Complete |
-| 1969 | Minsky & Papert | ✅ Complete |
-| 1974 | Werbos | ✅ Complete |
-| 1980 | Fukushima | ✅ Complete |
-| 1982 | Hopfield | ✅ Complete |
-| 1986 | Rumelhart, Hinton & Williams | ✅ Complete |
-| 1989 | LeCun | ✅ Complete |
+| # | Year | Paper | Status |
+| :--- | :--- | :--- | :--- |
+| 1 | 1943 | McCulloch & Pitts | ✅ Complete |
+| 2 | 1949 | Hebb | ✅ Complete |
+| 3 | 1950 | Turing | ✅ Complete |
+| 4 | 1958 | Rosenblatt | ✅ Complete |
+| 5 | 1960 | Widrow & Hoff | ✅ Complete |
+| 6 | 1969 | Minsky & Papert | ✅ Complete |
+| 7 | 1974 | Werbos | ✅ Complete |
+| 8 | 1980 | Fukushima | ✅ Complete |
+| 9 | 1982 | Hopfield | ✅ Complete |
+| 10 | 1986 | Rumelhart, Hinton & Williams | ✅ Complete |
+| 11 | 1989 | LeCun CNN | ✅ Complete |
+| 12 | 1990 | Jordan Network | ✅ Complete |
+| 13 | 1991 | Elman Network | ✅ Complete |
+| 14 | 1997 | LSTM | ✅ Complete |
+| 15 | 1998 | LeNet‑5 | ✅ Complete |
+| 16 | 2012 | AlexNet | ✅ Complete |
+| 17 | 2014 | Seq2Seq | ✅ Complete |
 
 ---
 
 ## Next Milestone
 
-**v0.4.0 — Classical Neural Networks (1943–1998)**
+**v0.5.0 — Deep Learning Era (2014–2017)**
 
-- 1990: Jordan Network
-- 1991: Elman Network
-- 1997: LSTM
-- 1998: LeNet-5
+- 2014: GAN
+- 2015: ResNet
+- 2017: Transformer
 
 ---
 
@@ -130,4 +137,4 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-No
 
 ---
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18

@@ -53,7 +53,7 @@ historical_accuracy:
   verified_from_original_paper: false
 status:
   notes: "complete"
-  implementation: "complete"
+  implementation: "forward_pass_only"
   equations: "complete"
   bibliography: "complete"
   summary: "complete"

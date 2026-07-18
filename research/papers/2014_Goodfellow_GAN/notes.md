@@ -21,15 +21,15 @@ The authors addressed the problem of **generative modelling**: learning to gener
 
 ---
 
-## 3. Biological Motivation
+## 3. Primary Claim
 
-GANs were **not** biologically inspired. The adversarial training framework is purely computational. However, the idea of a generator and discriminator competing can be loosely compared to evolution or to the interplay between learning and evaluation in nature.
+The paper's central claim is that **adversarial training**—simultaneously training a generator and a discriminator in a two-player minimax game—can learn generative models that approximate the true data distribution, with the generator eventually producing samples indistinguishable from real data under ideal conditions.
 
 ---
 
-## 4. Mathematical Formulation
+## 4. Math Abstraction
 
-**Minimax Objective:**
+**Minimax Objective (Value Function):**
 
 ```latex
 \min_G \max_D V(D,G) =
@@ -38,42 +38,42 @@ GANs were **not** biologically inspired. The adversarial training framework is p
 \mathbb{E}_{z\sim p_z}[\log(1-D(G(z)))]
 ```
 
-**Generator Mapping:**
+**Generator Mapping:** \( G: \mathbb{R}^d \rightarrow \mathbb{R}^n \)
 
-```latex
-G: \mathbb{R}^d \rightarrow \mathbb{R}^n
-```
+**Discriminator Mapping:** \( D: \mathbb{R}^n \rightarrow [0,1] \)
 
-**Discriminator Mapping:**
-
-```latex
-D: \mathbb{R}^n \rightarrow [0,1]
-```
-
-**JS Divergence Connection (under ideal conditions):**
+**Connection to Jensen–Shannon Divergence (under ideal conditions):**
 
 ```latex
 2 \cdot \text{JSD}(p_{\text{data}} \parallel p_g) =
 \max_D V(D,G) + \log 4
 ```
 
+This shows that the minimax game is equivalent to minimizing the JS divergence between the data distribution and the generator's distribution.
+
 ---
 
-## 5. Original Paper Analysis
+## 5. Relation to Biology
+
+GANs are **not** biologically inspired. The adversarial training framework is purely computational, motivated by game theory and the idea of competing agents. While the concept of competition appears in nature, the paper does not claim biological plausibility.
+
+---
+
+## 6. Original Paper Analysis
 
 The paper introduced several innovations:
 
 1. **Adversarial Training Framework:** A generator and discriminator are trained simultaneously.
 2. **Minimax Objective:** The game-theoretic formulation with value function \( V(D,G) \).
-3. **MLP-based Architecture:** Both networks are simple multi-layer perceptrons (CNNs were added later in DCGAN).
+3. **MLP-based Architecture:** The original experiments used multi-layer perceptrons for both networks (CNNs were popularised later in DCGAN, 2015).
 4. **Theoretical Analysis:** Proof that, under ideal conditions, the generator converges to the true data distribution.
 5. **Empirical Results:** Demonstrated on MNIST, CIFAR-10, and the Toronto Face Database.
 
-The paper's key insight was that adversarial training could produce high-quality samples without needing to compute likelihoods explicitly.
+The general framework is independent of the specific architecture; the paper establishes a method that can be applied to any differentiable model.
 
 ---
 
-## 6. Algorithm / Method
+## 7. Algorithm / Method
 
 **Training Procedure:**
 
@@ -81,12 +81,12 @@ The paper's key insight was that adversarial training could produce high-quality
 2. Sample a mini-batch of latent noise \( z \sim p_z \).
 3. Generate fake samples \( G(z) \).
 4. Update the discriminator \( D \) using cross-entropy loss on real and fake samples.
-5. Update the generator \( G \) to fool the discriminator.
-6. Repeat steps 1-5 until convergence.
+5. Update the generator \( G \) to fool the discriminator (either by minimizing \( \log(1-D(G(z))) \) or maximizing \( \log D(G(z)) \)).
+6. Repeat steps 1–5 until convergence.
 
 ---
 
-## 7. NumPy Scratch Implementation
+## 8. NumPy Scratch Implementation
 
 ```python
 import numpy as np
@@ -124,9 +124,11 @@ class Discriminator:
         return self.sigmoid(logits), logits
 ```
 
+The above is a forward‑pass‑only demonstration. A full training loop would require alternating updates with carefully chosen hyperparameters; due to the complexity and instability, it is not included in this educational archive.
+
 ---
 
-## 8. Limitations (As Acknowledged by the Authors and Later Research)
+## 9. Limitations (As Acknowledged by the Authors and Later Research)
 
 - **Training Instability:** GANs are notoriously difficult to train due to mode collapse and vanishing gradients.
 - **Mode Collapse:** The generator may produce only a limited variety of samples.
@@ -136,7 +138,13 @@ class Discriminator:
 
 ---
 
-## 9. Influence on Later Research
+## 10. Impact at Time of Publication
+
+At NeurIPS 2014, the GAN paper was immediately recognised as a major breakthrough. It sparked a new subfield of deep learning research, leading to hundreds of follow‑up papers. The adversarial training framework provided a powerful alternative to traditional generative modelling and quickly became one of the most cited papers in machine learning.
+
+---
+
+## 11. Influence on Later Research
 
 - **DCGAN (2015):** Convolutional GANs for image generation.
 - **WGAN (2017):** Wasserstein GAN with stable training.
@@ -146,13 +154,15 @@ class Discriminator:
 
 ---
 
-## 10. Modern Relevance (2026 Perspective)
+## 12. Modern Relevance (2026 Perspective)
 
-GANs are now a standard tool in generative modelling, with applications in image generation, video synthesis, text-to-image generation, and even drug discovery. While newer approaches (e.g., diffusion models) have emerged, GANs remain widely used due to their speed and high-quality outputs. The adversarial training framework has also inspired research in reinforcement learning and multi-agent systems.
+GANs are now a standard tool in generative modelling, with applications in image generation, video synthesis, and drug discovery. While newer approaches (e.g., diffusion models) have emerged for image generation, GANs remain widely used due to their speed and high‑quality outputs. In the text domain, autoregressive Transformers and diffusion‑based models have become more prevalent; GANs have had significant influence but are not the dominant approach for text generation.
+
+The adversarial training framework has also inspired research in reinforcement learning and multi‑agent systems.
 
 ---
 
-## 11. Primary Source Paraphrase
+## 13. Primary Source Paraphrase
 
 - The paper introduces adversarial training as a framework for generative modelling.
 - The generator learns to produce samples that fool the discriminator.
@@ -162,7 +172,7 @@ GANs are now a standard tool in generative modelling, with applications in image
 
 ---
 
-## 12. Historical Timeline
+## 14. Historical Timeline
 
 - **Before:**
   - 2012: AlexNet
@@ -177,18 +187,18 @@ GANs are now a standard tool in generative modelling, with applications in image
 
 ---
 
-## 13. Common Misconceptions
+## 15. Common Misconceptions
 
 - **Misconception 1:** "GANs were the first neural generative models."
-  - **Fact:** Autoregressive models and energy-based models existed before GANs.
+  - **Fact:** Autoregressive models and energy‑based models existed before GANs.
 - **Misconception 2:** "GANs introduced neural image generation."
   - **Fact:** Generative neural models existed before GANs. GANs introduced adversarial training as a framework.
 - **Misconception 3:** "GANs always converge."
-  - **Fact:** Training instability is a well-known challenge.
+  - **Fact:** Training instability is a well‑known challenge.
 
 ---
 
-## 14. Implementation Verification
+## 16. Implementation Verification
 
 ```python
 def test_gan_forward():
@@ -202,7 +212,7 @@ def test_gan_forward():
 
 ---
 
-## 15. Cross References
+## 17. Cross References
 
 - **Predecessor:** 2012_Krizhevsky_AlexNet
 - **Predecessor:** 2006_Hinton_DBN
@@ -212,48 +222,10 @@ def test_gan_forward():
 
 ---
 
-## 16. Historical Accuracy Check
+## 18. Open Questions
 
-**Claims in the paper:**
-1. GANs can learn generative models through adversarial training.
-2. The minimax objective corresponds to JS divergence minimization.
-3. Under ideal conditions, the generator converges to the data distribution.
-
-**Modern interpretation:** The paper is historically accurate and foundational for generative modelling.
-
----
-
-## 17. Reproducibility
-
-- **Dataset:** MNIST, CIFAR-10, Toronto Face Database.
-- **Hardware:** GPUs (training took hours to days).
-- **Reproducibility Today:** Easily reproducible with modern frameworks; hyperparameter tuning remains important.
-
----
-
-## 18. Influence Graph
-
-```text
-AlexNet (2012) ──────────────────────────────────────► GAN (2014)
-  │                                                           │
-  │ (Deep learning for vision)                               │ (Adversarial generative)
-  │                                                           │
-  └───────────────────────────────────────────────────────────┘
-                                                              │
-                                                              ▼
-                                                   DCGAN (2015)
-                                                              │
-                                                              ▼
-                                                   StyleGAN (2018)
-                                                              │
-                                                              ▼
-                                                   Diffusion Models (2020)
-```
-
----
-
-## Additional Notes
-
-- The paper was famously written while Goodfellow and his collaborators were at the University of Montreal.
-- The adversarial training concept has inspired work beyond generative modelling, including adversarial examples and robustness in classifiers.
-- The JS divergence interpretation of the minimax objective is a key theoretical result.
+1. How does the choice of architecture (MLP vs. CNN) affect GAN performance?
+2. What is the relationship between the minimax objective and JS divergence?
+3. How can mode collapse be prevented in GAN training?
+4. Why do GANs require careful hyperparameter tuning?
+5. How do GANs compare to other generative models (e.g., diffusion models, VAEs)?

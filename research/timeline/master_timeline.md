@@ -1,7 +1,7 @@
 # Master Timeline: From Biological Neurons to Large Language Models (1943–2026)
 
 **Project:** From Biological Neurons to Large Language Models  
-**Last Updated:** 2026-07-17  
+**Last Updated:** 2026-07-18  
 **Current Scope (v1):** Landmark papers across the historical evolution of AI
 
 ---
@@ -42,19 +42,20 @@
 | Year | Paper / Event | Theme | Status |
 | :--- | :--- | :--- | :--- |
 | **1989** | LeCun et al. — *Backpropagation Applied to Handwritten Zip Code Recognition* | Convolutional Neural Networks (CNNs) | ✅ Complete |
-| **1991** | Hochreiter — *Untersuchungen zu dynamischen neuronalen Netzen* | Vanishing Gradient Problem | 📅 Planned |
-| **1997** | Hochreiter & Schmidhuber — *Long Short-Term Memory* | LSTM (Sequence Learning) | 📅 Planned |
+| **1990** | Jordan — *Attractor Dynamics...* | Recurrent Network (Output Feedback) | ✅ Complete |
+| **1991** | Elman — *Finding Structure in Time* | Simple RNN (Hidden State) | ✅ Complete |
+| **1997** | Hochreiter & Schmidhuber — *Long Short-Term Memory* | LSTM (Original, no forget gate) | ✅ Complete |
+| **1998** | LeCun et al. — *Gradient-Based Learning Applied to Document Recognition* | LeNet-5 | ✅ Complete |
 
 ---
 
-## Phase 5: Deep Learning Maturation (1998–2012)
+## Phase 5: Deep Learning Maturation (2006–2012)
 
 | Year | Paper / Event | Theme | Status |
 | :--- | :--- | :--- | :--- |
-| **1998** | LeCun et al. — *Gradient-Based Learning Applied to Document Recognition* | LeNet-5 | 📅 Planned |
 | **2006** | Hinton, Osindero & Teh — *A Fast Learning Algorithm for Deep Belief Nets* | Deep Belief Networks | 📅 Planned |
 | **2010** | Glorot & Bengio — *Understanding the Difficulty of Training Deep Feedforward Neural Networks* | Xavier Initialisation | 📅 Planned |
-| **2012** | Krizhevsky, Sutskever & Hinton — *ImageNet Classification with Deep Convolutional Neural Networks* | AlexNet | 📅 Planned |
+| **2012** | Krizhevsky, Sutskever & Hinton — *ImageNet Classification with Deep Convolutional Neural Networks* | AlexNet | ✅ Complete |
 
 ---
 
@@ -63,10 +64,12 @@
 | Year | Paper / Event | Theme | Status |
 | :--- | :--- | :--- | :--- |
 | **2013** | Mikolov et al. — *Efficient Estimation of Word Representations in Vector Space* | Word2Vec | 📅 Planned |
-| **2014** | Sutskever et al. — *Sequence to Sequence Learning with Neural Networks* | Seq2Seq | 📅 Planned |
+| **2014** | Sutskever et al. — *Sequence to Sequence Learning with Neural Networks* | Seq2Seq | ✅ Complete |
+| **2014** | Bahdanau et al. — *Neural Machine Translation by Jointly Learning to Align and Translate* | Attention | 📅 Planned |
 | **2014** | Goodfellow et al. — *Generative Adversarial Networks* | GANs | 📅 Planned |
 | **2015** | Ioffe & Szegedy — *Batch Normalization* | BatchNorm | 📅 Planned |
 | **2015** | He et al. — *Deep Residual Learning for Image Recognition* | ResNet | 📅 Planned |
+| **2016** | (Optional) — *GRU* | Gated Recurrent Unit | 📅 Planned |
 
 ---
 
