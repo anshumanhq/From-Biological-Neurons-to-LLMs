@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T14:32:09.597695'
+  last_updated: '2026-07-18T14:46:52.023479'
 summary:
-  total_papers: 27
-  completed: 27
+  total_papers: 28
+  completed: 28
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -511,6 +511,92 @@ papers:
   - Guillaume Lample
   venue: arXiv preprint
   doi: 10.48550/arXiv.2302.13971
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: conceptual_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2023_Meta_Llama2
+  title: 'Llama 2: Open Foundation and Fine-Tuned Chat Models'
+  year: 2023
+  authors:
+  - Hugo Touvron
+  - Louis Martin
+  - Kevin Stone
+  - Peter Albert
+  - Amjad Almahairi
+  - Yasmine Babaei
+  - Nikolay Bashlykov
+  - Soumya Batra
+  - Prajjwal Bhargava
+  - Shruti Bhosale
+  - Dan Bikel
+  - Lukas Blecher
+  - Cristian Canton Ferrer
+  - Moya Chen
+  - Guillem Cucurull
+  - David Esiobu
+  - Jude Fernandes
+  - Jeremy Fu
+  - Wenyin Fu
+  - Brian Fuller
+  - Cynthia Gao
+  - Vedanuj Goswami
+  - Naman Goyal
+  - Anthony Hartshorn
+  - Saghar Hosseini
+  - Rui Hou
+  - Hakan Inan
+  - Marcin Kardas
+  - Viktor Kerkez
+  - Madian Khabsa
+  - Isabel Kloumann
+  - Artem Korenev
+  - Punit Singh Koura
+  - Marie-Anne Lachaux
+  - Thibaut Lavril
+  - Jenya Lee
+  - Diana Liskovich
+  - Yinghai Lu
+  - Yuning Mao
+  - Xavier Martinet
+  - Todor Mihaylov
+  - Pushkar Mishra
+  - Igor Molybog
+  - Yixin Nie
+  - Andrew Poulton
+  - Jeremy Reizenstein
+  - Rashmi Rungta
+  - Kalyan Saladi
+  - Alan Schelten
+  - Ruan Silva
+  - Eric Michael Smith
+  - Ranjan Subramanian
+  - Xiaoqing Ellen Tan
+  - Binh Tang
+  - Ross Taylor
+  - Adina Williams
+  - Jian Xiang Kuan
+  - Puxin Xu
+  - Zheng Yan
+  - Iliyan Zarov
+  - Yuchen Zhang
+  - Angela Fan
+  - Melanie Kambadur
+  - Sharan Narang
+  - Aurelien Rodriguez
+  - Robert Stojnic
+  - Sergey Edunov
+  - Thomas Scialom
+  venue: arXiv preprint
+  doi: 10.48550/arXiv.2307.09288
   phase: The Transformer & LLM Era
   era: 2017-2026
   status:

@@ -248,6 +248,17 @@
       }
     },
     {
+      "id": "2023_Meta_Llama2",
+      "label": "Llama 2: Open Foundation and Fine-Tuned Chat Model...",
+      "year": 2023,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "conceptual_only",
+        "verified": false
+      }
+    },
+    {
       "id": "2023_OpenAI_GPT4",
       "label": "GPT-4 Technical Report...",
       "year": 2023,
@@ -741,6 +752,31 @@
       "type": "influences"
     },
     {
+      "source": "2023_Meta_LLaMA",
+      "target": "2023_Meta_Llama2",
+      "type": "influences"
+    },
+    {
+      "source": "2022_Ouyang_InstructGPT",
+      "target": "2023_Meta_Llama2",
+      "type": "influences"
+    },
+    {
+      "source": "2020_Brown_GPT3",
+      "target": "2023_Meta_Llama2",
+      "type": "influences"
+    },
+    {
+      "source": "2023_Meta_Llama2",
+      "target": "2023_Mistral_7B",
+      "type": "influences"
+    },
+    {
+      "source": "2023_Meta_Llama2",
+      "target": "2024_Open_LLMs",
+      "type": "influences"
+    },
+    {
       "source": "2022_OpenAI_ChatGPT",
       "target": "2023_OpenAI_GPT4",
       "type": "influences"
@@ -767,8 +803,8 @@
     }
   ],
   "metadata": {
-    "total_nodes": 27,
-    "total_edges": 101,
-    "generated": "2026-07-18T14:32:10.371792"
+    "total_nodes": 28,
+    "total_edges": 106,
+    "generated": "2026-07-18T14:46:52.756374"
   }
 }
