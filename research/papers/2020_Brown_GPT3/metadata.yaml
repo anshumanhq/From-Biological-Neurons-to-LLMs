@@ -1,0 +1,88 @@
+id: "2020_Brown_GPT3"
+title: "Language Models are Few-Shot Learners"
+authors:
+  - "Tom B. Brown"
+  - "Benjamin Mann"
+  - "Nick Ryder"
+  - "Melanie Subbiah"
+  - "Jared Kaplan"
+  - "Prafulla Dhariwal"
+  - "Arvind Neelakantan"
+  - "Pranav Shyam"
+  - "Girish Sastry"
+  - "Amanda Askell"
+  - "Sandhini Agarwal"
+  - "Ariel Herbert-Voss"
+  - "Gretchen Krueger"
+  - "Tom Henighan"
+  - "Rewon Child"
+  - "Aditya Ramesh"
+  - "Daniel M. Ziegler"
+  - "Jeffrey Wu"
+  - "Clemens Winter"
+  - "Christopher Hesse"
+  - "Mark Chen"
+  - "Eric Sigler"
+  - "Mateusz Litwin"
+  - "Scott Gray"
+  - "Benjamin Chess"
+  - "Jack Clark"
+  - "Christopher Berner"
+  - "Sam McCandlish"
+  - "Alec Radford"
+  - "Ilya Sutskever"
+  - "Dario Amodei"
+year: 2020
+venue: "Advances in Neural Information Processing Systems (NeurIPS) 33"
+doi: "10.48550/arXiv.2005.14165"
+primary_subject:
+  - "Natural Language Processing"
+  - "Generative Pre-training"
+  - "Few-shot Learning"
+  - "Scaling Laws"
+architectural_innovation: false
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2019_Radford_GPT2"
+  - "2018_Radford_GPT"
+successors:
+  - "2022_Ouyang_InstructGPT"
+  - "2022_OpenAI_ChatGPT"
+knowledge_flow: |
+  GPT-3 (2020) scaled the autoregressive Transformer language model
+  to 175 billion parameters, demonstrating that scaling substantially
+  improves in-context learning, particularly in the few-shot setting.
+  The model was evaluated in zero-shot, one-shot, and few-shot settings
+  without gradient updates or task-specific fine-tuning. The paper
+  established scaling as the central experimental variable, documented
+  performance improvements with model scale, and reported both successes
+  and limitations including benchmark contamination concerns.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "forward_pass_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

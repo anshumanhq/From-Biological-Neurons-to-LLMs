@@ -1,0 +1,36 @@
+% GPT-3 (2020) – Core Equations
+
+% 1. Autoregressive language modelling objective:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log P(u_i \mid u_{<i}; \Theta)
+\end{equation}
+
+% 2. Transformer decoder layer with causal masking:
+\begin{equation}
+h_l = \text{block}(h_{l-1}) \quad \forall l \in [1, L]
+\end{equation}
+
+% 3. Causal masked self-attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} + M \right) V
+\end{equation}
+
+% 4. Few-shot learning (in-context learning, no gradient updates):
+\begin{equation}
+P(y \mid x, \text{demonstrations}) = \text{LM}(\text{prompt})
+\end{equation}
+
+% 5. Scaling law relationship (model size, dataset size, compute):
+\begin{equation}
+\text{Performance} \propto N^{\alpha} \cdot D^{\beta}
+\end{equation}
+
+% 6. Zero-shot setting: no demonstrations, only task description:
+\begin{equation}
+P(y \mid x, \text{instruction}) = \text{LM}(\text{prompt})
+\end{equation}
+
+% 7. One-shot setting: one demonstration followed by the query:
+\begin{equation}
+P(y \mid x, d) = \text{LM}(d \oplus \text{query})
+\end{equation}
