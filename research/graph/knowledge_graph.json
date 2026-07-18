@@ -87,6 +87,88 @@
       "phase": "The Architecture Era",
       "historical_importance": 10,
       "has_implementation": true
+    },
+    {
+      "id": "1990_Jordan_Network",
+      "label": "Attractor Dynamics and Parallelism in a Connection...",
+      "year": 1990,
+      "phase": "The Architecture Era",
+      "historical_importance": 8,
+      "has_implementation": true
+    },
+    {
+      "id": "1991_Elman_Network",
+      "label": "Finding Structure in Time...",
+      "year": 1991,
+      "phase": "The Architecture Era",
+      "historical_importance": 9,
+      "has_implementation": {
+        "status": "educational",
+        "verified": false
+      }
+    },
+    {
+      "id": "1997_Hochreiter_LSTM",
+      "label": "Long Short-Term Memory...",
+      "year": 1997,
+      "phase": "The Architecture Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
+    },
+    {
+      "id": "1998_LeCun_LeNet5",
+      "label": "Gradient-Based Learning Applied to Document Recogn...",
+      "year": 1998,
+      "phase": "The Architecture Era",
+      "historical_importance": 10,
+      "has_implementation": true
+    },
+    {
+      "id": "2012_Krizhevsky_AlexNet",
+      "label": "ImageNet Classification with Deep Convolutional Ne...",
+      "year": 2012,
+      "phase": "The Deep Learning Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
+    },
+    {
+      "id": "2014_Goodfellow_GAN",
+      "label": "Generative Adversarial Nets...",
+      "year": 2014,
+      "phase": "The Deep Learning Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
+    },
+    {
+      "id": "2014_Sutskever_Seq2Seq",
+      "label": "Sequence to Sequence Learning with Neural Networks...",
+      "year": 2014,
+      "phase": "The Deep Learning Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
+    },
+    {
+      "id": "2015_He_ResNet",
+      "label": "Deep Residual Learning for Image Recognition...",
+      "year": 2015,
+      "phase": "The Deep Learning Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -254,11 +336,181 @@
       "source": "1989_LeCun_CNN",
       "target": "2012_AlexNet",
       "type": "influences"
+    },
+    {
+      "source": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "target": "1990_Jordan_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1990_Jordan_Network",
+      "target": "1991_Elman_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1990_Jordan_Network",
+      "target": "1997_LSTM",
+      "type": "influences"
+    },
+    {
+      "source": "1990_Jordan_Network",
+      "target": "1991_Elman_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1986_Rumelhart_Hinton_Williams_Backprop",
+      "target": "1991_Elman_Network",
+      "type": "influences"
+    },
+    {
+      "source": "1991_Elman_Network",
+      "target": "1997_LSTM",
+      "type": "influences"
+    },
+    {
+      "source": "1991_Elman_Network",
+      "target": "2014_Seq2Seq",
+      "type": "influences"
+    },
+    {
+      "source": "1991_Elman_Network",
+      "target": "1997_Hochreiter_LSTM",
+      "type": "influences"
+    },
+    {
+      "source": "1990_Jordan_Network",
+      "target": "1997_Hochreiter_LSTM",
+      "type": "influences"
+    },
+    {
+      "source": "1997_Hochreiter_LSTM",
+      "target": "1999_LSTM_ForgetGate",
+      "type": "influences"
+    },
+    {
+      "source": "1997_Hochreiter_LSTM",
+      "target": "2014_Seq2Seq",
+      "type": "influences"
+    },
+    {
+      "source": "1997_Hochreiter_LSTM",
+      "target": "2017_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "1989_LeCun_CNN",
+      "target": "1998_LeCun_LeNet5",
+      "type": "influences"
+    },
+    {
+      "source": "1980_Fukushima_Neocognitron",
+      "target": "1998_LeCun_LeNet5",
+      "type": "influences"
+    },
+    {
+      "source": "1998_LeCun_LeNet5",
+      "target": "2012_AlexNet",
+      "type": "influences"
+    },
+    {
+      "source": "1998_LeCun_LeNet5",
+      "target": "2015_ResNet",
+      "type": "influences"
+    },
+    {
+      "source": "1998_LeCun_LeNet5",
+      "target": "2012_Krizhevsky_AlexNet",
+      "type": "influences"
+    },
+    {
+      "source": "1989_LeCun_CNN",
+      "target": "2012_Krizhevsky_AlexNet",
+      "type": "influences"
+    },
+    {
+      "source": "2012_Krizhevsky_AlexNet",
+      "target": "2014_Seq2Seq",
+      "type": "influences"
+    },
+    {
+      "source": "2012_Krizhevsky_AlexNet",
+      "target": "2015_ResNet",
+      "type": "influences"
+    },
+    {
+      "source": "2012_Krizhevsky_AlexNet",
+      "target": "2017_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "2012_Krizhevsky_AlexNet",
+      "target": "2014_Goodfellow_GAN",
+      "type": "influences"
+    },
+    {
+      "source": "2006_Hinton_DBN",
+      "target": "2014_Goodfellow_GAN",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Goodfellow_GAN",
+      "target": "2015_DCGAN",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Goodfellow_GAN",
+      "target": "2017_WGAN",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Goodfellow_GAN",
+      "target": "2018_StyleGAN",
+      "type": "influences"
+    },
+    {
+      "source": "1997_Hochreiter_LSTM",
+      "target": "2014_Sutskever_Seq2Seq",
+      "type": "influences"
+    },
+    {
+      "source": "1991_Elman_Network",
+      "target": "2014_Sutskever_Seq2Seq",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Sutskever_Seq2Seq",
+      "target": "2017_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "2014_Sutskever_Seq2Seq",
+      "target": "2014_Bahdanau_Attention",
+      "type": "influences"
+    },
+    {
+      "source": "2012_Krizhevsky_AlexNet",
+      "target": "2015_He_ResNet",
+      "type": "influences"
+    },
+    {
+      "source": "1998_LeCun_LeNet5",
+      "target": "2015_He_ResNet",
+      "type": "influences"
+    },
+    {
+      "source": "2015_He_ResNet",
+      "target": "2017_Transformer",
+      "type": "influences"
+    },
+    {
+      "source": "2015_He_ResNet",
+      "target": "2018_GPT",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 11,
-    "total_edges": 33,
-    "generated": "2026-07-17T15:36:13.317462"
+    "total_nodes": 19,
+    "total_edges": 67,
+    "generated": "2026-07-18T13:12:36.335824"
   }
 }

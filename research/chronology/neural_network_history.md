@@ -32,3 +32,4 @@
 | 2022 | Ouyang et al. | InstructGPT / RLHF – alignment |
 | 2023 | OpenAI | GPT-4 – advanced reasoning |
 | 2024–2026 | Various | Agentic AI, multimodal, RAG |
+| 2012 | Krizhevsky, Sutskever & Hinton | AlexNet wins ImageNet |

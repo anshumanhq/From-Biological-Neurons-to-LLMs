@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-17T15:42:40.893303'
+  last_updated: '2026-07-18T13:12:35.702481'
 summary:
-  total_papers: 11
-  completed: 11
+  total_papers: 19
+  completed: 19
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -142,4 +142,174 @@ papers:
   phase: The Architecture Era
   era: 1989-1997
   status: complete
+  historical_importance: 10
+- id: 1990_Jordan_Network
+  title: Attractor Dynamics and Parallelism in a Connectionist Sequential Machine
+  year: 1990
+  authors:
+  - Michael I. Jordan
+  venue: Proceedings of the Eighth Annual Conference of the Cognitive Science Society
+  doi: ''
+  phase: The Architecture Era
+  era: 1990-1997
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 8
+- id: 1991_Elman_Network
+  title: Finding Structure in Time
+  year: 1991
+  authors:
+  - Jeffrey L. Elman
+  venue: Cognitive Science, Vol. 14, No. 2
+  doi: 10.1207/s15516709cog1402_1
+  phase: The Architecture Era
+  era: 1990-1997
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 9
+- id: 1997_Hochreiter_LSTM
+  title: Long Short-Term Memory
+  year: 1997
+  authors:
+  - Sepp Hochreiter
+  - "J\xFCrgen Schmidhuber"
+  venue: Neural Computation, Vol. 9, No. 8
+  doi: 10.1162/neco.1997.9.8.1735
+  phase: The Architecture Era
+  era: 1990-1997
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 1998_LeCun_LeNet5
+  title: Gradient-Based Learning Applied to Document Recognition
+  year: 1998
+  authors:
+  - Yann LeCun
+  - "L\xE9on Bottou"
+  - Yoshua Bengio
+  - Patrick Haffner
+  venue: Proceedings of the IEEE, Vol. 86, No. 11
+  doi: 10.1109/5.726791
+  phase: The Architecture Era
+  era: 1989-1997
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2012_Krizhevsky_AlexNet
+  title: ImageNet Classification with Deep Convolutional Neural Networks
+  year: 2012
+  authors:
+  - Alex Krizhevsky
+  - Ilya Sutskever
+  - Geoffrey E. Hinton
+  venue: Advances in Neural Information Processing Systems (NeurIPS) 25
+  doi: 10.1145/3065386
+  phase: The Deep Learning Era
+  era: 2012-2015
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2014_Goodfellow_GAN
+  title: Generative Adversarial Nets
+  year: 2014
+  authors:
+  - Ian J. Goodfellow
+  - Jean Pouget-Abadie
+  - Mehdi Mirza
+  - Bing Xu
+  - David Warde-Farley
+  - Sherjil Ozair
+  - Aaron Courville
+  - Yoshua Bengio
+  venue: Advances in Neural Information Processing Systems (NeurIPS) 27
+  doi: 10.48550/arXiv.1406.2661
+  phase: The Deep Learning Era
+  era: 2014-2017
+  status:
+    notes: complete
+    implementation: forward_pass_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2014_Sutskever_Seq2Seq
+  title: Sequence to Sequence Learning with Neural Networks
+  year: 2014
+  authors:
+  - Ilya Sutskever
+  - Oriol Vinyals
+  - Quoc V. Le
+  venue: Advances in Neural Information Processing Systems (NeurIPS) 27
+  doi: 10.48550/arXiv.1409.3215
+  phase: The Deep Learning Era
+  era: 2014-2017
+  status:
+    notes: complete
+    implementation: complete
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2015_He_ResNet
+  title: Deep Residual Learning for Image Recognition
+  year: 2015
+  authors:
+  - Kaiming He
+  - Xiangyu Zhang
+  - Shaoqing Ren
+  - Jian Sun
+  venue: arXiv:1512.03385 (CVPR 2016)
+  doi: 10.48550/arXiv.1512.03385
+  phase: The Deep Learning Era
+  era: 2015-2017
+  status:
+    notes: complete
+    implementation: forward_pass_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
   historical_importance: 10

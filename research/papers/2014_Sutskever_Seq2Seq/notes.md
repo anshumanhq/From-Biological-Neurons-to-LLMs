@@ -31,39 +31,39 @@ Seq2Seq was **not** biologically inspired. It was motivated by practical conside
 
 **Encoder LSTM (source sequence \(x_1, \dots, x_T\)):**
 
-'''latex
+```latex
 h_t = \text{LSTM}(x_t, h_{t-1})
-'''
+```
 
 **Context Vector (final encoder state):**
 
-'''latex
+```latex
 c = h_T
-'''
+```
 
 **Decoder LSTM (target sequence \(y_1, \dots, y_U\)):**
 
-'''latex
+```latex
 h'_u = \text{LSTM}(y_{u-1}, h'_{u-1}, c)
-'''
+```
 
 **Output Probability:**
 
-'''latex
+```latex
 P(y_u \mid y_{<u}, x) = \text{softmax}(W h'_u + b)
-'''
+```
 
 **Training Objective (Teacher Forcing):**
 
-'''latex
+```latex
 \mathcal{L} = -\sum_{u=1}^{U} \log P(y_u \mid y_{<u}, x)
-'''
+```
 
 **Greedy Decoding (Inference):**
 
-'''latex
+```latex
 \hat{y}_u = \arg\max_{y} P(y \mid \hat{y}_{<u}, x)
-'''
+```
 
 ---
 
@@ -94,7 +94,7 @@ The model achieved state-of-the-art BLEU scores on English-French translation, s
 
 ## 7. NumPy Scratch Implementation
 
-'''python
+```python
 import numpy as np
 
 class LSTMCell:
@@ -144,7 +144,7 @@ class Seq2Seq:
     def forward(self, source_tokens, max_length=10):
         context_h, context_c = self.encode(source_tokens)
         return self.decode(context_h, context_c, max_length)
-'''
+```
 
 ---
 
@@ -203,14 +203,14 @@ Seq2Seq is considered the foundation of modern sequence transduction. While Tran
 
 ## 14. Implementation Verification
 
-'''python
+```python
 def test_seq2seq_forward():
     seq2seq = Seq2Seq(input_vocab_size=100, output_vocab_size=100, hidden_size=64, embedding_size=32)
     source = [5, 12, 7]
     outputs = seq2seq.forward(source, max_length=5)
     assert outputs.shape == (5, 100), "Output shape mismatch"
     print("Seq2Seq forward pass successful.")
-'''
+```
 
 ---
 
@@ -242,7 +242,7 @@ def test_seq2seq_forward():
 
 ## 18. Influence Graph
 
-'''text
+```text
 LSTM (1997) ───────────────────────────────────────► Seq2Seq (2014)
   │                                                           │
   │ (Recurrent sequence modelling)                           │ (Encoder-Decoder)
@@ -257,7 +257,7 @@ LSTM (1997) ──────────────────────�
                                                               │
                                                               ▼
                                                       Modern LLMs
-'''
+```
 
 ---
 
