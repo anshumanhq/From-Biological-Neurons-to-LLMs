@@ -1,16 +1,18 @@
-id: "1990_Jordan_Network"
-title: "Attractor Dynamics and Parallelism in a Connectionist Sequential Machine"
+id: "1991_Elman_Network"
+title: "Finding Structure in Time"
 authors:
-  - "Michael I. Jordan"
-year: 1990
-venue: "Proceedings of the Eighth Annual Conference of the Cognitive Science Society"
+  - "Jeffrey L. Elman"
+year: 1991
+venue: "Cognitive Science, Vol. 14, No. 2"
+doi: "10.1207/s15516709cog1402_1"
 primary_subject:
   - "Recurrent Neural Networks"
   - "Sequence Learning"
+  - "Cognitive Science"
 architectural_innovation: true
 learning_algorithm_innovation: false
 biological_inspiration: false
-historical_importance: 8
+historical_importance: 9
 difficulty: "Intermediate"
 implementation:
   historical: true
@@ -18,15 +20,16 @@ implementation:
   language: "NumPy"
   dependencies: "numpy"
 predecessors:
+  - "1990_Jordan_Network"
   - "1986_Rumelhart_Hinton_Williams_Backprop"
 successors:
-  - "1991_Elman_Network"
   - "1997_LSTM"
+  - "2014_Seq2Seq"
 knowledge_flow: |
-  Jordan Network (1990) introduced context units that provide feedback
-  from the output layer to the hidden layer, enabling the network to
-  process sequences by maintaining a state. This was the first practical
-  recurrent network architecture for sequence learning.
+  Elman Network (1991) simplified the Jordan Network by using the hidden state
+  as context (rather than output). This became the standard "Simple RNN" and
+  demonstrated that hidden-state recurrence can capture richer temporal patterns.
+  However, it still suffered from vanishing gradients, motivating LSTM.
 phase: "The Architecture Era"
 era: "1990-1997"
 historical_accuracy:
@@ -41,4 +44,4 @@ status:
   questions: "complete"
   diagrams: "pending"
   reviewed: false
-last_updated: "2026-07-17"
+last_updated: "2026-07-18"

@@ -1,0 +1,21 @@
+% Elman Network (1991) – Core Equations
+
+% 1. Hidden state update (uses previous hidden state as context):
+\begin{equation}
+h(t) = f\left( W_{ih} x(t) + W_{hh} h(t-1) + b_h \right)
+\end{equation}
+
+% 2. Output:
+\begin{equation}
+y(t) = g\left( W_{ho} h(t) + b_o \right)
+\end{equation}
+
+% 3. Context is simply the previous hidden state:
+\begin{equation}
+c(t) = h(t-1)
+\end{equation}
+
+% 4. Backpropagation through time (BPTT) weight update (conceptual):
+\begin{equation}
+\Delta W = -\eta \sum_{t} \frac{\partial E}{\partial W} \quad \text{(unfolded over time)}
+\end{equation}

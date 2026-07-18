@@ -17,7 +17,7 @@ Security here means:
 
 If you discover a mathematical error in the equations, a citation mismatch, or a logic flaw in the NumPy scratch code, please do **not** open a public issue immediately.
 
-Instead, email the project maintainer at: **[your-email@domain.com]**
+Instead, email the project maintainer at: **[anshumansingh3697@gmail.com]**
 
 We will respond within 72 hours and coordinate a fix via a private fork or a dedicated hotfix branch.
 

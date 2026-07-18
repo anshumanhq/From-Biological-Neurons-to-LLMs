@@ -1,8 +1,8 @@
 # Contributing to "From Biological Neurons to Large Language Models"
 
 **Project Type:** Academic Manuscript / Historical Research Archive  
-**Current Phase:** Infrastructure & Drafting (v0.1.0)  
-**Lead Author:** [Your Name / Lab]  
+**Current Phase:** Infrastructure & Drafting (v0.3.0)  
+**Lead Author:** Anshuman Singh
 
 ---
 

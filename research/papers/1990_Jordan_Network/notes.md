@@ -67,7 +67,7 @@ Where:
 - \( g(\cdot) \): output activation (usually linear or sigmoid)
 - \( \alpha, \beta \): context update parameters (often \( \alpha = 1, \beta = 1 \))
 
-**Learning:** The network is trained using backpropagation through time (BPTT) or teacher forcing, where the context is updated with the target output (instead of the actual output) during training to stabilise learning.
+**Learning:** The network is typically trained using **backpropagation through time (BPTT)**. **Teacher forcing**—a technique where the context is updated using the target output instead of the network's own prediction—was commonly used to stabilise training. This description follows the standard interpretation of Jordan's work as understood in later literature.
 
 ---
 
@@ -211,13 +211,13 @@ The Jordan Network is now considered a **historical precursor** to modern sequen
 
 ---
 
-## 11. Primary Source Quotes
+## 11. Primary Source Paraphrase
 
-> *"A system that can learn to produce sequences must have access to information about its past outputs."*
+The following summarises the paper's central contributions:
 
-> *"The context units provide the network with a short-term memory of the previous output."*
-
-> *"Teacher forcing is a powerful technique for training recurrent networks that would otherwise be unstable."*
+- The network can learn to generate sequences by maintaining a state that represents previous outputs.
+- Context units provide a form of short-term memory that allows the network to process sequential dependencies.
+- Teacher forcing is a technique that stabilises learning by using target outputs instead of the network's own predictions to update the context.
 
 ---
 

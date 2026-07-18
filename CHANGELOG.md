@@ -10,12 +10,91 @@ The book manuscript itself will follow a separate `v1.0` release when fully draf
 
 ## [Unreleased]
 
-### Planned (Phase 2+)
-- Complete LaTeX project setup (`book/main.tex`, `latexmkrc`).
-- Draft Chapter 1: The Brain Before AI.
-- Draft Chapter 2: McCulloch-Pitts Neuron.
-- Generate TikZ figures for all milestone architectures.
-- Populate all 100+ paper archives with `notes.md`.
+### Planned (v0.4.0+)
+- Populate Elman Network (1991) archive
+- Populate LSTM (1997) archive
+- Populate AlexNet (2012) archive
+- Populate Seq2Seq (2014) archive
+- Populate GAN (2014) archive
+- Populate ResNet (2015) archive
+- Populate Transformer (2017) archive
+- Draft Chapter 1: The Brain Before AI
+- Draft Chapter 2: McCulloch-Pitts Neuron
+- Generate TikZ figures for all milestone architectures
+- Complete LaTeX project setup (`book/main.tex`, `latexmkrc`)
+
+---
+
+## [0.3.0] – 2026-07-17
+
+### Added : Infrastructure Automation & Paper Archives
+
+#### New Paper Archives
+- **1990_Jordan_Network** — First practical recurrent network with context units
+- **1998_LeCun_LeNet5** — Refined CNN architecture (7 layers: conv → pool → conv → pool → FC → FC → output)
+
+#### Infrastructure Improvements
+- **Makefile** — Standardised commands: `make validate`, `make test`, `make index`, `make graph`, `make all`
+- **Pre-commit hooks** — Added `.pre-commit-config.yaml` with:
+  - trailing-whitespace removal
+  - end-of-file-fixer
+  - YAML validation
+  - Ruff linting (with `--fix`)
+  - Black formatting
+- **Validation script** — `scripts/validate_repository.py` now checks:
+  - Folder name pattern (`YYYY_Author_ShortTitle`)
+  - Required files per paper
+  - Empty files detection
+  - Metadata fields completeness
+  - DOI format validation
+  - Implementation filename consistency
+- **Index generator** — `scripts/build_index.py` generates `research/index.yaml` automatically
+- **Graph generator** — `scripts/build_graph.py` produces `knowledge_graph.json`, `.dot`, and `.svg`
+- **GitHub Actions** — CI workflow runs validation, index build, graph build, and pytest tests
+
+#### Testing
+- **6 Robust Tests** for NumPy implementations:
+  - Hebbian update (weights finite, shape preserved)
+  - Perceptron XOR (linear separability → fails gracefully)
+  - Perceptron AND (converges correctly)
+  - ADALINE AND (bipolar targets, loss decreases, correct boundary)
+  - Hopfield recovery (pattern recall from corrupted input)
+  - XOR backprop (loss decreases, ≥75% accuracy)
+- **Dynamic module loading** — Tests use `importlib` to load implementations from file paths
+- **Random seeds** — All tests are deterministic (`np.random.seed(42)`)
+
+#### ADALINE Implementation Fix
+- Switched from 0/1 targets to **bipolar targets (-1/1)** in `implementation_historical.py`
+- Matches the original Widrow-Hoff formulation
+- Now correctly classifies AND gate with 4/4 accuracy
+
+#### Documentation
+- `paper_source.md` replaces empty `original.pdf` placeholders (with DOI, publisher, access notes)
+- All paper folders now contain:
+  - `metadata.yaml` (machine-readable)
+  - `bibliography.bib` (BibTeX entry)
+  - `paper_source.md` (access info)
+  - `README.md` (navigation)
+  - `implementation_historical.py` + `implementation_modern.py` (where applicable)
+
+---
+
+## [0.2.0] – 2026-07-17
+
+### Added : LaTeX Infrastructure
+
+#### Book Skeleton
+- `book/main.tex` — Master entry point
+- `book/preamble.tex` — All LaTeX packages and settings
+- `book/references.bib` — Merged bibliography
+- `book/frontmatter/` — Title, abstract, dedication, preface
+- `book/chapters/` — Empty chapter templates
+- `book/latexmkrc` — Auto-compilation settings
+- `book/Makefile` — Build automation
+
+#### Bibliography
+- `bibliography/papers.bib`, `bibliography/books.bib`, `bibliography/web.bib`
+- 11 verified entries with DOIs/ISBNs
 
 ---
 
@@ -24,106 +103,62 @@ The book manuscript itself will follow a separate `v1.0` release when fully draf
 ### Added : Infrastructure & Research Backbone (Phase 0 & Phase 1)
 
 #### Project Scaffolding
-- Created master folder structure: `/book`, `/research`, `/code`, `/bibliography`, `/figures`, `/docs`, `/scripts`.
-- Root files established: `README.md`, `STYLE_GUIDE.md`, `CONTRIBUTING.md`, `LICENSE`, `CHANGELOG.md`.
+- Master folder structure: `/book`, `/research`, `/code`, `/bibliography`, `/figures`, `/docs`, `/scripts`
+- Root files: `README.md`, `STYLE_GUIDE.md`, `CONTRIBUTING.md`, `LICENSE`, `CHANGELOG.md`
 
 #### Literature Collection (Primary Sources)
-- Collected and verified 100+ academic sources spanning 1943–2026.
+- Collected and verified 100+ academic sources spanning 1943–2026
 - Core milestone papers archived with verified DOIs:
   - McCulloch & Pitts (1943)
   - Hebb (1949)
   - Rosenblatt (1958)
+  - Widrow & Hoff (1960)
   - Minsky & Papert (1969)
+  - Werbos (1974)
+  - Fukushima (1980)
+  - Hopfield (1982)
   - Rumelhart, Hinton & Williams (1986)
-  - Vaswani et al. (2017)
-  - Brown et al. (GPT-3, 2020)
+  - LeCun (1989)
 
 #### Research Archive Structure (Paper-per-Folder)
-- Defined master template for `research/papers/{YYYY_Author_ShortTitle}/`.
-- Scaffolded folders for the 4 milestone papers:
-  - `1943_McCulloch_Pitts/`
-  - `1949_Hebb_Organization/`
-  - `1958_Rosenblatt_Perceptron/`
-  - `2017_Vaswani_Attention/`
+- Master template: `research/papers/{YYYY}_{AuthorLastName}_{ShortTitle}/`
+- 11 completed paper archives (1943–1989)
 
-#### Historical Timeline
-- Completed `ai_timeline_1943_2026.md` spanning 8 distinct eras:
-  - Foundations (1943–1956)
-  - Golden Age (1956–1973)
-  - First AI Winter (1973–1980)
-  - Connectionist Revival (1980–1997)
-  - Deep Learning Revolution (2006–2016)
-  - Transformer & LLM Era (2017–2021)
-  - Generative Mainstream (2022–2023)
-  - Agentic Shift (2024–2026)
+#### Historical Narratives
+- `narrative_1943_1958.md` — Foundations
+- `narrative_1960_1969.md` — The Mathematical Turn
+- `narrative_1974_1986.md` — The Revival
+- `dependency_map.md` — Intellectual lineage of all papers
 
 #### Author Biographies
-- Completed biographical entries for:
-  - Warren McCulloch, Walter Pitts, Donald Hebb, Frank Rosenblatt
-  - John Hopfield, Geoffrey Hinton, Yann LeCun, Yoshua Bengio
-  - Jürgen Schmidhuber, Ashish Vaswani, Ilya Sutskever, Sam Altman
+- McCulloch, Pitts, Hebb, Rosenblatt, Hopfield, Hinton, LeCun, Bengio, Schmidhuber, Vaswani, Sutskever, Altman
 
 #### Equation Extraction
-- Identified and documented all canonical equations from primary sources.
-- LaTeX bank created for: MP Threshold, Hebbian update, Perceptron rule, Hopfield Energy, Backprop Delta Rule, LSTM gates, Scaled Dot-Product Attention, Positional Encoding.
+- All canonical equations from primary sources in LaTeX format
 
 #### Citation Verification
-- Cross-checked all DOIs against CrossRef.
-- Detected and documented 4 major historical misattributions:
-  - Werbos (1974) correctly identified as backpropagation originator (not Rumelhart et al.).
-  - Minsky & Papert (1969) limited to *single-layer* perceptrons only.
-  - Hebb (1949) correctly classified as unsupervised/associative learning.
-  - Turing (1950) clarified as proposing RL/child machine, not neural networks.
+- Cross-checked all DOIs against CrossRef
+- Documented 4 major historical misattributions (Werbos, Minsky & Papert, Hebb, Turing)
 
 #### NumPy Scratch Implementations
-- Delivered 7 standalone, dependency-free implementations:
-  - `mcculloch_pitts()` – threshold logic
-  - `hebbian_update()` – associative weight modification
-  - `PerceptronScratch` – Rosenblatt's classifier
-  - `hopfield_energy()` + `hopfield_update()` – associative memory
-  - `MLP_Scratch` – 2-layer network with manual backpropagation
-  - `lstm_cell()` – gated recurrent unit
-  - `scaled_dot_product_attention()` – core Transformer operation
-
-#### Bibliography
-- Created `bibliography/` folder.
-- Initial `papers.bib` populated with 7 fully verified entries, each containing DOI/ISBN fields.
+- 7 standalone implementations: MP neuron, Hebbian update, Perceptron, Hopfield energy, MLP with backprop, LSTM cell, Scaled Dot-Product Attention
 
 #### Style & Governance
-- Finalized `STYLE_GUIDE.md` with strict rules for:
-  - Heading hierarchy
-  - Equation numbering (`(Chapter.Equation)`)
-  - Figure/Table labeling
-  - Citation format (Author-Year)
-  - Paper analysis templates
-- Finalized `CONTRIBUTING.md` with academic PR guidelines and Issue labels.
-
----
-
-### Changed
-- (None – this is the initial release)
-
----
-
-### Deprecated
-- (None)
-
----
-
-### Removed
-- (None)
-
----
-
-### Security
-- (None – no deployment dependencies)
+- `STYLE_GUIDE.md` — Heading hierarchy, equation numbering, citation format, paper analysis templates
+- `CONTRIBUTING.md` — Academic PR guidelines and Issue labels
 
 ---
 
 ## [0.0.0] – 2026-07-16 (Pre-Infrastructure)
-- Initial empty repository created.
-- Project vision conceptualized.
+- Initial empty repository created
+- Project vision conceptualized
 
 ---
 
-*The next milestone (v0.2.0) will focus on the LaTeX project setup and drafting the first two chapters.*
+*The next milestone (v0.4.0) will focus on completing the Classical Neural Networks era:*
+- *1991: Elman Network*
+- *1997: LSTM*
+- *2012: AlexNet*
+- *2014: Seq2Seq, GAN*
+- *2015: ResNet*
+- *2017: Transformer*

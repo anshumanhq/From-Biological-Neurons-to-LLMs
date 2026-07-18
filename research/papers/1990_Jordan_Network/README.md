@@ -12,6 +12,32 @@ This paper introduced the **Jordan Network**, the first practical recurrent neur
 
 ---
 
+## Architecture Diagram
+
+'''text
+         ┌─────────────────────────────────────────────┐
+         │                                             │
+         ▼                                             │
+  ┌───────────┐    ┌───────────┐    ┌───────────┐     │
+  │  Input    │───►│  Hidden   │───►│  Output   │─────┘
+  │  Layer    │    │  Layer    │    │  Layer    │
+  └───────────┘    └───────────┘    └───────────┘
+         │               ▲                │
+         │               │                │
+         │         ┌─────┴─────┐          │
+         │         │  Context  │◄─────────┘
+         │         │  Units    │
+         │         └───────────┘
+         │               │
+         └───────────────┘
+'''
+
+- **Context Units:** Store the previous output and feed it back to the hidden layer.
+- **Teacher Forcing:** During training, the context is updated with the target output (stabilises learning).
+- **Free Running:** During generation, the context is updated with the network's own output.
+
+---
+
 ## Key Contributions
 
 - **Context Units:** Store previous output and feed it back to the hidden layer.
