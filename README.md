@@ -1,6 +1,6 @@
 # From Biological Neurons to Large Language Models
 
-**Version:** 0.4.0 (Classical Neural Networks Complete)  
+**Version:** 0.5.0 (Deep Learning & LLM Era)  
 **License:** CC BY-NC-ND 4.0
 
 ---
@@ -10,7 +10,7 @@
 [![Validation](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml/badge.svg)](https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs/actions/workflows/validate.yml)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Papers Archived](https://img.shields.io/badge/Papers%20Archived-17-brightgreen)](research/index.yaml)
+[![Papers Archived](https://img.shields.io/badge/Papers%20Archived-25-brightgreen)](research/index.yaml)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](.pre-commit-config.yaml)
 
 ---
@@ -27,13 +27,14 @@ Unlike typical history books, this repository treats the book as a **living rese
 
 | Phase | Period | Status |
 | :--- | :--- | :--- |
-| **v0.1.0** | Repository Governance | ✅ Complete |
-| **v0.2.0** | LaTeX Infrastructure | ✅ Complete |
-| **v0.2.1** | Repository Infrastructure | ✅ Complete |
-| **v0.3.0** | Infrastructure Automation | ✅ Complete |
-| **v0.4.0** | Classical Neural Networks (1943–1998) | ✅ **Complete** |
-| **v0.5.0** | Deep Learning Era (2012–2017) | 🚧 In Progress |
-| **v1.0.0** | Transformer → GPT → LLMs Complete | 📅 Planned |
+| **v0.1.0** | Repository Governance |  Complete |
+| **v0.2.0** | LaTeX Infrastructure |  Complete |
+| **v0.2.1** | Repository Infrastructure |  Complete |
+| **v0.3.0** | Infrastructure Automation |  Complete |
+| **v0.4.0** | Classical Neural Networks (1943�1998) |  Complete |
+| **v0.5.0** | Deep Learning & LLM Era (2012�2022) |  **Complete** |
+| **v0.6.0** | Modern LLMs (2023�2026) |  In Progress |
+| **v1.0.0** | Book Manuscript Complete |  Planned |
 
 ---
 
@@ -72,56 +73,64 @@ python scripts/build_graph.py
 
 ```text
 From-Biological-Neurons-to-LLMs/
-├── book/                    # LaTeX manuscript
-├── research/                # The Archive
-│   ├── papers/              # Per-paper folders (1943–2014)
-│   ├── history/             # Narratives + dependency map
-│   ├── graph/               # Knowledge graph (JSON/DOT/SVG)
-│   ├── index.yaml           # Machine-readable index
-│   ├── chronology/          # Master chronology
-│   ├── comparisons/         # Paper comparisons
-│   └── glossary/            # Terminology definitions
-├── code/                    # NumPy implementations
-├── bibliography/            # BibTeX sources
-├── scripts/                 # Automation scripts
-├── requirements-dev.txt     # Development dependencies
-├── .pre-commit-config.yaml  # Pre-commit hooks
-└── README.md
+ book/                    # LaTeX manuscript
+ research/                # The Archive
+    papers/              # Per-paper folders (1943�2022)
+    history/             # Narratives + dependency map
+    graph/               # Knowledge graph (JSON/DOT/SVG)
+    index.yaml           # Machine-readable index
+    chronology/          # Master chronology
+    comparisons/         # Paper comparisons
+    glossary/            # Terminology definitions
+ code/                    # NumPy implementations
+ bibliography/            # BibTeX sources
+ scripts/                 # Automation scripts
+ requirements-dev.txt     # Development dependencies
+ .pre-commit-config.yaml  # Pre-commit hooks
+ README.md
 ```
 
 ---
 
-## Current Papers Archived (17)
+## Current Papers Archived (25)
 
 | # | Year | Paper | Status |
 | :--- | :--- | :--- | :--- |
-| 1 | 1943 | McCulloch & Pitts | ✅ Complete |
-| 2 | 1949 | Hebb | ✅ Complete |
-| 3 | 1950 | Turing | ✅ Complete |
-| 4 | 1958 | Rosenblatt | ✅ Complete |
-| 5 | 1960 | Widrow & Hoff | ✅ Complete |
-| 6 | 1969 | Minsky & Papert | ✅ Complete |
-| 7 | 1974 | Werbos | ✅ Complete |
-| 8 | 1980 | Fukushima | ✅ Complete |
-| 9 | 1982 | Hopfield | ✅ Complete |
-| 10 | 1986 | Rumelhart, Hinton & Williams | ✅ Complete |
-| 11 | 1989 | LeCun CNN | ✅ Complete |
-| 12 | 1990 | Jordan Network | ✅ Complete |
-| 13 | 1991 | Elman Network | ✅ Complete |
-| 14 | 1997 | LSTM | ✅ Complete |
-| 15 | 1998 | LeNet‑5 | ✅ Complete |
-| 16 | 2012 | AlexNet | ✅ Complete |
-| 17 | 2014 | Seq2Seq | ✅ Complete |
+| 1 | 1943 | McCulloch & Pitts |  Complete |
+| 2 | 1949 | Hebb |  Complete |
+| 3 | 1950 | Turing |  Complete |
+| 4 | 1958 | Rosenblatt |  Complete |
+| 5 | 1960 | Widrow & Hoff |  Complete |
+| 6 | 1969 | Minsky & Papert |  Complete |
+| 7 | 1974 | Werbos |  Complete |
+| 8 | 1980 | Fukushima |  Complete |
+| 9 | 1982 | Hopfield |  Complete |
+| 10 | 1986 | Rumelhart, Hinton & Williams |  Complete |
+| 11 | 1989 | LeCun CNN |  Complete |
+| 12 | 1990 | Jordan Network |  Complete |
+| 13 | 1991 | Elman Network |  Complete |
+| 14 | 1997 | LSTM |  Complete |
+| 15 | 1998 | LeNet5 |  Complete |
+| 16 | 2012 | AlexNet |  Complete |
+| 17 | 2014 | Seq2Seq |  Complete |
+| 18 | 2014 | GAN |  Complete |
+| 19 | 2015 | ResNet |  Complete |
+| 20 | 2017 | Transformer |  Complete |
+| 21 | 2018 | GPT |  Complete |
+| 22 | 2019 | GPT2 |  Complete |
+| 23 | 2020 | GPT3 |  Complete |
+| 24 | 2022 | InstructGPT |  Complete |
+| 25 | 2022 | ChatGPT |  Complete |
 
 ---
 
 ## Next Milestone
 
-**v0.5.0 — Deep Learning Era (2014–2017)**
+**v0.6.0 � Modern LLMs (2023�2026)**
 
-- 2014: GAN
-- 2015: ResNet
-- 2017: Transformer
+- 2023: GPT-4
+- 2024�2026: Agentic AI
+- Book chapters and narrative completion
 
 ---
 

@@ -28,6 +28,7 @@ digraph KnowledgeGraph {
   "2020_Brown_GPT3" [label="Language Models are Few-Shot Learners...\n(2020)"];
   "2022_OpenAI_ChatGPT" [label="Introducing ChatGPT...\n(2022)"];
   "2022_Ouyang_InstructGPT" [label="Training Language Models to Follow Instructions wi...\n(2022)"];
+  "2023_OpenAI_GPT4" [label="GPT-4 Technical Report...\n(2023)"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
   "1943_McCulloch_Pitts" -> "1958_Rosenblatt_Perceptron" [label="influences"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
@@ -119,4 +120,9 @@ digraph KnowledgeGraph {
   "2019_Radford_GPT2" -> "2022_Ouyang_InstructGPT" [label="influences"];
   "2022_Ouyang_InstructGPT" -> "2022_OpenAI_ChatGPT" [label="influences"];
   "2022_Ouyang_InstructGPT" -> "2023_OpenAI_GPT4" [label="influences"];
+  "2022_OpenAI_ChatGPT" -> "2023_OpenAI_GPT4" [label="influences"];
+  "2022_Ouyang_InstructGPT" -> "2023_OpenAI_GPT4" [label="influences"];
+  "2020_Brown_GPT3" -> "2023_OpenAI_GPT4" [label="influences"];
+  "2023_OpenAI_GPT4" -> "2024_OpenAI_AgenticAI" [label="influences"];
+  "2023_OpenAI_GPT4" -> "2024_OpenAI_Multimodal" [label="influences"];
 }

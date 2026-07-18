@@ -235,6 +235,17 @@
         "status": "forward_pass_only",
         "verified": false
       }
+    },
+    {
+      "id": "2023_OpenAI_GPT4",
+      "label": "GPT-4 Technical Report...",
+      "year": 2023,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "conceptual_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -692,11 +703,36 @@
       "source": "2022_Ouyang_InstructGPT",
       "target": "2023_OpenAI_GPT4",
       "type": "influences"
+    },
+    {
+      "source": "2022_OpenAI_ChatGPT",
+      "target": "2023_OpenAI_GPT4",
+      "type": "influences"
+    },
+    {
+      "source": "2022_Ouyang_InstructGPT",
+      "target": "2023_OpenAI_GPT4",
+      "type": "influences"
+    },
+    {
+      "source": "2020_Brown_GPT3",
+      "target": "2023_OpenAI_GPT4",
+      "type": "influences"
+    },
+    {
+      "source": "2023_OpenAI_GPT4",
+      "target": "2024_OpenAI_AgenticAI",
+      "type": "influences"
+    },
+    {
+      "source": "2023_OpenAI_GPT4",
+      "target": "2024_OpenAI_Multimodal",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 25,
-    "total_edges": 91,
-    "generated": "2026-07-18T13:56:53.723714"
+    "total_nodes": 26,
+    "total_edges": 96,
+    "generated": "2026-07-18T14:17:52.093615"
   }
 }

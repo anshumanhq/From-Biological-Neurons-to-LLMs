@@ -30,6 +30,6 @@
 | 2019 | Radford et al. | GPT-2 – scaling language models |
 | 2020 | Brown et al. | GPT-3 – few-shot learning at scale |
 | 2022 | Ouyang et al. | InstructGPT / RLHF – alignment |
+| 2022 | OpenAI | ChatGPT – conversational AI product |
 | 2023 | OpenAI | GPT-4 – advanced reasoning |
 | 2024–2026 | Various | Agentic AI, multimodal, RAG |
-| 2012 | Krizhevsky, Sutskever & Hinton | AlexNet wins ImageNet |

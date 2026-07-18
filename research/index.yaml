@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T13:56:53.027769'
+  last_updated: '2026-07-18T14:17:51.394156'
 summary:
-  total_papers: 25
-  completed: 25
+  total_papers: 26
+  completed: 26
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -484,6 +484,25 @@ papers:
   status:
     notes: complete
     implementation: forward_pass_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2023_OpenAI_GPT4
+  title: GPT-4 Technical Report
+  year: 2023
+  authors:
+  - OpenAI
+  venue: OpenAI Technical Report
+  doi: 10.48550/arXiv.2303.08774
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: conceptual_only
     equations: complete
     bibliography: complete
     summary: complete
