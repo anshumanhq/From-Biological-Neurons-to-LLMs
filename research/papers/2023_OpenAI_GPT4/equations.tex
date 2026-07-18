@@ -1,0 +1,25 @@
+% GPT-4 (2023) – Core Equations
+% GPT-4 uses the same fundamental Transformer decoder equations as GPT-3,
+% with additional post-training alignment. The core equations are included
+% for reference; GPT-4's innovation is not in new equations.
+
+% 1. Autoregressive language modelling:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log P(u_i \mid u_{<i}; \Theta)
+\end{equation}
+
+% 2. Causal masked self-attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} + M \right) V
+\end{equation}
+
+% 3. RLHF / PPO alignment (as in InstructGPT):
+\begin{equation}
+\mathcal{L}_{\text{RL}} = -\mathbb{E}_{x \sim \mathcal{D}_{\text{RL}}, y \sim \pi_{\theta}(x)}
+\left[ r_{\phi}(x, y) - \beta \cdot \text{KL}\left( \pi_{\theta} \parallel \pi_{\text{ref}} \right) \right]
+\end{equation}
+
+% 4. Multimodal input processing (conceptual):
+\begin{equation}
+\text{Embedding}(x_{\text{text}}, x_{\text{image}}) = \text{concat}(\text{text\_emb}, \text{image\_emb})
+\end{equation}
