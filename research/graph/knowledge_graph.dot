@@ -23,6 +23,7 @@ digraph KnowledgeGraph {
   "2014_Sutskever_Seq2Seq" [label="Sequence to Sequence Learning with Neural Networks...\n(2014)"];
   "2015_He_ResNet" [label="Deep Residual Learning for Image Recognition...\n(2015)"];
   "2017_Vaswani_Transformer" [label="Attention Is All You Need...\n(2017)"];
+  "2018_Devlin_BERT" [label="BERT: Pre-training of Deep Bidirectional Transform...\n(2018)"];
   "2018_Radford_GPT" [label="Improving Language Understanding by Generative Pre...\n(2018)"];
   "2019_Radford_GPT2" [label="Language Models are Unsupervised Multitask Learner...\n(2019)"];
   "2020_Brown_GPT3" [label="Language Models are Few-Shot Learners...\n(2020)"];
@@ -104,6 +105,10 @@ digraph KnowledgeGraph {
   "2017_Vaswani_Transformer" -> "2018_GPT" [label="influences"];
   "2017_Vaswani_Transformer" -> "2018_BERT" [label="influences"];
   "2017_Vaswani_Transformer" -> "2020_GPT3" [label="influences"];
+  "2017_Vaswani_Transformer" -> "2018_Devlin_BERT" [label="influences"];
+  "2018_Devlin_BERT" -> "2019_RoBERTa" [label="influences"];
+  "2018_Devlin_BERT" -> "2019_ALBERT" [label="influences"];
+  "2018_Devlin_BERT" -> "2020_DeBERTa" [label="influences"];
   "2017_Vaswani_Transformer" -> "2018_Radford_GPT" [label="influences"];
   "2018_Radford_GPT" -> "2019_Radford_GPT2" [label="influences"];
   "2018_Radford_GPT" -> "2020_Brown_GPT3" [label="influences"];
