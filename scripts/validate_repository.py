@@ -170,6 +170,57 @@ def validate_implementations():
     return has_errors
 
 
+# Add these functions inside validate_repository.py
+
+def validate_metadata_content(paper_dir):
+    """Check metadata.yaml for schema version, implementation, reproducibility."""
+    metadata_file = paper_dir / "metadata.yaml"
+    if not metadata_file.exists():
+        return False
+    try:
+        import yaml
+        with open(metadata_file, 'r') as f:
+            data = yaml.safe_load(f)
+        errors = False
+        if 'schema_version' not in data:
+            print(f"⚠️ {paper_dir.name}: Missing 'schema_version' in metadata")
+            errors = True
+        if 'implementation' not in data:
+            print(f"⚠️ {paper_dir.name}: Missing 'implementation' field")
+            errors = True
+        elif not isinstance(data['implementation'], dict):
+            print(f"⚠️ {paper_dir.name}: 'implementation' should be a dict")
+            errors = True
+        else:
+            for key in ['historical', 'modern']:
+                if key not in data['implementation']:
+                    print(f"⚠️ {paper_dir.name}: Missing implementation.{key}")
+                    errors = True
+                elif not isinstance(data['implementation'][key], dict):
+                    print(f"⚠️ {paper_dir.name}: implementation.{key} should be a dict")
+                    errors = True
+                else:
+                    if 'status' not in data['implementation'][key]:
+                        print(f"⚠️ {paper_dir.name}: Missing implementation.{key}.status")
+                        errors = True
+                    if 'verified' not in data['implementation'][key]:
+                        print(f"⚠️ {paper_dir.name}: Missing implementation.{key}.verified")
+                        errors = True
+        if 'reproducibility' not in data:
+            print(f"⚠️ {paper_dir.name}: Missing 'reproducibility' field")
+            errors = True
+        else:
+            for field in ['python', 'numpy', 'last_tested']:
+                if field not in data['reproducibility']:
+                    print(f"⚠️ {paper_dir.name}: Missing reproducibility.{field}")
+                    errors = True
+        return not errors
+    except Exception as e:
+        print(f"⚠️ {paper_dir.name}: Error reading metadata: {e}")
+        return False
+
+# In the main validation function, call this after checking required files.
+
 def main():
     print("=" * 60)
     print("Repository Validation: From Biological Neurons to LLMs")

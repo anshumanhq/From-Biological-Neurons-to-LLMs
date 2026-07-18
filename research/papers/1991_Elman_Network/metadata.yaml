@@ -14,11 +14,18 @@ learning_algorithm_innovation: false
 biological_inspiration: false
 historical_importance: 9
 difficulty: "Intermediate"
+schema_version: "1.0"
 implementation:
-  historical: true
-  modern: true
-  language: "NumPy"
-  dependencies: "numpy"
+  historical:
+    status: "educational"
+    verified: false
+  modern:
+    status: "educational"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
 predecessors:
   - "1990_Jordan_Network"
   - "1986_Rumelhart_Hinton_Williams_Backprop"
@@ -34,7 +41,6 @@ phase: "The Architecture Era"
 era: "1990-1997"
 historical_accuracy:
   verified_from_original_paper: false
-  implementation_status: "educational"
 status:
   notes: "complete"
   implementation: "complete"
