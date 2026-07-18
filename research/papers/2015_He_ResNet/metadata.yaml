@@ -1,0 +1,58 @@
+id: "2015_He_ResNet"
+title: "Deep Residual Learning for Image Recognition"
+authors:
+  - "Kaiming He"
+  - "Xiangyu Zhang"
+  - "Shaoqing Ren"
+  - "Jian Sun"
+year: 2015
+venue: "arXiv:1512.03385 (CVPR 2016)"
+doi: "10.48550/arXiv.1512.03385"
+primary_subject:
+  - "Computer Vision"
+  - "Convolutional Neural Networks"
+  - "Deep Learning"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2012_Krizhevsky_AlexNet"
+  - "1998_LeCun_LeNet5"
+successors:
+  - "2017_Transformer"
+  - "2018_GPT"
+knowledge_flow: |
+  ResNet (2015) introduced residual learning with identity shortcut connections
+  to address the degradation problem in very deep networks. The formulation
+  H(x) = F(x) + x allows gradients to flow directly through the network,
+  enabling training of networks with 152 layers and winning the ILSVRC 2015
+  competition with 3.57% top‑5 error. Residual connections have since become
+  a fundamental component of many architectures, including Transformers.
+phase: "The Deep Learning Era"
+era: "2015-2017"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "forward_pass_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

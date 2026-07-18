@@ -1,0 +1,26 @@
+% ResNet (2015) – Core Equations
+
+% 1. Residual block (identity shortcut):
+\begin{equation}
+\mathbf{y} = \mathcal{F}(\mathbf{x}, \{W_i\}) + \mathbf{x}
+\end{equation}
+
+% 2. Residual block with projection shortcut (when dimensions differ):
+\begin{equation}
+\mathbf{y} = \mathcal{F}(\mathbf{x}, \{W_i\}) + W_s \mathbf{x}
+\end{equation}
+
+% 3. Bottleneck residual block:
+\begin{equation}
+\mathbf{y} = \mathbf{x} + W_3 \cdot \text{ReLU}(W_2 \cdot \text{ReLU}(W_1 \mathbf{x}))
+\end{equation}
+
+% 4. Degradation problem (deeper network → higher training error):
+\begin{equation}
+\text{Error}(56\text{-layer}) > \text{Error}(20\text{-layer})
+\end{equation}
+
+% 5. Residual learning formulation (learning residual vs. unreferenced mapping):
+\begin{equation}
+\mathcal{F}(\mathbf{x}) = \mathcal{H}(\mathbf{x}) - \mathbf{x}
+\end{equation}
