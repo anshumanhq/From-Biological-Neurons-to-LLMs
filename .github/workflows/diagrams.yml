@@ -1,0 +1,43 @@
+name: Build Diagrams
+
+on:
+  push:
+    paths:
+      - 'book/tikz/*.tex'
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions UI
+
+jobs:
+  build-diagrams:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install LaTeX and pdf2svg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended pdf2svg
+
+      - name: Compile all TikZ diagrams to PDF
+        working-directory: book/tikz
+        run: |
+          for texfile in *.tex; do
+            echo "Processing $texfile..."
+            pdflatex -interaction=nonstopmode "$texfile"
+          done
+
+      - name: Convert PDFs to SVGs
+        working-directory: book/tikz
+        run: |
+          for pdffile in *.pdf; do
+            base=$(basename "$pdffile" .pdf)
+            echo "Converting $pdffile to ${base}.svg..."
+            pdf2svg "$pdffile" "${base}.svg"
+          done
+
+      - name: Upload SVG artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: diagram-svgs
+          path: book/tikz/*.svg

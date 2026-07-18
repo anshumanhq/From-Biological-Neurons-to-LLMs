@@ -1,0 +1,57 @@
+% ============================================================
+% DIAGRAM TEMPLATE – From Biological Neurons to LLMs
+% ============================================================
+% Usage:
+%   1. Copy this template to book/tikz/{paper_id}_{diagram_name}.tex
+%   2. Fill in the title, caption, and diagram code
+%   3. Compile with: pdflatex {filename}.tex
+%   4. Convert to SVG: pdf2svg {filename}.pdf {filename}.svg
+% ============================================================
+
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% ============================================================
+% Colour Palette
+% ============================================================
+% Neuron body:       blue!20
+% Input:             green!20
+% Output:            red!20
+% Weight:            orange!30
+% Bias/Threshold:    gray!20
+% Edge/Arrow:        black!70
+% Text:              black
+% Highlight:         yellow!20
+
+\usetikzlibrary{shapes,arrows,positioning,fit,calc,backgrounds}
+
+\begin{document}
+
+% ============================================================
+% DIAGRAM: [Title]
+% ============================================================
+% Caption: [Figure X.Y: Description. (Source: Paper, Year)]
+% ============================================================
+
+\begin{tikzpicture}[
+    % Node styles
+    neuron/.style={draw, circle, minimum size=1cm, inner sep=0pt, fill=blue!20},
+    input/.style={draw, circle, minimum size=0.8cm, inner sep=0pt, fill=green!20},
+    output/.style={draw, circle, minimum size=0.8cm, inner sep=0pt, fill=red!20},
+    weight/.style={draw, rectangle, minimum width=0.6cm, minimum height=0.4cm, fill=orange!30, font=\tiny},
+    threshold/.style={draw, rectangle, minimum width=0.6cm, minimum height=0.4cm, fill=gray!20, font=\tiny},
+    label/.style={font=\sffamily\small},
+    title/.style={font=\sffamily\Large\bfseries},
+    caption/.style={font=\sffamily\small\itshape},
+    edge/.style={-stealth, thick, draw=black!70},
+]
+
+% ============================================================
+% Diagram Code Here
+% ============================================================
+
+\end{tikzpicture}
+
+\end{document}

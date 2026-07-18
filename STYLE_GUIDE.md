@@ -120,4 +120,83 @@ Every folder must contain a `notes.md` with these exact headers:
 
 ---
 
+## 13. Diagram Standards (TikZ)
+
+### 13.1 Colour Palette
+
+| Element | Colour | TikZ Fill |
+| :--- | :--- | :--- |
+| Neuron body | Blue | `blue!20` |
+| Input | Green | `green!20` |
+| Output | Red | `red!20` |
+| Weight | Orange | `orange!30` |
+| Bias / Threshold | Gray | `gray!20` |
+| Edge / Arrow | Dark Gray | `black!70` |
+| Text | Black | `black` |
+| Highlight | Yellow | `yellow!20` |
+
+### 13.2 Node Styles
+
+| Style | Shape | Size | Usage |
+| :--- | :--- | :--- | :--- |
+| `neuron` | Circle | 1cm | Main neuron body |
+| `input` | Circle | 0.8cm | Input nodes |
+| `output` | Circle | 0.8cm | Output nodes |
+| `weight` | Rectangle | 0.6×0.4cm | Synaptic weight |
+| `threshold` | Rectangle | 0.6×0.4cm | Bias/threshold |
+
+### 13.3 Typography in Diagrams
+
+- **Font:** `\sffamily` (sans‑serif for readability).
+- **Labels:** Use `\mathbf{x}` for vectors, `w_i` for weights.
+- **Titles:** `\sffamily\Large\bfseries`.
+- **Captions:** `\sffamily\small\itshape`.
+- **Figure Numbering:** `Figure Chapter.Index` (e.g., *Figure 1.1: McCulloch-Pitts Neuron*).
+
+### 13.4 File Naming & Storage
+
+| File Type | Location | Naming Convention |
+| :--- | :--- | :--- |
+| TikZ Source | `book/tikz/` | `{YYYY}_{short_name}.tex` |
+| SVG Output (Common) | `figures/common/` | `{YYYY}_{short_name}.svg` |
+| SVG Output (Paper) | `research/papers/*/diagrams/` | `{YYYY}_{short_name}.svg` |
+
+### 13.5 Caption Requirements
+
+Every diagram **must** include a caption with:
+
+- Figure number (e.g., `Figure 1.1`)
+- Description of the diagram
+- Source citation: `(Adapted from Author, Year, p. X)`
+
+*Example:* `Figure 1.1: The McCulloch-Pitts neuron model. (Adapted from McCulloch & Pitts, 1943, p. 117)`
+
+### 13.6 Export Workflow
+
+1. Write TikZ source in `book/tikz/`.
+2. Compile: `pdflatex diagram.tex`.
+3. Export to SVG: `pdf2svg diagram.pdf diagram.svg`.
+4. Copy to `figures/common/` and `research/papers/*/diagrams/`.
+
+---
+
+## 14. Diagram Generation Workflow
+
+The repository uses GitHub Actions to automatically compile TikZ diagrams from `book/tikz/` and produce SVG artifacts.
+
+### How to Generate Diagrams
+
+1. Create or edit `.tex` files in `book/tikz/`.
+2. Push the changes or manually trigger the **Build Diagrams** workflow from GitHub Actions.
+3. Download the `diagram-svgs` artifact.
+4. Copy the SVGs to `figures/common/` and/or the specific paper's `diagrams/` folder.
+
+### Requirements for TikZ Files
+
+- Use the template from `docs/diagram_template.tex`.
+- Ensure the diagram compiles with `pdflatex` (standalone class).
+- Include a caption as a node inside the diagram.
+
+---
+
 *This style guide is frozen as of v0.1.0. Any future amendments require a PR to the repository and an update to CHANGELOG.md.*
