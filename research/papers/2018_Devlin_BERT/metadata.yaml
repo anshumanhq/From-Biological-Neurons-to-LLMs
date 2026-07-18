@@ -1,0 +1,63 @@
+id: "2018_Devlin_BERT"
+title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+authors:
+  - "Jacob Devlin"
+  - "Ming-Wei Chang"
+  - "Kenton Lee"
+  - "Kristina Toutanova"
+year: 2018
+venue: "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT)"
+doi: "10.48550/arXiv.1810.04805"
+primary_subject:
+  - "Natural Language Processing"
+  - "Pre-trained Language Models"
+  - "Transformer Architecture"
+  - "Bidirectional Representation"
+architectural_innovation: true  # Transformer encoder + bidirectional pre-training
+learning_algorithm_innovation: true  # MLM + NSP
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "conceptual_only"
+    verified: false
+  modern:
+    status: "conceptual_only"
+    verified: false
+reproducibility:
+  python: "N/A"
+  numpy: "N/A"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2017_Vaswani_Transformer"
+successors:
+  - "2019_RoBERTa"
+  - "2019_ALBERT"
+  - "2020_DeBERTa"
+knowledge_flow: |
+  BERT (2018) introduced deep bidirectional representation learning through
+  two unsupervised pre-training objectives: Masked Language Modeling (MLM)
+  and Next Sentence Prediction (NSP). Unlike GPT's autoregressive approach,
+  BERT uses the Transformer encoder to condition on both left and right
+  contexts, enabling rich bidirectional representations. The model achieved
+  state-of-the-art results on 11 NLP tasks, including GLUE and SQuAD,
+  establishing the "pre-train then fine-tune" paradigm as the dominant
+  approach for NLP. BERT became one of the most influential papers in NLP
+  history, sparking a wave of follow-up models (RoBERTa, ALBERT, DeBERTa,
+  etc.) and setting the stage for the modern foundation model era.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "conceptual_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

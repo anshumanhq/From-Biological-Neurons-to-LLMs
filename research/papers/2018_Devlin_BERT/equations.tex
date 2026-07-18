@@ -1,0 +1,35 @@
+% BERT (2018) – Core Equations
+
+% 1. Masked Language Modeling (MLM) objective:
+\begin{equation}
+\mathcal{L}_{\text{MLM}} = -\sum_{i \in \mathcal{M}} \log P(w_i \mid w_{\backslash i}; \Theta)
+\end{equation}
+where \(\mathcal{M}\) is the set of masked positions.
+
+% 2. Next Sentence Prediction (NSP) objective:
+\begin{equation}
+\mathcal{L}_{\text{NSP}} = -\log P(\text{isNext} \mid [CLS], \text{sentence A}, \text{sentence B})
+\end{equation}
+
+% 3. Combined pre-training objective:
+\begin{equation}
+\mathcal{L}_{\text{BERT}} = \mathcal{L}_{\text{MLM}} + \mathcal{L}_{\text{NSP}}
+\end{equation}
+
+% 4. Transformer encoder self-attention (bidirectional):
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
+\end{equation}
+
+% 5. Positional encoding (same as Transformer):
+\begin{equation}
+\text{PE}(pos, 2i) = \sin\left( \frac{pos}{10000^{2i/d_{\text{model}}}} \right)
+\end{equation}
+\begin{equation}
+\text{PE}(pos, 2i+1) = \cos\left( \frac{pos}{10000^{2i/d_{\text{model}}}} \right)
+\end{equation}
+
+% 6. Fine-tuning objective (e.g., classification):
+\begin{equation}
+P(y \mid \mathbf{x}) = \text{softmax}(W h_{[CLS]} + b)
+\end{equation}
