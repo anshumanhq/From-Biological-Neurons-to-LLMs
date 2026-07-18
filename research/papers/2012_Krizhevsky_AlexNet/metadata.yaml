@@ -1,0 +1,57 @@
+id: "2012_Krizhevsky_AlexNet"
+title: "ImageNet Classification with Deep Convolutional Neural Networks"
+authors:
+  - "Alex Krizhevsky"
+  - "Ilya Sutskever"
+  - "Geoffrey E. Hinton"
+year: 2012
+venue: "Advances in Neural Information Processing Systems (NeurIPS) 25"
+doi: "10.1145/3065386"
+primary_subject:
+  - "Computer Vision"
+  - "Convolutional Neural Networks"
+  - "Deep Learning"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "1998_LeCun_LeNet5"
+  - "1989_LeCun_CNN"
+successors:
+  - "2014_Seq2Seq"
+  - "2015_ResNet"
+  - "2017_Transformer"
+knowledge_flow: |
+  AlexNet (2012) demonstrated that deep CNNs with ReLU activations, dropout,
+  data augmentation, and GPU training could achieve breakthrough performance
+  on the ImageNet Large-Scale Visual Recognition Challenge (ILSVRC). This
+  paper marked the beginning of the modern deep-learning era and sparked
+  the AI boom of the 2010s.
+phase: "The Deep Learning Era"
+era: "2012-2015"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
