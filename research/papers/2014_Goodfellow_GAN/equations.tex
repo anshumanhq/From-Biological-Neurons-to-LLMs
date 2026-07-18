@@ -1,0 +1,36 @@
+% GAN (2014) – Core Equations
+
+% 1. Minimax objective (adversarial game):
+\begin{equation}
+\min_G \max_D V(D,G) =
+\mathbb{E}_{x\sim p_{\text{data}}}[\log D(x)]
++
+\mathbb{E}_{z\sim p_z}[\log(1-D(G(z)))]
+\end{equation}
+
+% 2. Generator mapping: latent noise z to generated sample:
+\begin{equation}
+G: \mathbb{R}^d \rightarrow \mathbb{R}^n
+\end{equation}
+
+% 3. Discriminator mapping: sample to probability of being real:
+\begin{equation}
+D: \mathbb{R}^n \rightarrow [0,1]
+\end{equation}
+
+% 4. Cross-entropy loss for discriminator (binary classification):
+\begin{equation}
+\mathcal{L}_D = -\mathbb{E}_{x\sim p_{\text{data}}}[\log D(x)]
+-\mathbb{E}_{z\sim p_z}[\log(1-D(G(z)))]
+\end{equation}
+
+% 5. Generator loss (minimise discriminator's success):
+\begin{equation}
+\mathcal{L}_G = \mathbb{E}_{z\sim p_z}[\log(1-D(G(z)))]
+\end{equation}
+
+% 6. JS Divergence connection (under ideal conditions):
+\begin{equation}
+2 \cdot \text{JSD}(p_{\text{data}} \parallel p_g) =
+\max_D V(D,G) + \log 4
+\end{equation}

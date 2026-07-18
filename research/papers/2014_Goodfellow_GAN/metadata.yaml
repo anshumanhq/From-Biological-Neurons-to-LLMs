@@ -1,0 +1,63 @@
+id: "2014_Goodfellow_GAN"
+title: "Generative Adversarial Nets"
+authors:
+  - "Ian J. Goodfellow"
+  - "Jean Pouget-Abadie"
+  - "Mehdi Mirza"
+  - "Bing Xu"
+  - "David Warde-Farley"
+  - "Sherjil Ozair"
+  - "Aaron Courville"
+  - "Yoshua Bengio"
+year: 2014
+venue: "Advances in Neural Information Processing Systems (NeurIPS) 27"
+doi: "10.48550/arXiv.1406.2661"
+primary_subject:
+  - "Generative Models"
+  - "Adversarial Training"
+  - "Deep Learning"
+architectural_innovation: true
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2012_Krizhevsky_AlexNet"
+  - "2006_Hinton_DBN"
+successors:
+  - "2015_DCGAN"
+  - "2017_WGAN"
+  - "2018_StyleGAN"
+knowledge_flow: |
+  GANs (2014) introduced adversarial training as a general framework
+  for learning generative models through competition between a generator
+  and discriminator. The minimax objective (min_G max_D V(D,G)) connects
+  the training dynamics to Jensen-Shannon divergence minimization. This
+  paper established a new paradigm for generative modelling that has
+  since been extended to image, text, and audio generation.
+phase: "The Deep Learning Era"
+era: "2014-2017"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
