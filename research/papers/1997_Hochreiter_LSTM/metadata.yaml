@@ -1,0 +1,55 @@
+id: "1997_Hochreiter_LSTM"
+title: "Long Short-Term Memory"
+authors:
+  - "Sepp Hochreiter"
+  - "Jürgen Schmidhuber"
+year: 1997
+venue: "Neural Computation, Vol. 9, No. 8"
+doi: "10.1162/neco.1997.9.8.1735"
+primary_subject:
+  - "Recurrent Neural Networks"
+  - "Sequence Learning"
+  - "Gradient-based Optimization"
+architectural_innovation: true
+learning_algorithm_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "1991_Elman_Network"
+  - "1990_Jordan_Network"
+successors:
+  - "1999_LSTM_ForgetGate"
+  - "2014_Seq2Seq"
+  - "2017_Transformer"
+knowledge_flow: |
+  The original 1997 LSTM introduced a memory cell with a Constant Error Carousel (CEC)
+  and input/output gating, enabling more reliable learning of long-term dependencies.
+  The later forget-gate extension (1999/2000) made the memory capable of adaptive
+  resetting in continuous input streams.
+phase: "The Architecture Era"
+era: "1990-1997"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
