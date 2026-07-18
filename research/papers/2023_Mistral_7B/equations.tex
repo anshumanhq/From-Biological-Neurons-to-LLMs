@@ -1,0 +1,28 @@
+% Mistral 7B (2023) – Core Equations
+
+% 1. Autoregressive language modelling:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log P(u_i \mid u_{<i}; \Theta)
+\end{equation}
+
+% 2. Standard self-attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
+\end{equation}
+
+% 3. Grouped-Query Attention (GQA):
+\begin{equation}
+Q \in \mathbb{R}^{n \times d_k}, \quad K, V \in \mathbb{R}^{g \times d_k}
+\end{equation}
+where \(g < n\) is the number of query groups.
+
+% 4. Sliding Window Attention (SWA):
+\begin{equation}
+\text{SWA}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \odot M_{\text{window}} \right) V
+\end{equation}
+where \(M_{\text{window}}\) is a mask limiting attention to a local window.
+
+% 5. RoPE (Rotary Positional Embedding):
+\begin{equation}
+f_{\text{RoPE}}(x, m) = \text{Rotary}(x, m \cdot \theta)
+\end{equation}

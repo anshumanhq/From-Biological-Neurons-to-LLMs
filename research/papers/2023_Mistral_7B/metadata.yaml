@@ -1,0 +1,80 @@
+id: "2023_Mistral_7B"
+title: "Mistral 7B"
+authors:
+  - "Albert Q. Jiang"
+  - "Alexandre Sablayrolles"
+  - "Arthur Mensch"
+  - "Chris Bamford"
+  - "Devendra Singh Chaplot"
+  - "Diego de las Casas"
+  - "Florian Bressand"
+  - "Gianna Lengyel"
+  - "Guillaume Lample"
+  - "Lucile Saulnier"
+  - "Lélio Renard Lavaud"
+  - "Marie-Anne Lachaux"
+  - "Pierre Stock"
+  - "Teven Le Scao"
+  - "Thibaut Lavril"
+  - "Thomas Wang"
+  - "Timothée Lacroix"
+  - "William El Sayed"
+year: 2023
+venue: "arXiv preprint"
+doi: "10.48550/arXiv.2310.06825"
+primary_subject:
+  - "Natural Language Processing"
+  - "Efficient Transformers"
+  - "Open-weight Models"
+  - "Inference Optimization"
+architectural_innovation: true  # Sliding Window Attention, Grouped-Query Attention
+learning_algorithm_innovation: false
+scaling_innovation: false
+efficiency_innovation: true
+open_weight_innovation: true
+biological_inspiration: false
+historical_importance: 9
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "conceptual_only"
+    verified: false
+  modern:
+    status: "conceptual_only"
+    verified: false
+reproducibility:
+  python: "N/A"
+  numpy: "N/A"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2023_Meta_Llama2"
+  - "2023_Meta_LLaMA"
+successors:
+  - "2024_Mixtral_8x7B"
+  - "2024_Open_LLMs"
+knowledge_flow: |
+  Mistral 7B (2023) introduced a 7B-parameter efficient language model
+  with two key architectural innovations: Grouped-Query Attention (GQA)
+  and Sliding Window Attention (SWA). GQA reduces memory bandwidth
+  requirements during inference, while SWA limits attention computation
+  to local windows, enabling faster processing of long sequences. The
+  model demonstrated strong performance on various benchmarks, often
+  outperforming much larger models in specific evaluations. Released
+  under an open-weight licence, Mistral 7B significantly influenced
+  the open-weight LLM ecosystem and established efficiency as a key
+  design goal.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "conceptual_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
