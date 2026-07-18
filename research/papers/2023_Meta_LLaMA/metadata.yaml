@@ -1,0 +1,77 @@
+id: "2023_Meta_LLaMA"
+title: "LLaMA: Open and Efficient Foundation Language Models"
+authors:
+  - "Hugo Touvron"
+  - "Thibaut Lavril"
+  - "Gautier Izacard"
+  - "Xavier Martinet"
+  - "Marie-Anne Lachaux"
+  - "Timothée Lacroix"
+  - "Baptiste Rozière"
+  - "Naman Goyal"
+  - "Eric Hambro"
+  - "Faisal Azhar"
+  - "Aurelien Rodriguez"
+  - "Armand Joulin"
+  - "Edouard Grave"
+  - "Guillaume Lample"
+year: 2023
+venue: "arXiv preprint"
+doi: "10.48550/arXiv.2302.13971"
+primary_subject:
+  - "Natural Language Processing"
+  - "Open-weight Models"
+  - "Efficient Training"
+  - "Foundation Models"
+architectural_innovation: false
+learning_algorithm_innovation: false
+scaling_innovation: false
+efficiency_innovation: true
+open_weight_innovation: true
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "conceptual_only"
+    verified: false
+  modern:
+    status: "conceptual_only"
+    verified: false
+reproducibility:
+  python: "N/A"
+  numpy: "N/A"
+  last_tested: "2026-07-18"
+predecessors:
+  - "2023_OpenAI_GPT4"
+  - "2020_Brown_GPT3"
+successors:
+  - "2023_Meta_Llama2"
+  - "2023_Mistral_7B"
+  - "2024_Open_LLMs"
+knowledge_flow: |
+  LLaMA (2023) demonstrated that highly capable foundation language models
+  could be trained at comparatively smaller parameter scales using large
+  quantities of publicly available data and careful training methodology.
+  The paper introduced models ranging from 7B to 65B parameters and reported
+  that LLaMA-13B outperformed GPT-3 (175B) on most evaluated benchmarks,
+  while LLaMA-65B was competitive with larger contemporary models.
+  The original release provided research access to model weights under a
+  noncommercial license. Although not an unrestricted open-source release,
+  LLaMA became a major catalyst for the subsequent open-weight LLM ecosystem,
+  including instruction-tuned, quantized, and derivative models.
+phase: "The Transformer & LLM Era"
+era: "2017-2026"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "conceptual_only"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"

@@ -1,0 +1,23 @@
+% LLaMA (2023) – Core Equations
+% LLaMA uses the Transformer decoder architecture, similar to GPT.
+% Key contributions are in training efficiency and data curation.
+
+% 1. Autoregressive language modelling:
+\begin{equation}
+\mathcal{L} = -\sum_{i} \log P(u_i \mid u_{<i}; \Theta)
+\end{equation}
+
+% 2. Causal masked self-attention:
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} + M \right) V
+\end{equation}
+
+% 3. Efficient training with RMSNorm (instead of LayerNorm):
+\begin{equation}
+\text{RMSNorm}(x) = \frac{x}{\sqrt{\frac{1}{n} \sum_i x_i^2 + \epsilon}}
+\end{equation}
+
+% 4. SwiGLU activation (instead of ReLU):
+\begin{equation}
+\text{SwiGLU}(x) = \text{swish}(x W_1 + b_1) \odot (x W_2 + b_2)
+\end{equation}

@@ -56,12 +56,11 @@ GPT‑4 is **not** biologically inspired.
 
 The paper (technical report) documents:
 
-- **Architecture:** Transformer decoder (similar to GPT‑3, with engineering improvements).
-- **Scale:** Likely >1 trillion parameters (though not explicitly stated).
-- **Multimodality:** Accepts image and text inputs (in later deployments).
-- **Alignment:** Extensive RLHF and safety measures.
-- **Benchmarks:** Human‑level performance on professional exams (bar, medical), MMLU (~86%), MATH (~42%), HumanEval (~67%).
-- **Limitations:** Hallucinations, biases, and reasoning gaps remain.
+- **Architecture:** GPT-4 belongs to the autoregressive Transformer-based language-model family, but its exact architecture and parameter count were not disclosed. Some reports suggest a mixture-of-experts (MoE) design, but this remains speculative.
+- **Multimodality:** The technical report describes capabilities to accept image and text inputs; however, the initial public release was text-only. Image-input functionality was available later through selected deployments.
+- **Alignment:** OpenAI employed RLHF-style post-training and alignment methods to improve safety and reliability, but the exact pipeline details were not fully specified.
+- **Benchmarks:** Human-level or near-human-level performance on many professional exams (e.g., bar, medical licensing) and strong results on academic benchmarks (MMLU ~86%, MATH ~42%, HumanEval ~67%).
+- **Limitations:** Hallucinations, biases, and reasoning gaps remain; the model is not a universal human-level intelligence.
 
 ---
 
@@ -110,7 +109,7 @@ GPT‑4 set a new standard for LLM capability, reasoning, and safety. It signifi
 
 ## 12. Modern Relevance (2026 Perspective)
 
-GPT‑4 remains one of the most capable LLMs, and its multimodal capabilities have been expanded. The lessons from GPT‑4—scaling, alignment, safety, and engineering—have been adopted by other models. GPT‑4 is widely used in enterprise and research applications.
+GPT-4 remains one of the most capable LLMs, and its multimodal capabilities have been expanded in later versions. The lessons from GPT-4—scaling, alignment, safety, and engineering—have been adopted by other models. GPT-4 is widely used in enterprise and research applications. It also catalysed the open-weight research ecosystem through its influence on models like LLaMA and Mistral.
 
 ---
 
@@ -141,12 +140,14 @@ GPT‑4 remains one of the most capable LLMs, and its multimodal capabilities ha
 
 ## 15. Common Misconceptions
 
-- **Misconception 1:** "GPT‑4 introduced a new architecture."
-  - **Fact:** It uses a Transformer decoder (similar to GPT‑3).
-- **Misconception 2:** "GPT‑4 is open source."
+- **Misconception 1:** "GPT-4 introduced a new architecture."
+  - **Fact:** It belongs to the Transformer decoder family; exact architecture details were not disclosed.
+- **Misconception 2:** "GPT-4 is open source."
   - **Fact:** It is proprietary.
-- **Misconception 3:** "GPT‑4 is perfect."
-  - **Fact:** It still has limitations.
+- **Misconception 3:** "GPT-4 is perfect."
+  - **Fact:** It still has hallucinations, biases, and limitations.
+- **Misconception 4:** "GPT-4 was released with image input from day one."
+  - **Fact:** The initial public release was text-only; image-input capability came later through select deployments.
 
 ---
 
