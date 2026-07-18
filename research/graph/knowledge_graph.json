@@ -180,6 +180,17 @@
         "status": "forward_pass_only",
         "verified": false
       }
+    },
+    {
+      "id": "2018_Radford_GPT",
+      "label": "Improving Language Understanding by Generative Pre...",
+      "year": 2018,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 10,
+      "has_implementation": {
+        "status": "forward_pass_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -542,11 +553,26 @@
       "source": "2017_Vaswani_Transformer",
       "target": "2020_GPT3",
       "type": "influences"
+    },
+    {
+      "source": "2017_Vaswani_Transformer",
+      "target": "2018_Radford_GPT",
+      "type": "influences"
+    },
+    {
+      "source": "2018_Radford_GPT",
+      "target": "2019_Radford_GPT2",
+      "type": "influences"
+    },
+    {
+      "source": "2018_Radford_GPT",
+      "target": "2020_Brown_GPT3",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 20,
-    "total_edges": 72,
-    "generated": "2026-07-18T13:19:28.524097"
+    "total_nodes": 21,
+    "total_edges": 75,
+    "generated": "2026-07-18T13:28:36.897932"
   }
 }

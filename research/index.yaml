@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T13:19:27.946540'
+  last_updated: '2026-07-18T13:28:36.309449'
 summary:
-  total_papers: 20
-  completed: 20
+  total_papers: 21
+  completed: 21
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -327,6 +327,28 @@ papers:
   - Illia Polosukhin
   venue: Advances in Neural Information Processing Systems (NeurIPS) 30
   doi: 10.48550/arXiv.1706.03762
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: forward_pass_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 10
+- id: 2018_Radford_GPT
+  title: Improving Language Understanding by Generative Pre-Training
+  year: 2018
+  authors:
+  - Alec Radford
+  - Karthik Narasimhan
+  - Tim Salimans
+  - Ilya Sutskever
+  venue: OpenAI Technical Report
+  doi: 10.48550/arXiv.2502.09733
   phase: The Transformer & LLM Era
   era: 2017-2026
   status:
