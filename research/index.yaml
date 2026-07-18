@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T15:12:23.302286'
+  last_updated: '2026-07-18T15:27:35.459854'
 summary:
-  total_papers: 30
-  completed: 30
+  total_papers: 31
+  completed: 31
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -687,3 +687,43 @@ papers:
     diagrams: pending
     reviewed: false
   historical_importance: 10
+- id: 2024_Mistral_Mixtral_8x7B
+  title: Mixtral of Experts
+  year: 2024
+  authors:
+  - Albert Q. Jiang
+  - Alexandre Sablayrolles
+  - Antoine Roux
+  - Arthur Mensch
+  - Baptiste Savary
+  - Chris Bamford
+  - Devendra Singh Chaplot
+  - Diego de las Casas
+  - Emma Bou Hanna
+  - Florian Bressand
+  - Gianna Lengyel
+  - Guillaume Lample
+  - "L\xE9lio Renard Lavaud"
+  - Lucile Saulnier
+  - Marie-Anne Lachaux
+  - Pierre Stock
+  - Sandro Manoel
+  - Teven Le Scao
+  - Thibaut Lavril
+  - Thomas Wang
+  - "Timoth\xE9e Lacroix"
+  - William El Sayed
+  venue: arXiv preprint
+  doi: 10.48550/arXiv.2401.04088
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: conceptual_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 9

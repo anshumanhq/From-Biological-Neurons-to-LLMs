@@ -33,6 +33,7 @@ digraph KnowledgeGraph {
   "2023_Meta_Llama2" [label="Llama 2: Open Foundation and Fine-Tuned Chat Model...\n(2023)"];
   "2023_Mistral_7B" [label="Mistral 7B...\n(2023)"];
   "2023_OpenAI_GPT4" [label="GPT-4 Technical Report...\n(2023)"];
+  "2024_Mistral_Mixtral_8x7B" [label="Mixtral of Experts...\n(2024)"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
   "1943_McCulloch_Pitts" -> "1958_Rosenblatt_Perceptron" [label="influences"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
@@ -147,4 +148,8 @@ digraph KnowledgeGraph {
   "2020_Brown_GPT3" -> "2023_OpenAI_GPT4" [label="influences"];
   "2023_OpenAI_GPT4" -> "2023_Meta_LLaMA" [label="influences"];
   "2023_OpenAI_GPT4" -> "2024_OpenAI_AgenticAI" [label="influences"];
+  "2023_Mistral_7B" -> "2024_Mistral_Mixtral_8x7B" [label="influences"];
+  "2023_Meta_Llama2" -> "2024_Mistral_Mixtral_8x7B" [label="influences"];
+  "2024_Mistral_Mixtral_8x7B" -> "2024_Open_LLMs" [label="influences"];
+  "2024_Mistral_Mixtral_8x7B" -> "2024_AgenticAI" [label="influences"];
 }

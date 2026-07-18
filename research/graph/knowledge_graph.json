@@ -290,6 +290,17 @@
         "status": "conceptual_only",
         "verified": false
       }
+    },
+    {
+      "id": "2024_Mistral_Mixtral_8x7B",
+      "label": "Mixtral of Experts...",
+      "year": 2024,
+      "phase": "The Transformer & LLM Era",
+      "historical_importance": 9,
+      "has_implementation": {
+        "status": "conceptual_only",
+        "verified": false
+      }
     }
   ],
   "edges": [
@@ -862,11 +873,31 @@
       "source": "2023_OpenAI_GPT4",
       "target": "2024_OpenAI_AgenticAI",
       "type": "influences"
+    },
+    {
+      "source": "2023_Mistral_7B",
+      "target": "2024_Mistral_Mixtral_8x7B",
+      "type": "influences"
+    },
+    {
+      "source": "2023_Meta_Llama2",
+      "target": "2024_Mistral_Mixtral_8x7B",
+      "type": "influences"
+    },
+    {
+      "source": "2024_Mistral_Mixtral_8x7B",
+      "target": "2024_Open_LLMs",
+      "type": "influences"
+    },
+    {
+      "source": "2024_Mistral_Mixtral_8x7B",
+      "target": "2024_AgenticAI",
+      "type": "influences"
     }
   ],
   "metadata": {
-    "total_nodes": 30,
-    "total_edges": 114,
-    "generated": "2026-07-18T15:12:24.089131"
+    "total_nodes": 31,
+    "total_edges": 118,
+    "generated": "2026-07-18T15:27:36.273558"
   }
 }
