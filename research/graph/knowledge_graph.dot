@@ -30,6 +30,7 @@ digraph KnowledgeGraph {
   "2022_Ouyang_InstructGPT" [label="Training Language Models to Follow Instructions wi...\n(2022)"];
   "2023_Meta_LLaMA" [label="LLaMA: Open and Efficient Foundation Language Mode...\n(2023)"];
   "2023_Meta_Llama2" [label="Llama 2: Open Foundation and Fine-Tuned Chat Model...\n(2023)"];
+  "2023_Mistral_7B" [label="Mistral 7B...\n(2023)"];
   "2023_OpenAI_GPT4" [label="GPT-4 Technical Report...\n(2023)"];
   "1943_McCulloch_Pitts" -> "1949_Hebb_Organization" [label="influences"];
   "1943_McCulloch_Pitts" -> "1958_Rosenblatt_Perceptron" [label="influences"];
@@ -132,6 +133,10 @@ digraph KnowledgeGraph {
   "2020_Brown_GPT3" -> "2023_Meta_Llama2" [label="influences"];
   "2023_Meta_Llama2" -> "2023_Mistral_7B" [label="influences"];
   "2023_Meta_Llama2" -> "2024_Open_LLMs" [label="influences"];
+  "2023_Meta_Llama2" -> "2023_Mistral_7B" [label="influences"];
+  "2023_Meta_LLaMA" -> "2023_Mistral_7B" [label="influences"];
+  "2023_Mistral_7B" -> "2024_Mixtral_8x7B" [label="influences"];
+  "2023_Mistral_7B" -> "2024_Open_LLMs" [label="influences"];
   "2022_OpenAI_ChatGPT" -> "2023_OpenAI_GPT4" [label="influences"];
   "2022_Ouyang_InstructGPT" -> "2023_OpenAI_GPT4" [label="influences"];
   "2020_Brown_GPT3" -> "2023_OpenAI_GPT4" [label="influences"];

@@ -1,10 +1,10 @@
 project:
   name: From Biological Neurons to Large Language Models
   version: 0.3.0
-  last_updated: '2026-07-18T14:46:52.023479'
+  last_updated: '2026-07-18T14:52:52.284906'
 summary:
-  total_papers: 28
-  completed: 28
+  total_papers: 29
+  completed: 29
   pending: 0
 papers:
 - id: 1943_McCulloch_Pitts
@@ -609,6 +609,42 @@ papers:
     diagrams: pending
     reviewed: false
   historical_importance: 10
+- id: 2023_Mistral_7B
+  title: Mistral 7B
+  year: 2023
+  authors:
+  - Albert Q. Jiang
+  - Alexandre Sablayrolles
+  - Arthur Mensch
+  - Chris Bamford
+  - Devendra Singh Chaplot
+  - Diego de las Casas
+  - Florian Bressand
+  - Gianna Lengyel
+  - Guillaume Lample
+  - Lucile Saulnier
+  - "L\xE9lio Renard Lavaud"
+  - Marie-Anne Lachaux
+  - Pierre Stock
+  - Teven Le Scao
+  - Thibaut Lavril
+  - Thomas Wang
+  - "Timoth\xE9e Lacroix"
+  - William El Sayed
+  venue: arXiv preprint
+  doi: 10.48550/arXiv.2310.06825
+  phase: The Transformer & LLM Era
+  era: 2017-2026
+  status:
+    notes: complete
+    implementation: conceptual_only
+    equations: complete
+    bibliography: complete
+    summary: complete
+    questions: complete
+    diagrams: pending
+    reviewed: false
+  historical_importance: 9
 - id: 2023_OpenAI_GPT4
   title: GPT-4 Technical Report
   year: 2023
