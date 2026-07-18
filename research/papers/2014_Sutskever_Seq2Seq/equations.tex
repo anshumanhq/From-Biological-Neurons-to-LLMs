@@ -1,0 +1,31 @@
+% Seq2Seq (2014) – Core Equations
+
+% 1. Encoder LSTM (source sequence x_1, ..., x_T):
+\begin{equation}
+h_t = \text{LSTM}(x_t, h_{t-1})
+\end{equation}
+
+% 2. Final encoder hidden state (context vector):
+\begin{equation}
+c = h_T
+\end{equation}
+
+% 3. Decoder LSTM (target sequence y_1, ..., y_U):
+\begin{equation}
+h'_u = \text{LSTM}(y_{u-1}, h'_{u-1}, c)
+\end{equation}
+
+% 4. Output probability for target token:
+\begin{equation}
+P(y_u \mid y_{<u}, x) = \text{softmax}(W h'_u + b)
+\end{equation}
+
+% 5. Training objective (teacher forcing):
+\begin{equation}
+\mathcal{L} = -\sum_{u=1}^{U} \log P(y_u \mid y_{<u}, x)
+\end{equation}
+
+% 6. Greedy decoding (inference):
+\begin{equation}
+\hat{y}_u = \arg\max_{y} P(y \mid \hat{y}_{<u}, x)
+\end{equation}

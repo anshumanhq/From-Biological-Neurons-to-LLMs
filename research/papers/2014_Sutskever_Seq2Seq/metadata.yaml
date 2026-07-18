@@ -1,0 +1,57 @@
+id: "2014_Sutskever_Seq2Seq"
+title: "Sequence to Sequence Learning with Neural Networks"
+authors:
+  - "Ilya Sutskever"
+  - "Oriol Vinyals"
+  - "Quoc V. Le"
+year: 2014
+venue: "Advances in Neural Information Processing Systems (NeurIPS) 27"
+doi: "10.48550/arXiv.1409.3215"
+primary_subject:
+  - "Sequence Learning"
+  - "Neural Machine Translation"
+  - "Encoder-Decoder Architecture"
+architectural_innovation: true
+learning_algorithm_innovation: false
+biological_inspiration: false
+historical_importance: 10
+difficulty: "Advanced"
+schema_version: "1.0"
+implementation:
+  historical:
+    status: "forward_pass_only"
+    verified: false
+  modern:
+    status: "forward_pass_only"
+    verified: false
+reproducibility:
+  python: "3.12"
+  numpy: ">=2.0"
+  last_tested: "2026-07-18"
+predecessors:
+  - "1997_Hochreiter_LSTM"
+  - "1991_Elman_Network"
+successors:
+  - "2017_Transformer"
+  - "2014_Bahdanau_Attention"
+knowledge_flow: |
+  Seq2Seq (2014) introduced the encoder-decoder architecture for sequence
+  transduction tasks like neural machine translation. It used two LSTMs:
+  one to encode the source sequence into a fixed-length vector, and another
+  to decode that vector into the target sequence. This paper established
+  the foundation for all subsequent sequence-to-sequence models, including
+  attention-based models and Transformers.
+phase: "The Deep Learning Era"
+era: "2014-2017"
+historical_accuracy:
+  verified_from_original_paper: false
+status:
+  notes: "complete"
+  implementation: "complete"
+  equations: "complete"
+  bibliography: "complete"
+  summary: "complete"
+  questions: "complete"
+  diagrams: "pending"
+  reviewed: false
+last_updated: "2026-07-18"
