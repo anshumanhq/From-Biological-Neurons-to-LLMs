@@ -27,15 +27,15 @@ Unlike typical history books, this repository treats the book as a **living rese
 
 | Phase | Period | Status |
 | :--- | :--- | :--- |
-| **v0.1.0** | Repository Governance | 7¼3 Complete |
-| **v0.2.0** | LaTeX Infrastructure | 7¼3 Complete |
-| **v0.2.1** | Repository Infrastructure | 7¼3 Complete |
-| **v0.3.0** | Infrastructure Automation | 7¼3 Complete |
-| **v0.4.0** | Classical Neural Networks (1943¨C1998) | 7¼3 Complete |
-| **v0.5.0** | Deep Learning & LLM Era (2012¨C2022) | 7¼3 Complete |
-| **v0.6.0** | Modern LLMs & Open-Weight Era (2023) | 7¼3 **Complete** |
-| **v0.7.0** | Remaining Transformer Landmarks (BERT, Mixtral, etc.) | •03 In Progress |
-| **v1.0.0** | Book Manuscript Complete | ”9Ý1 Planned |
+| **v0.1.0** | Repository Governance | âœ… Complete |
+| **v0.2.0** | LaTeX Infrastructure | âœ… Complete |
+| **v0.2.1** | Repository Infrastructure | âœ… Complete |
+| **v0.3.0** | Infrastructure Automation | âœ… Complete |
+| **v0.4.0** | Classical Neural Networks (1943â€“1998) | âœ… Complete |
+| **v0.5.0** | Deep Learning & LLM Era (2012â€“2022) | âœ… Complete |
+| **v0.6.0** | Modern LLMs & Open-Weight Era (2023) | âœ… **Complete** |
+| **v0.7.0** | Remaining Transformer Landmarks (BERT, Mixtral, etc.) | ðŸš§ In Progress |
+| **v1.0.0** | Book Manuscript Complete | ðŸ“… Planned |
 
 ---
 
@@ -43,53 +43,53 @@ Unlike typical history books, this repository treats the book as a **living rese
 
 ### Clone the Repository
 
-```bash
+'''bash
 git clone https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs.git
 cd From-Biological-Neurons-to-LLMs
-```
+'''
 
 ### Install Development Dependencies
 
-```bash
+'''bash
 pip install -r requirements-dev.txt
 pre-commit install
-```
+'''
 
 ### Run Validation
 
-```bash
+'''bash
 python scripts/validate_repository.py
-```
+'''
 
 ### Build Index & Knowledge Graph
 
-```bash
+'''bash
 python scripts/build_index.py
 python scripts/build_graph.py
-```
+'''
 
 ---
 
 ## Folder Structure
 
-```text
+'''text
 From-Biological-Neurons-to-LLMs/
-©À©¤©¤ book/                    # LaTeX manuscript
-©À©¤©¤ research/                # The Archive
-©¦   ©À©¤©¤ papers/              # Per-paper folders (1943¨C2023)
-©¦   ©À©¤©¤ history/             # Narratives + dependency map
-©¦   ©À©¤©¤ graph/               # Knowledge graph (JSON/DOT/SVG)
-©¦   ©À©¤©¤ index.yaml           # Machine-readable index
-©¦   ©À©¤©¤ chronology/          # Master chronology
-©¦   ©À©¤©¤ comparisons/         # Paper comparisons
-©¦   ©¸©¤©¤ glossary/            # Terminology definitions
-©À©¤©¤ code/                    # NumPy implementations
-©À©¤©¤ bibliography/            # BibTeX sources
-©À©¤©¤ scripts/                 # Automation scripts
-©À©¤©¤ requirements-dev.txt     # Development dependencies
-©À©¤©¤ .pre-commit-config.yaml  # Pre-commit hooks
-©¸©¤©¤ README.md
-```
+â”œâ”€â”€ book/                    # LaTeX manuscript
+â”œâ”€â”€ research/                # The Archive
+â”‚   â”œâ”€â”€ papers/              # Per-paper folders (1943â€“2023)
+â”‚   â”œâ”€â”€ history/             # Narratives + dependency map
+â”‚   â”œâ”€â”€ graph/               # Knowledge graph (JSON/DOT/SVG)
+â”‚   â”œâ”€â”€ index.yaml           # Machine-readable index
+â”‚   â”œâ”€â”€ chronology/          # Master chronology
+â”‚   â”œâ”€â”€ comparisons/         # Paper comparisons
+â”‚   â””â”€â”€ glossary/            # Terminology definitions
+â”œâ”€â”€ code/                    # NumPy implementations
+â”œâ”€â”€ bibliography/            # BibTeX sources
+â”œâ”€â”€ scripts/                 # Automation scripts
+â”œâ”€â”€ requirements-dev.txt     # Development dependencies
+â”œâ”€â”€ .pre-commit-config.yaml  # Pre-commit hooks
+â””â”€â”€ README.md
+'''
 
 ---
 
@@ -97,48 +97,48 @@ From-Biological-Neurons-to-LLMs/
 
 | # | Year | Paper | Status |
 | :--- | :--- | :--- | :--- |
-| 1 | 1943 | McCulloch & Pitts | 7¼3 Complete |
-| 2 | 1949 | Hebb | 7¼3 Complete |
-| 3 | 1950 | Turing | 7¼3 Complete |
-| 4 | 1958 | Rosenblatt | 7¼3 Complete |
-| 5 | 1960 | Widrow & Hoff | 7¼3 Complete |
-| 6 | 1969 | Minsky & Papert | 7¼3 Complete |
-| 7 | 1974 | Werbos | 7¼3 Complete |
-| 8 | 1980 | Fukushima | 7¼3 Complete |
-| 9 | 1982 | Hopfield | 7¼3 Complete |
-| 10 | 1986 | Rumelhart, Hinton & Williams | 7¼3 Complete |
-| 11 | 1989 | LeCun CNN | 7¼3 Complete |
-| 12 | 1990 | Jordan Network | 7¼3 Complete |
-| 13 | 1991 | Elman Network | 7¼3 Complete |
-| 14 | 1997 | LSTM | 7¼3 Complete |
-| 15 | 1998 | LeNet6¥25 | 7¼3 Complete |
-| 16 | 2012 | AlexNet | 7¼3 Complete |
-| 17 | 2014 | Seq2Seq | 7¼3 Complete |
-| 18 | 2014 | GAN | 7¼3 Complete |
-| 19 | 2015 | ResNet | 7¼3 Complete |
-| 20 | 2017 | Transformer | 7¼3 Complete |
-| 21 | 2018 | GPT | 7¼3 Complete |
-| 22 | 2019 | GPT6¥22 | 7¼3 Complete |
-| 23 | 2020 | GPT6¥23 | 7¼3 Complete |
-| 24 | 2022 | InstructGPT | 7¼3 Complete |
-| 25 | 2022 | ChatGPT | 7¼3 Complete |
-| 26 | 2023 | GPT6¥24 | 7¼3 Complete |
-| 27 | 2023 | LLaMA | 7¼3 Complete |
-| 28 | 2023 | Llama 2 | 7¼3 Complete |
-| 29 | 2023 | Mistral 7B | 7¼3 Complete |
+| 1 | 1943 | McCulloch & Pitts | âœ… Complete |
+| 2 | 1949 | Hebb | âœ… Complete |
+| 3 | 1950 | Turing | âœ… Complete |
+| 4 | 1958 | Rosenblatt | âœ… Complete |
+| 5 | 1960 | Widrow & Hoff | âœ… Complete |
+| 6 | 1969 | Minsky & Papert | âœ… Complete |
+| 7 | 1974 | Werbos | âœ… Complete |
+| 8 | 1980 | Fukushima | âœ… Complete |
+| 9 | 1982 | Hopfield | âœ… Complete |
+| 10 | 1986 | Rumelhart, Hinton & Williams | âœ… Complete |
+| 11 | 1989 | LeCun CNN | âœ… Complete |
+| 12 | 1990 | Jordan Network | âœ… Complete |
+| 13 | 1991 | Elman Network | âœ… Complete |
+| 14 | 1997 | LSTM | âœ… Complete |
+| 15 | 1998 | LeNetâ€‘5 | âœ… Complete |
+| 16 | 2012 | AlexNet | âœ… Complete |
+| 17 | 2014 | Seq2Seq | âœ… Complete |
+| 18 | 2014 | GAN | âœ… Complete |
+| 19 | 2015 | ResNet | âœ… Complete |
+| 20 | 2017 | Transformer | âœ… Complete |
+| 21 | 2018 | GPT | âœ… Complete |
+| 22 | 2019 | GPTâ€‘2 | âœ… Complete |
+| 23 | 2020 | GPTâ€‘3 | âœ… Complete |
+| 24 | 2022 | InstructGPT | âœ… Complete |
+| 25 | 2022 | ChatGPT | âœ… Complete |
+| 26 | 2023 | GPTâ€‘4 | âœ… Complete |
+| 27 | 2023 | LLaMA | âœ… Complete |
+| 28 | 2023 | Llama 2 | âœ… Complete |
+| 29 | 2023 | Mistral 7B | âœ… Complete |
 
 ---
 
 ## Next Milestone
 
-**v0.7.0 ¡ª Remaining Transformer Landmarks**
+**v0.7.0 â€” Remaining Transformer Landmarks**
 
 - 2018: BERT
 - 2024: Mixtral 8x7B
 - 2013: Word2Vec
 - 2014: Bahdanau Attention
 - 2015: Batch Normalization
-- 2024¨C2026: RAG / Tool Use / Agentic AI
+- 2024â€“2026: RAG / Tool Use / Agentic AI
 
 ---
 
