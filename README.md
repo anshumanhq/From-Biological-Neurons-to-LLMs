@@ -43,36 +43,36 @@ Unlike typical history books, this repository treats the book as a **living rese
 
 ### Clone the Repository
 
-'''bash
+```bash
 git clone https://github.com/anshumanhq/From-Biological-Neurons-to-LLMs.git
 cd From-Biological-Neurons-to-LLMs
-'''
+```
 
 ### Install Development Dependencies
 
-'''bash
+```bash
 pip install -r requirements-dev.txt
 pre-commit install
-'''
+```
 
 ### Run Validation
 
-'''bash
+```bash
 python scripts/validate_repository.py
-'''
+```
 
 ### Build Index & Knowledge Graph
 
-'''bash
+```bash
 python scripts/build_index.py
 python scripts/build_graph.py
-'''
+```
 
 ---
 
 ## Folder Structure
 
-'''text
+```text
 From-Biological-Neurons-to-LLMs/
 ├── book/                    # LaTeX manuscript
 ├── research/                # The Archive
@@ -89,7 +89,7 @@ From-Biological-Neurons-to-LLMs/
 ├── requirements-dev.txt     # Development dependencies
 ├── .pre-commit-config.yaml  # Pre-commit hooks
 └── README.md
-'''
+```
 
 ---
 
